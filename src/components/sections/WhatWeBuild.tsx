@@ -24,7 +24,7 @@ export function WhatWeBuild() {
 
                     <div className="flex-1 lg:max-w-[55%]">
                         <ul className="grid sm:grid-cols-2 gap-y-6 gap-x-12">
-                            {buildItems.map((item, i) => (
+                            {capabilities.map((item, i) => (
                                 <li key={i} className="flex items-start gap-4 group">
                                     <Check className="w-5 h-5 text-primary/60 group-hover:text-primary transition-colors mt-1 shrink-0" />
                                     <span className="text-lg font-light text-foreground/80 leading-relaxed">{item}</span>

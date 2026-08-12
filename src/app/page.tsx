@@ -1,15 +1,8 @@
 import { Hero } from "@/components/sections/Hero";
-import { Services } from "@/components/sections/Services";
-
-import { Focus } from "@/components/sections/Focus";
-import { HowWeWork } from "@/components/sections/HowWeWork";
-import { EngagementModel } from "@/components/sections/Engagement";
-import { Technology } from "@/components/sections/Technology";
-import { Problems } from "@/components/sections/Problems";
 import { Testimonials } from "@/components/sections/Testimonials";
-import { Contact } from "@/components/sections/Contact";
-import { Values } from "@/components/sections/Values";
 import { Reveal } from "@/components/ui/Reveal";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
@@ -22,37 +15,12 @@ export default function Home() {
         <Testimonials />
       </Reveal>
 
-      <Reveal width="100%">
-        <Services />
-      </Reveal>
-
-      <Reveal width="100%">
-        <Focus />
-      </Reveal>
-
-      <Reveal width="100%">
-        <HowWeWork />
-      </Reveal>
-
-      <Reveal width="100%">
-        <Values />
-      </Reveal>
-
-      <Reveal width="100%">
-        <EngagementModel />
-      </Reveal>
-
-      <Reveal width="100%">
-        <Technology />
-      </Reveal>
-
-      <Reveal width="100%">
-        <Problems />
-      </Reveal>
-
-      <Reveal width="100%">
-        <Contact />
-      </Reveal>
+      <div className="py-24 flex justify-center">
+        <Link href="/services" className="group inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors">
+          Explore Our Services
+          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+        </Link>
+      </div>
     </main>
   );
 }

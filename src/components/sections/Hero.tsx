@@ -1,51 +1,53 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Container } from "@/components/ui/Container";
-import { useTypewriter } from "@/hooks/useTypewriter";
+import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
+
+const ANIMATED_WORDS = ["Growth", "Leads", "Conversions", "ROI"];
 
 export function Hero() {
-    const { text, phase } = useTypewriter(
-        "Growth",
-        [
-            "Leads",
-            "Conversions",
-            "ROI"
-        ],
-        {
-            initialDelay: 500,
-            typingSpeed: 100,
-            deleteSpeed: 50,
-            pauseDuration: 3000,
-            loop: true,
-        }
-    );
+    const [wordIndex, setWordIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setWordIndex((prev) => (prev + 1) % ANIMATED_WORDS.length);
+        }, 2500);
+        return () => clearInterval(interval);
+    }, []);
 
     return (
-        <section className="min-h-screen flex items-center bg-background text-foreground overflow-hidden relative selection:bg-primary/20">
+        <section className="min-h-screen flex items-center bg-transparent text-foreground overflow-hidden relative selection:bg-primary/30">
+            {/* Background Glow Effect specific to Hero */}
+            <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-primary/20 blur-[120px] rounded-full pointer-events-none opacity-50 mix-blend-screen" />
 
             <Container className="relative z-10 w-full h-full">
-                <div className="flex flex-col lg:flex-row h-full min-h-[60vh] lg:items-center gap-16 lg:gap-24 pt-24 lg:pt-0">
+                <div className="flex flex-col lg:flex-row h-full min-h-[70vh] lg:items-center gap-16 lg:gap-24 pt-32 lg:pt-0">
 
-                    {/* Left Column: Authority Payload (45%) */}
+                    {/* Left Column: Authority Payload */}
                     <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
-                        className="flex-1 lg:max-w-[45%] space-y-10 relative"
+                        className="flex-1 lg:max-w-[50%] space-y-8 relative"
                     >
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-sm text-zinc-300 font-medium tracking-wide">
+                            <Sparkles className="w-4 h-4 text-primary" />
+                            <span>Digital Systems that Scale</span>
+                        </div>
+
                         <div className="space-y-6">
-                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-foreground leading-[1.1] overflow-hidden">
+                            <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight text-white leading-[1.05] overflow-hidden">
                                 <motion.span
                                     initial={{ y: "100%" }}
                                     animate={{ y: 0 }}
                                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
                                     className="block text-balance"
                                 >
-                                    Stop Losing High-Ticket Clients to Your Competitors.
+                                    Stop Losing <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">High-Ticket</span> Clients to Competitors.
                                 </motion.span>
                             </h1>
 
@@ -54,38 +56,52 @@ export function Hero() {
                                     initial={{ y: "100%" }}
                                     animate={{ y: 0 }}
                                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-                                    className="text-lg md:text-xl text-muted-foreground leading-relaxed font-light max-w-xl text-balance"
+                                    className="text-lg md:text-xl text-zinc-400 leading-relaxed font-light max-w-xl text-balance"
                                 >
-                                    We build conversion-optimized digital systems that predictably generate qualified inbound leads and scale your revenue.
+                                    We build conversion-optimized digital systems that predictably generate qualified inbound leads and scale revenue for top firms across the United States.
                                 </motion.p>
                             </div>
                         </div>
 
-                        <div className="flex flex-col sm:flex-row gap-4 pt-2">
-                            <Button href="#contact" size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium flex items-center gap-2">
+                        <div className="flex flex-col sm:flex-row gap-5 pt-4">
+                            <Button href="#contact" size="lg" className="bg-primary text-white hover:bg-primary/90 font-medium flex items-center gap-2 rounded-xl shadow-[0_0_40px_-10px_rgba(59,130,246,0.6)] hover:shadow-[0_0_60px_-15px_rgba(59,130,246,0.8)] transition-all duration-300 px-8">
                                 Book a Strategy Call
                                 <ArrowRight className="w-4 h-4" />
                             </Button>
-                            <Button href="#services" variant="ghost" size="lg" className="text-foreground hover:bg-accent">
+                            <Button href="#services" variant="ghost" size="lg" className="text-zinc-300 hover:text-white hover:bg-white/10 border border-white/10 backdrop-blur-sm rounded-xl px-8 transition-all duration-300">
                                 View Our Results
                             </Button>
                         </div>
                     </motion.div>
 
-                    {/* Right Column: Dynamic Headline (55%) */}
-                    <div className="flex-1 lg:max-w-[55%] overflow-hidden pl-0 lg:pl-12">
-                        <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl font-semibold tracking-tighter leading-[1.05] text-slate-900">
-                            <span className="block text-slate-700">Driving</span>
-                            <span className="block text-foreground relative min-h-[1.1em]">
-                                {text}
-                                <span
-                                    className={cn(
-                                        "absolute -right-[0.1em] top-4 bottom-4 w-[6px] bg-primary/30",
-                                        (phase === "pausing" || phase === "idle") ? "animate-pulse" : "opacity-100",
-                                    )}
-                                />
-                            </span>
-                        </h2>
+                    {/* Right Column: Dynamic Headline */}
+                    <div className="flex-1 lg:max-w-[50%] overflow-hidden flex lg:justify-end items-center">
+                        <motion.div 
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 1, delay: 0.3 }}
+                            className="relative"
+                        >
+                            <h2 className="text-6xl sm:text-7xl md:text-8xl lg:text-[7rem] font-bold tracking-tighter leading-[1] text-zinc-800 uppercase relative z-10 flex flex-col">
+                                <span className="block text-zinc-800/80">Driving</span>
+                                <span className="block text-white relative min-h-[1.1em] drop-shadow-2xl overflow-visible">
+                                    <AnimatePresence mode="popLayout">
+                                        <motion.span
+                                            key={wordIndex}
+                                            initial={{ y: 60, opacity: 0, rotateX: -90, filter: "blur(10px)" }}
+                                            animate={{ y: 0, opacity: 1, rotateX: 0, filter: "blur(0px)" }}
+                                            exit={{ y: -60, opacity: 0, rotateX: 90, filter: "blur(10px)", position: "absolute", left: 0 }}
+                                            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                                            className="block origin-center whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-br from-white to-zinc-400"
+                                        >
+                                            {ANIMATED_WORDS[wordIndex]}
+                                        </motion.span>
+                                    </AnimatePresence>
+                                </span>
+                            </h2>
+                            {/* Decorative blur behind the dynamic text */}
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-indigo-500/10 blur-[80px] rounded-full z-0 pointer-events-none" />
+                        </motion.div>
                     </div>
 
                 </div>

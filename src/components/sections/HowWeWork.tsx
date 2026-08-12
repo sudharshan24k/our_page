@@ -2,33 +2,83 @@
 
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
-import { Search, PenTool, Code2, ShieldCheck } from "lucide-react";
+import { Search, PenTool, Code2, ShieldCheck, Plus } from "lucide-react";
 import { motion, Variants } from "framer-motion";
+import { useState } from "react";
+import { ContentModal } from "@/components/ui/ContentModal";
 
 const phases = [
     {
         id: "01",
         title: "Audit & Analysis",
         description: "We start by auditing your current website and identifying leaks in your conversion funnel. We define the exact strategy needed to turn your site into a lead machine.",
-        icon: Search
+        icon: Search,
+        detailedContent: (
+            <>
+                <p><strong>The Business Reality:</strong> You cannot fix what you cannot measure. Before we write a single line of code or design a single pixel, we must understand exactly where your business is currently bleeding revenue online.</p>
+                <h4>Our Technical & Business Approach</h4>
+                <ul>
+                    <li><strong>Funnel Teardown:</strong> We analyze your current website traffic, looking at bounce rates, exit pages, and conversion drops. We identify the exact moments where prospects lose interest.</li>
+                    <li><strong>Competitive Analysis:</strong> We don't just look at your site; we look at the top three competitors in your space to understand the baseline expectations of your target buyers.</li>
+                    <li><strong>Strategic Blueprinting:</strong> We deliver a comprehensive, layman-friendly report outlining exactly what is wrong technically (e.g., slow load times, poor mobile UX) and what is wrong from a business perspective (e.g., weak messaging, lack of trust signals).</li>
+                </ul>
+                <p>This phase ensures that every dollar spent in the subsequent phases is directed toward solving a concrete business problem, not just making things "look pretty."</p>
+            </>
+        )
     },
     {
         id: "02",
         title: "Conversion-Led Design",
         description: "We design every page with a focus on authority, trust, and conversion. Every element is strategically placed to guide high-ticket clients toward booking a call.",
-        icon: PenTool
+        icon: PenTool,
+        detailedContent: (
+            <>
+                <p><strong>The Business Reality:</strong> Design is not art; it is a communication tool. A beautiful website that doesn't generate leads is a failure. Our design philosophy is entirely focused on driving the user toward a specific business outcome: contacting your sales team.</p>
+                <h4>Our Technical & Business Approach</h4>
+                <ul>
+                    <li><strong>Wireframing for Conversions:</strong> We structure the page layout based on psychological principles of how executives consume information—placing high-value propositions and trust signals precisely where the eye naturally tracks.</li>
+                    <li><strong>Authority Aesthetics:</strong> We utilize modern UI trends (like dark mode and glassmorphism) because they subconsciously signal premium quality, allowing you to command higher prices.</li>
+                    <li><strong>Frictionless UX:</strong> We design forms and interactive elements to require the absolute minimum cognitive load from the user. If it's hard to use, they won't use it.</li>
+                </ul>
+                <p>The result is an interface that looks expensive and operates like a highly trained digital salesperson, seamlessly guiding the prospect toward the "Book a Call" button.</p>
+            </>
+        )
     },
     {
         id: "03",
         title: "High-Performance Build",
         description: "Our development phase focuses on speed, security, and integration. We build a robust system that syncs perfectly with your existing CRM and sales processes.",
-        icon: Code2
+        icon: Code2,
+        detailedContent: (
+            <>
+                <p><strong>The Business Reality:</strong> Slow websites kill deals. If a page takes more than 3 seconds to load, 53% of mobile users will abandon it. We build infrastructure that is lightning fast and bulletproof.</p>
+                <h4>Our Technical & Business Approach</h4>
+                <ul>
+                    <li><strong>Modern Stack (Next.js):</strong> We ditch slow, bloated platforms like WordPress. We build using modern enterprise technology (React/Next.js) which pre-renders pages for instantaneous loading times.</li>
+                    <li><strong>CRM & API Integrations:</strong> A website should not exist in a vacuum. We pipe your lead forms directly into your CRM (HubSpot, Salesforce) and automate the notification process to your sales team via Slack or email.</li>
+                    <li><strong>Technical SEO Foundations:</strong> We write semantic, clean code that Google loves, ensuring that your foundation is perfectly primed for organic search dominance.</li>
+                </ul>
+                <p>By investing in a high-performance build, you aren't just buying a website; you are buying a scalable software asset that integrates seamlessly into your company's operational workflow.</p>
+            </>
+        )
     },
     {
         id: "04",
         title: "Launch & Lead Capture",
         description: "Rigorous testing and optimization before we go live. We ensure your lead capture systems are foolproof and your firm is ready to handle consistent inbound leads.",
-        icon: ShieldCheck
+        icon: ShieldCheck,
+        detailedContent: (
+            <>
+                <p><strong>The Business Reality:</strong> Launching a new system is inherently risky. We mitigate that risk entirely through exhaustive testing protocols before the public ever sees the new platform.</p>
+                <h4>Our Technical & Business Approach</h4>
+                <ul>
+                    <li><strong>Quality Assurance (QA):</strong> We test the platform across every major device, browser, and network speed to ensure 100% functionality. A broken form is a lost deal.</li>
+                    <li><strong>Performance Benchmarking:</strong> We run rigorous speed and accessibility audits to ensure the final product exceeds industry standards for performance.</li>
+                    <li><strong>Handoff & Training:</strong> We don't just hand over the keys and disappear. We train your team on how to manage the content, interpret the analytics, and handle the new influx of leads smoothly.</li>
+                </ul>
+                <p>The launch is just the beginning. We ensure your digital infrastructure is fully operational from day one, ready to act as the primary growth engine for your firm.</p>
+            </>
+        )
     }
 ];
 
@@ -38,6 +88,8 @@ const itemVariants: Variants = {
 };
 
 export function HowWeWork() {
+    const [selectedPhase, setSelectedPhase] = useState<typeof phases[0] | null>(null);
+
     return (
         <Section id="methodology" className="bg-background text-foreground border-t border-border py-24 md:py-32 overflow-hidden">
             <Container>
@@ -64,18 +116,24 @@ export function HowWeWork() {
                             <motion.div
                                 key={i}
                                 variants={itemVariants}
-                                className="group relative"
+                                className="group relative cursor-pointer"
+                                onClick={() => setSelectedPhase(phase)}
                             >
                                 <div className="absolute top-[16px] left-0 w-4 h-4 rounded-full bg-background border border-muted-foreground group-hover:border-primary group-hover:scale-110 transition-all duration-300 z-10" />
-                                <div className="pt-12">
+                                <div className="pt-12 h-full flex flex-col">
                                     <phase.icon className="w-8 h-8 text-muted-foreground mb-4 group-hover:text-primary transition-colors duration-300" />
                                     <span className="text-[13px] font-bold text-muted-foreground uppercase tracking-[0.2em] block mb-2 group-hover:text-primary transition-colors">
                                         Phase {phase.id}
                                     </span>
                                     <h3 className="text-xl font-medium text-foreground mb-3 group-hover:text-primary transition-colors">{phase.title}</h3>
-                                    <p className="text-muted-foreground font-light text-[15px] leading-relaxed group-hover:text-foreground transition-colors max-w-xs">
+                                    <p className="text-muted-foreground font-light text-[15px] leading-relaxed group-hover:text-foreground transition-colors max-w-xs flex-grow mb-4">
                                         {phase.description}
                                     </p>
+                                    
+                                    <div className="flex items-center text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors mt-auto pt-2">
+                                        <Plus className="w-4 h-4 mr-2 group-hover:rotate-90 transition-transform duration-300" />
+                                        <span>Read Methodology</span>
+                                    </div>
                                 </div>
                             </motion.div>
                         ))}
@@ -85,20 +143,37 @@ export function HowWeWork() {
                 {/* Mobile View (Stacked with Line) */}
                 <div className="md:hidden space-y-12 relative border-l border-border ml-4 pl-10">
                     {phases.map((phase, i) => (
-                        <div key={i} className="relative group">
+                        <div 
+                            key={i} 
+                            className="relative group cursor-pointer"
+                            onClick={() => setSelectedPhase(phase)}
+                        >
                             <div className="absolute top-2 -left-[45px] w-3 h-3 rounded-full bg-background border border-muted-foreground" />
                             <div className="relative text-foreground">
                                 <phase.icon className="w-8 h-8 text-muted-foreground mb-3" />
                                 <span className="text-xs font-bold text-muted-foreground uppercase tracking-widest block">Phase {phase.id}</span>
                                 <h3 className="text-xl font-medium mb-3">{phase.title}</h3>
-                                <p className="text-muted-foreground font-light text-[15px] leading-relaxed">
+                                <p className="text-muted-foreground font-light text-[15px] leading-relaxed mb-4">
                                     {phase.description}
                                 </p>
+                                
+                                <div className="flex items-center text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors">
+                                    <Plus className="w-4 h-4 mr-2 group-hover:rotate-90 transition-transform duration-300" />
+                                    <span>Read Methodology</span>
+                                </div>
                             </div>
                         </div>
                     ))}
                 </div>
             </Container>
+
+            <ContentModal 
+                isOpen={!!selectedPhase} 
+                onClose={() => setSelectedPhase(null)}
+                title={`${selectedPhase?.title || ""} Methodology`}
+            >
+                {selectedPhase?.detailedContent}
+            </ContentModal>
         </Section>
     );
 }

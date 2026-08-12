@@ -5,6 +5,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Container } from "@/components/ui/Container";
 import { MenuOverlay } from "@/components/layout/MenuOverlay";
+import { ArrowRight } from "lucide-react";
 
 export function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -26,20 +27,20 @@ export function Header() {
                 className={cn(
                     "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out",
                     isScrolled 
-                        ? "bg-white/70 backdrop-blur-xl border-b border-zinc-200/50 py-3 shadow-[0_4px_30px_rgba(0,0,0,0.03)]" 
+                        ? "bg-background/80 backdrop-blur-xl border-b border-white/5 py-3 shadow-[0_4px_30px_rgba(0,0,0,0.5)]" 
                         : "bg-transparent py-5"
                 )}
             >
                 <Container className="flex items-center justify-between">
-                    <Link href="/" className="text-lg font-semibold tracking-tight text-foreground/90 hover:text-foreground">
+                    <Link href="/" className="text-lg font-semibold tracking-tight text-white hover:text-primary transition-colors">
                         Edura Technologies
                     </Link>
-                    <nav className="hidden md:flex items-center gap-8 text-[15px] font-medium text-muted-foreground/80">
-                        {["Services", "Methodology", "Values", "Technology", "Contact"].map((item) => (
+                    <nav className="hidden md:flex items-center gap-8 text-[15px] font-medium text-zinc-400">
+                        {["Services", "Case Studies", "Methodology", "Values", "Technology", "Contact"].map((item) => (
                             <Link
                                 key={item}
-                                href={`#${item.toLowerCase()}`}
-                                className="hover:text-foreground transition-colors"
+                                href={`/${item.toLowerCase().replace(' ', '-')}`}
+                                className="hover:text-white transition-colors"
                             >
                                 {item}
                             </Link>
@@ -50,14 +51,15 @@ export function Header() {
                         {/* Mobile Menu Trigger */}
                         <button
                             onClick={() => setIsMenuOpen(true)}
-                            className="md:hidden flex flex-col gap-1.5 items-end text-muted-foreground hover:text-foreground transition-colors"
+                            className="md:hidden flex flex-col gap-1.5 items-end text-zinc-400 hover:text-white transition-colors"
                         >
                             <span className="w-6 h-0.5 bg-current"></span>
                             <span className="w-6 h-0.5 bg-current"></span>
                         </button>
 
-                        <Link href="#contact" className="hidden md:block text-sm font-medium hover:text-foreground transition-colors px-6 py-2 rounded-full border border-border/50 hover:border-primary/50 hover:bg-primary/10">
-                            Inquire
+                        <Link href="/contact" className="hidden md:flex items-center gap-2 text-sm font-medium text-white px-6 py-2 rounded-full bg-primary hover:bg-primary/90 shadow-[0_0_20px_-5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_30px_-5px_rgba(59,130,246,0.7)] transition-all">
+                            Claim Free Audit
+                            <ArrowRight className="w-4 h-4" />
                         </Link>
                     </div>
                 </Container>
