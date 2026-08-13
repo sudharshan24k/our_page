@@ -4,14 +4,29 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { Lock, ArrowRight, ShieldCheck } from "lucide-react";
+import { submitContact } from "@/app/actions/contact";
 import { useState } from "react";
 
 export function Contact() {
+    const [isPending, setIsPending] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        setIsSubmitted(true);
+        setIsPending(true);
+        setErrorMessage(null);
+
+        const formData = new FormData(e.currentTarget);
+        const result = await submitContact(formData);
+
+        setIsPending(false);
+
+        if (result.success) {
+            setIsSubmitted(true);
+        } else {
+            setErrorMessage(result.error || "Something went wrong.");
+        }
     };
 
     return (
@@ -39,25 +54,34 @@ export function Contact() {
                             </div>
                         ) : (
                             <form onSubmit={handleSubmit} className="space-y-6">
+                                {errorMessage && (
+                                    <div className="p-4 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 text-sm">
+                                        {errorMessage}
+                                    </div>
+                                )}
                                 <div className="space-y-4">
                                     <input 
                                         type="text" 
+                                        name="name"
                                         required 
                                         placeholder="Full Name" 
                                         className="w-full h-14 px-6 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
                                     />
                                     <input 
                                         type="email" 
+                                        name="email"
                                         required 
                                         placeholder="Work Email" 
                                         className="w-full h-14 px-6 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
                                     />
                                     <input 
                                         type="url" 
+                                        name="website"
                                         placeholder="Company Website (Optional)" 
                                         className="w-full h-14 px-6 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
                                     />
                                     <textarea 
+                                        name="challenge"
                                         required 
                                         rows={4}
                                         placeholder="What is your biggest growth challenge right now?" 
@@ -65,9 +89,9 @@ export function Contact() {
                                     />
                                 </div>
 
-                                <Button type="submit" className="w-full bg-primary text-white hover:bg-primary/90 h-14 text-sm tracking-widest font-bold uppercase rounded-xl flex items-center justify-center gap-3 shadow-[0_0_20px_-5px_rgba(59,130,246,0.5)] transition-all">
-                                    Claim Your Free Growth Audit
-                                    <ArrowRight className="w-4 h-4" />
+                                <Button type="submit" disabled={isPending} className="w-full bg-primary text-white hover:bg-primary/90 h-14 text-sm tracking-widest font-bold uppercase rounded-xl flex items-center justify-center gap-3 shadow-[0_0_20px_-5px_rgba(59,130,246,0.5)] transition-all disabled:opacity-50 disabled:cursor-not-allowed">
+                                    {isPending ? "Submitting..." : "Claim Your Free Growth Audit"}
+                                    {!isPending && <ArrowRight className="w-4 h-4" />}
                                 </Button>
 
                                 <div className="flex items-center justify-center gap-2 text-xs font-medium text-zinc-500 mt-4">
@@ -136,8 +160,8 @@ export function Contact() {
                             <div className="space-y-3">
                                 <div>
                                     <p className="text-zinc-400 text-xs uppercase tracking-widest mb-2">Email</p>
-                                    <a href="mailto:hello@ourpage.com" className="text-white hover:text-primary transition-colors font-medium">
-                                        hello@ourpage.com
+                                    <a href="mailto:hello@eduratech.com" className="text-white hover:text-primary transition-colors font-medium">
+                                        hello@eduratech.com
                                     </a>
                                 </div>
                                 <div>

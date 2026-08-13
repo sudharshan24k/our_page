@@ -49,52 +49,56 @@ export function Technology() {
                     </p>
                 </div>
 
-                <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, margin: "-50px" }}
-                    variants={{
-                        visible: { transition: { staggerChildren: 0.1 } }
-                    }}
-                    className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
-                >
-                    {techStack.map((group, i) => (
-                        <motion.div
-                            key={i}
-                            variants={{
-                                hidden: { opacity: 0, scale: 0.95 },
-                                visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } }
-                            }}
-                             className="group relative p-8 rounded-3xl border border-white/5 bg-[#0a0a0c] hover:border-white/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.7)] flex flex-col overflow-hidden"
-                         >
-                             {/* Top Accent Glow on Hover */}
-                             <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary/0 to-transparent group-hover:via-primary/70 transition-all duration-700" />
-                             
-                             {/* Inner Radial Gradient on Hover */}
-                             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
- 
-                             <div className="relative z-10 flex flex-col h-full">
-                                 <div className="flex items-center gap-4 mb-8">
-                                     <div className="p-3 rounded-2xl bg-white/[0.02] border border-white/5 flex items-center justify-center text-zinc-400 group-hover:text-primary group-hover:bg-primary/10 group-hover:border-primary/20 transition-all duration-500 shadow-inner group-hover:scale-110">
-                                         <group.icon className="w-6 h-6 stroke-[1.5]" />
-                                     </div>
-                                     <h3 className="text-xl font-medium text-white group-hover:text-primary transition-colors tracking-tight">{group.category}</h3>
-                                 </div>
- 
-                                 <div className="flex flex-wrap gap-2">
-                                     {group.items.map((item, idx) => (
-                                         <span
-                                             key={idx}
-                                             className="px-3.5 py-1.5 text-xs font-semibold rounded-full bg-white/5 border border-white/5 text-zinc-400 group-hover:border-primary/30 group-hover:text-primary group-hover:bg-primary/10 transition-all duration-300 hover:scale-105 cursor-default shadow-sm"
-                                         >
-                                            {item}
-                                        </span>
-                                    ))}
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, margin: "-50px" }}
+                        variants={{
+                            visible: { transition: { staggerChildren: 0.1 } }
+                        }}
+                        className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+                    >
+                        {techStack.map((group, i) => (
+                            <motion.div
+                                key={i}
+                                variants={{
+                                    hidden: { opacity: 0, y: 20 },
+                                    visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] } }
+                                }}
+                                className="group relative p-8 sm:p-10 rounded-3xl bg-white/[0.02] border border-white/[0.05] hover:border-primary/30 transition-all duration-700 hover:-translate-y-2 flex flex-col overflow-hidden backdrop-blur-xl"
+                            >
+                                {/* Animated glow behind the card */}
+                                <div className="absolute -inset-px rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-1000 z-0 bg-gradient-to-br from-primary/20 via-transparent to-transparent blur-2xl" />
+                                
+                                {/* Top Accent Glow on Hover */}
+                                <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:via-primary/70 transition-all duration-700 z-10" />
+                                
+                                {/* Inner Radial Gradient on Hover */}
+                                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/[0.05] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-10" />
+
+                                <div className="relative z-20 flex flex-col h-full">
+                                    <div className="flex items-center gap-5 mb-8">
+                                        <div className="p-3.5 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center text-zinc-400 group-hover:text-primary group-hover:bg-primary/20 group-hover:border-primary/40 transition-all duration-500 shadow-inner group-hover:scale-110 relative overflow-hidden">
+                                            <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500" />
+                                            <group.icon className="w-7 h-7 stroke-[1.5] relative z-10" />
+                                        </div>
+                                        <h3 className="text-2xl font-medium text-white group-hover:text-primary transition-colors tracking-tight">{group.category}</h3>
+                                    </div>
+
+                                    <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-white/5">
+                                        {group.items.map((item, idx) => (
+                                            <span
+                                                key={idx}
+                                                className="px-4 py-2 text-[13px] font-medium rounded-full bg-white/[0.03] border border-white/10 text-zinc-300 group-hover:border-primary/40 group-hover:text-white group-hover:bg-primary/20 transition-all duration-300 hover:scale-105 hover:bg-primary hover:border-primary hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] cursor-default"
+                                            >
+                                                {item}
+                                            </span>
+                                        ))}
+                                    </div>
                                 </div>
-                            </div>
-                        </motion.div>
-                    ))}
-                </motion.div>
+                            </motion.div>
+                        ))}
+                    </motion.div>
             </Container>
         </Section>
     );
