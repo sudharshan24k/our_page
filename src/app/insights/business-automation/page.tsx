@@ -1,4 +1,4 @@
-﻿import { Reveal } from "@/components/ui/Reveal";
+import { Reveal } from "@/components/ui/Reveal";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { ArrowRight } from "lucide-react";
@@ -371,9 +371,14 @@ export default function BusinessAutomation() {
               <h2 className="text-4xl font-semibold tracking-tighter text-white mb-8">
                 Ready to Cut Labor Costs?
               </h2>
-              <p className="text-xl text-zinc-300 font-light mb-12">
+              <p className="text-xl text-zinc-300 font-light mb-8">
                 Let's identify which processes you should automate first.
               </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+                <Link href="/services/business-automation" className="text-zinc-400 hover:text-white transition-colors underline underline-offset-4 decoration-white/20 hover:decoration-white/50">
+                  Learn about our Business Automation services
+                </Link>
+              </div>
               <a href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-primary/90 transition-all">
                 Get Your Automation Audit
                 <ArrowRight className="w-4 h-4" />
