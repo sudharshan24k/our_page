@@ -190,6 +190,7 @@ const caseStudies = [
 
 export function CaseStudies({ isMainHeading = false }: { isMainHeading?: boolean }) {
     const [selectedStudy, setSelectedStudy] = useState<typeof caseStudies[0] | null>(null);
+    const [selectedMetric, setSelectedMetric] = useState<string | null>(null);
 
     return (
         <Section id="case-studies" className="bg-background border-t border-white/5 py-24 md:py-32 relative overflow-hidden">
@@ -213,6 +214,33 @@ export function CaseStudies({ isMainHeading = false }: { isMainHeading?: boolean
                     <p className="text-lg md:text-xl font-light text-zinc-400">
                         We partner with industry leaders to engineer systems that drive measurable growth. Here is a look at what we've achieved together.
                     </p>
+                </div>
+
+                {/* Industry Tags */}
+                <div className="mb-12 flex flex-wrap gap-3">
+                    <button
+                        onClick={() => setSelectedMetric(null)}
+                        className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                            selectedMetric === null
+                                ? "bg-primary text-white"
+                                : "bg-white/5 text-zinc-400 hover:bg-white/10 border border-white/5"
+                        }`}
+                    >
+                        All Case Studies
+                    </button>
+                    {["Lead Generation", "Performance", "Cost Reduction", "Automation"].map((metric) => (
+                        <button
+                            key={metric}
+                            onClick={() => setSelectedMetric(metric === selectedMetric ? null : metric)}
+                            className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                                selectedMetric === metric
+                                    ? "bg-primary text-white"
+                                    : "bg-white/5 text-zinc-400 hover:bg-white/10 border border-white/5"
+                            }`}
+                        >
+                            {metric}
+                        </button>
+                    ))}
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -271,11 +299,36 @@ export function CaseStudies({ isMainHeading = false }: { isMainHeading?: boolean
                         );
                     })}
                 </div>
+
+                {/* CTA Section */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.3 }}
+                    className="mt-24 pt-24 border-t border-white/5"
+                >
+                    <div className="max-w-3xl">
+                        <h3 className="text-3xl md:text-4xl font-semibold text-white mb-6">
+                            Ready to become our next success story?
+                        </h3>
+                        <p className="text-lg text-zinc-400 mb-10 leading-relaxed">
+                            Whether you're a SaaS startup, B2B services firm, or enterprise technology company, we've got the playbook to scale your revenue predictably.
+                        </p>
+                        <a
+                            href="#contact"
+                            className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-primary/90 transition-all duration-300 shadow-[0_0_40px_-10px_rgba(59,130,246,0.6)] hover:shadow-[0_0_60px_-15px_rgba(59,130,246,0.8)]"
+                        >
+                            Schedule Your Free Audit
+                            <ArrowUpRight className="w-4 h-4" />
+                        </a>
+                    </div>
+                </motion.div>
             </Container>
 
             {/* Read More Modal */}
-            <ContentModal 
-                isOpen={!!selectedStudy} 
+            <ContentModal
+                isOpen={!!selectedStudy}
                 onClose={() => setSelectedStudy(null)}
                 title={selectedStudy?.client || ""}
             >

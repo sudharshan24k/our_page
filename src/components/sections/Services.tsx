@@ -189,11 +189,36 @@ export function Services({ isMainHeading = false }: { isMainHeading?: boolean })
                         </motion.article>
                     ))}
                 </motion.div>
+
+                {/* CTA Section */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.3 }}
+                    className="mt-24 pt-24 border-t border-white/5"
+                >
+                    <div className="max-w-3xl">
+                        <h3 className="text-3xl md:text-4xl font-semibold text-white mb-6">
+                            Not sure which service you need?
+                        </h3>
+                        <p className="text-lg text-zinc-400 mb-10 leading-relaxed">
+                            Most high-ticket B2B firms need a combination of these services. That's why we offer them as an integrated system, not à la carte. Let's talk about your specific situation and build a custom package.
+                        </p>
+                        <a
+                            href="#contact"
+                            className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-primary/90 transition-all duration-300 shadow-[0_0_40px_-10px_rgba(59,130,246,0.6)] hover:shadow-[0_0_60px_-15px_rgba(59,130,246,0.8)]"
+                        >
+                            Book a Strategy Call
+                            <ArrowRight className="w-4 h-4" />
+                        </a>
+                    </div>
+                </motion.div>
             </Container>
 
             {/* Read More Modal */}
-            <ContentModal 
-                isOpen={!!selectedService} 
+            <ContentModal
+                isOpen={!!selectedService}
                 onClose={() => setSelectedService(null)}
                 title={selectedService?.title || ""}
             >

@@ -53,13 +53,20 @@ export function Header() {
                         Edura Technologies
                     </Link>
                     <nav className="hidden md:flex items-center gap-8 text-[15px] font-medium text-zinc-400">
-                        {["Services", "Case Studies", "Methodology", "Values", "Technology", "Contact"].map((item) => (
+                        {[
+                            { label: "Why EduraTech", href: "/why-eduratech" },
+                            { label: "How We Work", href: "/how-we-work" },
+                            { label: "Services", href: "/services" },
+                            { label: "Case Studies", href: "/case-studies" },
+                            { label: "Methodology", href: "/methodology" },
+                            { label: "Technology", href: "/technology" }
+                        ].map((item) => (
                             <Link
-                                key={item}
-                                href={`/${item.toLowerCase().replace(' ', '-')}`}
+                                key={item.label}
+                                href={item.href}
                                 className="hover:text-white transition-colors relative group py-2"
                             >
-                                {item}
+                                {item.label}
                                 <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span>
                             </Link>
                         ))}

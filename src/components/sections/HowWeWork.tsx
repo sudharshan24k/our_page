@@ -13,6 +13,8 @@ const phases = [
         title: "Audit & Analysis",
         description: "We start by auditing your current website and identifying leaks in your conversion funnel. We define the exact strategy needed to turn your site into a lead machine.",
         icon: Search,
+        duration: "1-2 weeks",
+        deliverables: ["Competitive analysis report", "Conversion audit", "Custom growth strategy deck", "Implementation roadmap"],
         detailedContent: (
             <>
                 <p><strong>The Business Reality:</strong> You cannot fix what you cannot measure. Before we write a single line of code or design a single pixel, we must understand exactly where your business is currently bleeding revenue online.</p>
@@ -31,6 +33,8 @@ const phases = [
         title: "Conversion-Led Design",
         description: "We design every page with a focus on authority, trust, and conversion. Every element is strategically placed to guide high-ticket clients toward booking a call.",
         icon: PenTool,
+        duration: "2-3 weeks",
+        deliverables: ["Wireframes & user flows", "High-fidelity designs", "Design system components", "Responsive mockups"],
         detailedContent: (
             <>
                 <p><strong>The Business Reality:</strong> Design is not art; it is a communication tool. A beautiful website that doesn't generate leads is a failure. Our design philosophy is entirely focused on driving the user toward a specific business outcome: contacting your sales team.</p>
@@ -49,6 +53,8 @@ const phases = [
         title: "High-Performance Build",
         description: "Our development phase focuses on speed, security, and integration. We build a robust system that syncs perfectly with your existing CRM and sales processes.",
         icon: Code2,
+        duration: "3-4 weeks",
+        deliverables: ["Production-ready codebase", "CRM integrations", "API pipelines", "Automated workflows"],
         detailedContent: (
             <>
                 <p><strong>The Business Reality:</strong> Slow websites kill deals. If a page takes more than 3 seconds to load, 53% of mobile users will abandon it. We build infrastructure that is lightning fast and bulletproof.</p>
@@ -67,6 +73,8 @@ const phases = [
         title: "Launch & Lead Capture",
         description: "Rigorous testing and optimization before we go live. We ensure your lead capture systems are foolproof and your firm is ready to handle consistent inbound leads.",
         icon: ShieldCheck,
+        duration: "1-2 weeks",
+        deliverables: ["QA testing report", "Performance audit", "Team training", "Documentation"],
         detailedContent: (
             <>
                 <p><strong>The Business Reality:</strong> Launching a new system is inherently risky. We mitigate that risk entirely through exhaustive testing protocols before the public ever sees the new platform.</p>
@@ -134,10 +142,15 @@ export function HowWeWork() {
                                         Phase {phase.id}
                                     </span>
                                     <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-primary transition-colors tracking-tight">{phase.title}</h3>
-                                    <p className="text-zinc-400 font-light text-[15px] leading-relaxed flex-grow mb-8">
+                                    <p className="text-zinc-400 font-light text-[15px] leading-relaxed flex-grow mb-6">
                                         {phase.description}
                                     </p>
-                                    
+
+                                    <div className="mb-6 pb-6 border-b border-white/5">
+                                        <p className="text-xs text-primary font-bold uppercase tracking-widest mb-3">Timeline</p>
+                                        <p className="text-white font-semibold">{phase.duration}</p>
+                                    </div>
+
                                     <div className="flex items-center text-sm font-semibold text-zinc-400 group-hover:text-white transition-colors mt-auto pt-5">
                                         <Plus className="w-4 h-4 mr-2 group-hover:rotate-90 group-hover:text-primary transition-all duration-300" />
                                         <span>Read Methodology</span>
@@ -170,7 +183,12 @@ export function HowWeWork() {
                                 <p className="text-zinc-400 font-light text-[15px] leading-relaxed mb-6">
                                     {phase.description}
                                 </p>
-                                
+
+                                <div className="mb-6 pb-6 border-b border-white/5">
+                                    <p className="text-xs text-primary font-bold uppercase tracking-widest mb-3">Timeline</p>
+                                    <p className="text-white font-semibold">{phase.duration}</p>
+                                </div>
+
                                 <div className="flex items-center text-sm font-semibold text-zinc-400 group-hover:text-white transition-colors">
                                     <Plus className="w-4 h-4 mr-2 group-hover:rotate-90 group-hover:text-primary transition-all duration-300" />
                                     <span>Read Methodology</span>

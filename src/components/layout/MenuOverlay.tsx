@@ -11,11 +11,12 @@ interface MenuOverlayProps {
 }
 
 const navLinks = [
-    { label: "Services", href: "#services" },
-    { label: "Methodology", href: "#methodology" },
-    { label: "Values", href: "#values" },
-    { label: "Technology", href: "#technology" },
-    { label: "Contact", href: "#contact" }
+    { label: "Why EduraTech", href: "/why-eduratech" },
+    { label: "How We Work", href: "/how-we-work" },
+    { label: "Services", href: "/services" },
+    { label: "Case Studies", href: "/case-studies" },
+    { label: "Methodology", href: "/methodology" },
+    { label: "Technology", href: "/technology" }
 ];
 
 export function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {

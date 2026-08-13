@@ -78,9 +78,9 @@ export function Contact() {
                         )}
                     </div>
 
-                    {/* Right Column: Process Steps */}
-                    <div className="lg:pl-8">
-                        <div className="bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl rounded-3xl p-10 h-full relative overflow-hidden">
+                    {/* Right Column: Process Steps + Contact Info */}
+                    <div className="lg:pl-8 flex flex-col gap-8">
+                        <div className="bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl rounded-3xl p-10 relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full blur-[60px]" />
                             <h3 className="text-3xl font-bold text-white mb-10 relative z-10">Your Path to Predictable Growth</h3>
 
@@ -126,6 +126,23 @@ export function Contact() {
                                     <p className="text-zinc-400 text-lg leading-relaxed pt-2">
                                         We build the system and you <span className="text-white font-medium">watch the leads flow in</span>
                                     </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Quick Contact Info */}
+                        <div className="bg-white/[0.02] backdrop-blur border border-white/5 rounded-2xl p-6">
+                            <p className="text-sm text-zinc-500 mb-4 font-medium">ALTERNATIVE CONTACT</p>
+                            <div className="space-y-3">
+                                <div>
+                                    <p className="text-zinc-400 text-xs uppercase tracking-widest mb-2">Email</p>
+                                    <a href="mailto:hello@ourpage.com" className="text-white hover:text-primary transition-colors font-medium">
+                                        hello@ourpage.com
+                                    </a>
+                                </div>
+                                <div>
+                                    <p className="text-zinc-400 text-xs uppercase tracking-widest mb-2">Response Time</p>
+                                    <p className="text-white font-medium">Within 24 hours</p>
                                 </div>
                             </div>
                         </div>

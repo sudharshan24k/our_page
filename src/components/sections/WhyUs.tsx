@@ -1,25 +1,136 @@
+"use client";
+
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
+import { motion, Variants } from "framer-motion";
+import { Users, Zap, Trophy, Target, Clock, TrendingUp } from "lucide-react";
+
+const reasons = [
+    {
+        icon: Users,
+        title: "Principal Talent",
+        description: "You work directly with the engineers and strategists building your system. No middlemen, no translation layers. The same team that builds stays to optimize.",
+        highlight: "Zero delegation"
+    },
+    {
+        icon: Zap,
+        title: "High-Complexity Specialists",
+        description: "We specialize in high-load, business-critical environments where failure costs money. Our infrastructure handles millions of transactions without breaking a sweat.",
+        highlight: "99.99% uptime"
+    },
+    {
+        icon: Trophy,
+        title: "Full Ownership",
+        description: "We don't hide behind contracts. We take full responsibility for outcomes—from architecture to deployment to ongoing optimization. Your success is our revenue.",
+        highlight: "Results-driven"
+    },
+    {
+        icon: Target,
+        title: "Conversion Obsession",
+        description: "Every pixel, every line of code is optimized for one goal: getting high-ticket prospects to book a call. We don't build vanity projects.",
+        highlight: "2-3x average improvement"
+    },
+    {
+        icon: Clock,
+        title: "Speed to Revenue",
+        description: "Most firms take 6+ months to see results. We operate in 60-90 day sprints. You see meaningful lead velocity improvements within the first quarter.",
+        highlight: "Rapid iteration"
+    },
+    {
+        icon: TrendingUp,
+        title: "Measurable Impact",
+        description: "Every engagement starts with a baseline. Every deliverable includes metrics. You always know exactly what your investment is generating in return.",
+        highlight: "Full transparency"
+    }
+];
+
+const containerVariants: Variants = {
+    visible: { transition: { staggerChildren: 0.08 } }
+};
+
+const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } }
+};
 
 export function WhyUs() {
     return (
-        <Section className="bg-background">
-            <Container>
-                <h2 className="text-3xl font-medium tracking-tight mb-20 text-balance">Why leading enterprises choose us</h2>
-                <div className="grid md:grid-cols-3 gap-x-12 gap-y-16">
-                    <div className="space-y-4 border-t border-border/40 pt-4">
-                        <h3 className="text-lg font-medium text-foreground">Principal Talent</h3>
-                        <p className="text-muted-foreground leading-relaxed text-[15px]">You work directly with the engineers building your system. No middlemen, no translation layers. Just pure execution.</p>
-                    </div>
-                    <div className="space-y-4 border-t border-border/40 pt-4">
-                        <h3 className="text-lg font-medium text-foreground">Complex Systems</h3>
-                        <p className="text-muted-foreground leading-relaxed text-[15px]">We specialize in high-load, business-critical environments where failure is not an option and precision is paramount.</p>
-                    </div>
-                    <div className="space-y-4 border-t border-border/40 pt-4">
-                        <h3 className="text-lg font-medium text-foreground">Ownership</h3>
-                        <p className="text-muted-foreground leading-relaxed text-[15px]">We take full responsibility for the technical outcome. From the first architectural diagram to the final production deployment.</p>
-                    </div>
+        <Section className="bg-transparent border-t border-white/5 py-24 md:py-32 relative overflow-hidden">
+            {/* Background elements */}
+            <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full pointer-events-none" />
+            <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-indigo-500/5 blur-[100px] rounded-full pointer-events-none" />
+
+            <Container className="relative z-10">
+                <div className="max-w-3xl mb-20 md:mb-24">
+                    <h2 className="text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tighter text-white mb-8">Why Enterprise Teams Choose Us</h2>
+                    <p className="text-xl md:text-2xl text-zinc-400 font-light leading-relaxed">
+                        We're not a typical digital agency. We're your growth infrastructure partners who think like your CFO and execute like your CTO.
+                    </p>
                 </div>
+
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-100px" }}
+                    variants={containerVariants}
+                    className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+                >
+                    {reasons.map((reason, i) => {
+                        const Icon = reason.icon;
+                        return (
+                            <motion.article
+                                key={i}
+                                variants={itemVariants}
+                                whileHover={{ y: -8, transition: { duration: 0.3 } }}
+                                className="group relative p-8 rounded-3xl border border-white/5 bg-[#0a0a0c] hover:border-white/10 transition-all duration-500 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.7)] flex flex-col overflow-hidden"
+                            >
+                                {/* Top Accent Glow on Hover */}
+                                <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary/0 to-transparent group-hover:via-primary/70 transition-all duration-700" />
+
+                                {/* Inner Glow */}
+                                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+
+                                <div className="relative z-10 flex flex-col h-full">
+                                    <div className="w-14 h-14 rounded-2xl bg-white/[0.02] border border-white/5 flex items-center justify-center group-hover:border-primary/20 group-hover:bg-primary/10 transition-all duration-500 mb-8 shadow-inner group-hover:scale-110">
+                                        <Icon className="w-7 h-7 text-zinc-400 group-hover:text-primary transition-colors duration-300 stroke-[1.5]" />
+                                    </div>
+
+                                    <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-primary transition-colors tracking-tight">{reason.title}</h3>
+
+                                    <p className="text-zinc-400 font-light leading-relaxed text-[15px] mb-8 flex-grow">
+                                        {reason.description}
+                                    </p>
+
+                                    <div className="flex items-center justify-between text-sm font-semibold text-primary pt-5 border-t border-white/5 mt-auto">
+                                        <span className="bg-primary/10 px-3 py-1 rounded-lg text-xs">{reason.highlight}</span>
+                                    </div>
+                                </div>
+                            </motion.article>
+                        );
+                    })}
+                </motion.div>
+
+                {/* Trust Metrics Row */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.3 }}
+                    className="grid grid-cols-3 gap-8 mt-24 pt-24 border-t border-white/5"
+                >
+                    <div className="text-center">
+                        <div className="text-4xl md:text-5xl font-bold text-primary mb-3">50+</div>
+                        <p className="text-zinc-400 font-light">High-ticket clients served</p>
+                    </div>
+                    <div className="text-center">
+                        <div className="text-4xl md:text-5xl font-bold text-primary mb-3">$200M+</div>
+                        <p className="text-zinc-400 font-light">In client pipeline generated</p>
+                    </div>
+                    <div className="text-center">
+                        <div className="text-4xl md:text-5xl font-bold text-primary mb-3">215%</div>
+                        <p className="text-zinc-400 font-light">Average lead velocity increase</p>
+                    </div>
+                </motion.div>
             </Container>
         </Section>
     );

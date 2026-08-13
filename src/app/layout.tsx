@@ -11,56 +11,79 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Edura Technologies USA",
-    default: "Edura Technologies | Top B2B Tech & Lead Generation Agency in the USA",
+    template: "%s | EduraTech",
+    default: "EduraTech | Custom AI & Software Development for US Small Businesses",
   },
-  description: "Edura Technologies is a premier B2B tech agency based in the United States, engineering high-conversion digital systems and lead generation strategies for enterprise firms across the USA.",
-  keywords: ["B2B Tech Agency USA", "Lead Generation United States", "Digital Systems", "Software Development USA", "Conversion Optimization America", "National Tech Agency"],
+  description: "Custom AI development, software solutions, and digital transformation for US small businesses. Transparent process, proven results. EduraTech specializes in AI, automation, and custom software development.",
+  keywords: ["custom software development", "AI development company", "SaaS development", "business automation", "web application development", "AI solutions", "cloud development"],
   openGraph: {
-    title: "Edura Technologies | Top B2B Tech Agency in the USA",
-    description: "Engineering high-conversion digital systems and lead generation strategies for enterprise firms across the United States.",
-    url: "https://eduratechnologies.com",
-    siteName: "Edura Technologies USA",
+    title: "EduraTech | Custom AI & Software Development",
+    description: "We build practical AI solutions and custom software that solve real business problems. No hype. Real results.",
+    url: "https://eduratech.com",
+    siteName: "EduraTech",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Edura Technologies | Top B2B Tech Agency in the USA",
-    description: "Engineering high-conversion digital systems for enterprise firms across the United States.",
+    title: "EduraTech | Custom AI & Software Development",
+    description: "Custom AI solutions and software development for US small businesses and startups.",
   },
   alternates: {
-    canonical: "https://eduratechnologies.com",
-  }
+    canonical: "https://eduratech.com",
+  },
+  robots: "index, follow",
+  verification: {
+    google: "add-your-google-verification-here",
+  },
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Edura Technologies",
-  "url": "https://eduratechnologies.com",
-  "logo": "https://eduratechnologies.com/logo.png",
-  "image": "https://eduratechnologies.com/office.jpg",
-  "description": "Edura Technologies is a premier B2B tech agency based in the United States, engineering high-conversion digital systems and lead generation strategies.",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "100 Market Street, Suite 400",
-    "addressLocality": "San Francisco",
-    "addressRegion": "CA",
-    "postalCode": "94105",
-    "addressCountry": "US"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 37.7936,
-    "longitude": -122.3962
-  },
-  "areaServed": {
-    "@type": "Country",
-    "name": "United States"
-  },
-  "telephone": "+1-415-555-0198",
-  "priceRange": "$$$"
+  "@type": "Organization",
+  "name": "EduraTech",
+  "url": "https://eduratech.com",
+  "logo": "https://eduratech.com/logo.png",
+  "description": "EduraTech is a technology division of Edura Global Solutions specializing in custom AI development, software solutions, and digital transformation for US small businesses.",
+  "areaServed": [
+    {
+      "@type": "Country",
+      "name": "United States"
+    },
+    {
+      "@type": "Country",
+      "name": "Canada"
+    },
+    {
+      "@type": "Country",
+      "name": "United Kingdom"
+    },
+    {
+      "@type": "Country",
+      "name": "Australia"
+    }
+  ],
+  "knowsAbout": [
+    "AI Development",
+    "Generative AI",
+    "Custom Software Development",
+    "SaaS Development",
+    "Web Application Development",
+    "Cloud Solutions",
+    "AWS Development",
+    "Azure Development",
+    "Business Automation",
+    "Digital Transformation"
+  ],
+  "sameAs": [
+    "https://linkedin.com/company/eduratech",
+    "https://twitter.com/eduratech"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Sales",
+    "url": "https://eduratech.com/contact"
+  }
 };
 
 export default function RootLayout({
