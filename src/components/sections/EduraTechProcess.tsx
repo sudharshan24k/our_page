@@ -188,59 +188,75 @@ export function EduraTechProcess() {
                 <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full pointer-events-none" />
 
                 <Container className="relative z-10">
-                    <motion.div
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, margin: "-100px" }}
-                        variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
-                        className="space-y-8"
-                    >
-                        {processSteps.map((step, i) => {
-                            const Icon = step.icon;
-                            return (
-                                <motion.div
-                                    key={i}
-                                    variants={itemVariants}
-                                    onClick={() => setSelectedStep(step)}
-                                    className="group cursor-pointer relative p-8 rounded-3xl border border-white/5 bg-[#0a0a0c] hover:border-primary/20 transition-all duration-500 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.7)] overflow-hidden"
-                                >
-                                    {/* Top Accent */}
-                                    <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary/0 to-transparent group-hover:via-primary/70 transition-all duration-700" />
+                    <div className="relative max-w-6xl mx-auto">
+                        {/* Central Animated Line */}
+                        <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/0 via-white/10 to-primary/0 md:-translate-x-1/2" />
+                        
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, margin: "-100px" }}
+                            variants={{ visible: { transition: { staggerChildren: 0.15 } } }}
+                        >
+                            {processSteps.map((step, i) => {
+                                const Icon = step.icon;
+                                const isEven = i % 2 === 0;
 
-                                    {/* Inner Glow */}
-                                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
-
-                                    <div className="relative z-10 flex items-start gap-8">
-                                        <div className="flex-shrink-0">
-                                            <div className="flex items-center justify-center">
-                                                <div className="w-20 h-20 rounded-2xl bg-white/[0.02] border border-white/5 flex items-center justify-center group-hover:border-primary/20 group-hover:bg-primary/10 transition-all duration-500 shadow-inner group-hover:scale-110">
-                                                    <Icon className="w-10 h-10 text-zinc-400 group-hover:text-primary transition-colors duration-300 stroke-[1.5]" />
-                                                </div>
-                                            </div>
+                                return (
+                                    <div key={i} className={`relative flex flex-col md:flex-row items-start md:items-center w-full mb-16 md:mb-32 last:mb-0 group ${isEven ? 'md:justify-start' : 'md:justify-end'}`}>
+                                        
+                                        {/* Timeline Node */}
+                                        <div className="absolute left-8 md:left-1/2 w-12 h-12 rounded-full bg-[#0a0a0c] border border-white/10 md:-translate-x-1/2 z-10 flex items-center justify-center mt-6 md:mt-0 group-hover:border-primary/50 group-hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-all duration-700">
+                                            <div className="w-4 h-4 rounded-full bg-white/5 border border-white/20 group-hover:bg-primary group-hover:border-primary transition-all duration-500 group-hover:scale-110 shadow-[inset_0_0_10px_rgba(0,0,0,0.5)]" />
                                         </div>
 
-                                        <div className="flex-1 min-w-0">
-                                            <div className="flex items-center gap-4 mb-4">
-                                                <span className="text-xl font-bold text-primary bg-primary/10 px-3 py-1 rounded-lg">
-                                                    Phase {step.id}
-                                                </span>
-                                            </div>
-                                            <h3 className="text-3xl font-semibold text-white mb-4 group-hover:text-primary transition-colors tracking-tight">
-                                                {step.title}
-                                            </h3>
-                                            <p className="text-zinc-400 font-light leading-relaxed text-[15px] mb-6">
-                                                {step.description}
-                                            </p>
-                                            <div className="flex items-center text-sm font-semibold text-zinc-400 group-hover:text-white transition-colors">
-                                                <Plus className="w-4 h-4 mr-2 group-hover:rotate-90 group-hover:text-primary transition-all duration-300" />
-                                                <span>View Deliverables</span>
-                                            </div>
+                                        {/* Content Card Wrapper */}
+                                        <div className={`w-full md:w-[45%] pl-24 md:pl-0 mt-2 md:mt-0 ${isEven ? 'md:pr-16 md:text-right' : 'md:pl-16 md:text-left'}`}>
+                                            <motion.div
+                                                variants={{
+                                                    hidden: { opacity: 0, x: isEven ? -40 : 40 },
+                                                    visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] } }
+                                                }}
+                                                onClick={() => setSelectedStep(step)}
+                                                className="relative p-8 md:p-10 rounded-3xl bg-white/[0.02] border border-white/[0.05] hover:border-primary/30 transition-all duration-700 hover:-translate-y-2 backdrop-blur-xl cursor-pointer overflow-hidden group/card text-left"
+                                            >
+                                                {/* Ambient Background Glow */}
+                                                <div className="absolute -inset-px rounded-3xl opacity-0 group-hover/card:opacity-100 transition-opacity duration-1000 z-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent blur-2xl" />
+                                                
+                                                {/* Top Accent Line */}
+                                                <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover/card:via-primary/70 transition-all duration-700 z-10" />
+
+                                                <div className="relative z-20">
+                                                    <div className={`flex items-center gap-6 mb-6 ${isEven ? 'md:flex-row-reverse' : ''}`}>
+                                                        <div className="w-16 h-16 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center flex-shrink-0 group-hover/card:bg-primary/20 group-hover/card:border-primary/40 transition-all duration-500 shadow-inner group-hover/card:scale-110 relative overflow-hidden">
+                                                            <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover/card:opacity-100 blur-xl transition-opacity duration-500" />
+                                                            <Icon className="w-8 h-8 text-zinc-400 group-hover/card:text-primary transition-colors duration-300 stroke-[1.5] relative z-10" />
+                                                        </div>
+                                                        <div>
+                                                            <span className="text-sm font-bold text-primary tracking-widest uppercase mb-1 block">Phase {step.id}</span>
+                                                            <h3 className="text-2xl md:text-3xl font-medium text-white group-hover/card:text-primary transition-colors tracking-tight">
+                                                                {step.title}
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+
+                                                    <p className={`text-zinc-400 font-light leading-relaxed text-base md:text-lg mb-8 ${isEven ? 'md:text-right' : 'md:text-left'}`}>
+                                                        {step.description}
+                                                    </p>
+
+                                                    <div className={`flex items-center text-sm font-medium text-zinc-400 group-hover/card:text-white transition-colors ${isEven ? 'md:justify-end' : 'md:justify-start'}`}>
+                                                        {!isEven && <Plus className="w-4 h-4 mr-2 group-hover/card:rotate-90 group-hover/card:text-primary transition-all duration-300" />}
+                                                        <span>View Deliverables</span>
+                                                        {isEven && <Plus className="w-4 h-4 ml-2 group-hover/card:rotate-90 group-hover/card:text-primary transition-all duration-300" />}
+                                                    </div>
+                                                </div>
+                                            </motion.div>
                                         </div>
                                     </div>
-                                </motion.div>
-                            );
-                        })}
-                    </motion.div>
+                                );
+                            })}
+                        </motion.div>
+                    </div>
                 </Container>
             </Section>
 
