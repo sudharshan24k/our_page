@@ -41,8 +41,9 @@ export function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
                                 </Link>
                             </motion.div>
                             <button
+                                aria-label="Close mobile menu"
                                 onClick={onClose}
-                                className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors tracking-widest uppercase"
+                                className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors tracking-widest uppercase p-2 -mr-2"
                             >
                                 <X className="w-6 h-6" />
                                 CLOSE
@@ -79,7 +80,7 @@ export function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
                             </div>
                             <div className="flex gap-8">
                                 {["Twitter", "LinkedIn", "Clutch"].map((platform) => (
-                                    <Link key={platform} href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+                                    <Link key={platform} href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors p-2 -ml-2 first:ml-0">
                                         {platform}
                                     </Link>
                                 ))}

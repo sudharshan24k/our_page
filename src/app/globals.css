@@ -107,3 +107,77 @@ body {
     transform: translateY(0);
   }
 }
+
+/* Premium Prose Typography for Modals */
+.prose {
+  color: var(--muted-foreground);
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.prose p {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p:first-child {
+  margin-top: 0;
+}
+
+.prose h4 {
+  color: var(--foreground);
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  letter-spacing: -0.02em;
+}
+
+.prose strong {
+  color: #e4e4e7;
+  font-weight: 600;
+}
+
+/* Stylish label prefix for "The Business Problem:" */
+.prose p > strong:first-child {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1.25rem;
+  list-style-type: none;
+}
+
+.prose li {
+  position: relative;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 0.75rem;
+}
+
+/* Glowing Accent Bullets */
+.prose li::before {
+  content: "";
+  position: absolute;
+  left: -0.75rem;
+  top: 0.65em;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  box-shadow: 0 0 10px 1px rgba(59, 130, 246, 0.5);
+}
+
+.prose li > strong:first-child {
+  color: var(--foreground);
+  margin-right: 0.25rem;
+}

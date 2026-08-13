@@ -3,7 +3,7 @@
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { motion } from "framer-motion";
-import { ArrowUpRight, BarChart3, TrendingUp, Users, Zap, Clock, ShieldCheck, Globe, Building2, Plus } from "lucide-react";
+import { ArrowUpRight, BarChart3, TrendingUp, Users, Zap, Clock, ShieldCheck, Globe, Building2 } from "lucide-react";
 import { useState } from "react";
 import { ContentModal } from "@/components/ui/ContentModal";
 
@@ -188,7 +188,7 @@ const caseStudies = [
     }
 ];
 
-export function CaseStudies() {
+export function CaseStudies({ isMainHeading = false }: { isMainHeading?: boolean }) {
     const [selectedStudy, setSelectedStudy] = useState<typeof caseStudies[0] | null>(null);
 
     return (
@@ -199,10 +199,17 @@ export function CaseStudies() {
 
             <Container className="relative z-10">
                 <div className="max-w-3xl mb-16">
-                    <h2 className="text-4xl md:text-5xl font-semibold tracking-tighter text-white mb-6">
-                        Proven impact.<br />
-                        <span className="text-zinc-500">Zero compromises.</span>
-                    </h2>
+                    {isMainHeading ? (
+                        <h1 className="text-4xl md:text-5xl font-semibold tracking-tighter text-white mb-6">
+                            Proven impact.<br />
+                            <span className="text-zinc-500">Zero compromises.</span>
+                        </h1>
+                    ) : (
+                        <h2 className="text-4xl md:text-5xl font-semibold tracking-tighter text-white mb-6">
+                            Proven impact.<br />
+                            <span className="text-zinc-500">Zero compromises.</span>
+                        </h2>
+                    )}
                     <p className="text-lg md:text-xl font-light text-zinc-400">
                         We partner with industry leaders to engineer systems that drive measurable growth. Here is a look at what we've achieved together.
                     </p>
@@ -212,45 +219,55 @@ export function CaseStudies() {
                     {caseStudies.map((study, index) => {
                         const Icon = study.icon;
                         return (
-                            <motion.div 
+                            <motion.article 
                                 key={study.id}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                                 onClick={() => setSelectedStudy(study)}
-                                className="group cursor-pointer relative bg-white/[0.02] border border-white/10 hover:border-primary/30 rounded-2xl p-6 transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.1)] flex flex-col h-full"
+                                className="group cursor-pointer relative bg-[#0a0a0c] border border-white/5 hover:border-white/10 rounded-3xl p-7 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.7)] flex flex-col h-full overflow-hidden"
                             >
-                                <div className="flex justify-between items-start mb-6">
-                                    <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 group-hover:text-primary transition-colors">
-                                        <Icon className="w-5 h-5" />
-                                    </div>
-                                    <div className="text-right">
-                                        <div className="text-2xl font-bold text-white tracking-tight">{study.metric}</div>
-                                        <div className="text-xs font-medium text-primary uppercase tracking-wider">{study.metricLabel}</div>
-                                    </div>
-                                </div>
+                                {/* Top Accent Glow on Hover */}
+                                <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary/0 to-transparent group-hover:via-primary/70 transition-all duration-700" />
                                 
-                                <h3 className="text-lg font-semibold text-white mb-4 group-hover:text-primary transition-colors">
-                                    {study.client}
-                                </h3>
-                                
-                                <div className="space-y-4 flex-grow mb-6">
-                                    <div>
-                                        <span className="text-xs font-medium text-zinc-500 uppercase tracking-wider block mb-1">Challenge</span>
-                                        <p className="text-sm text-zinc-400 leading-relaxed line-clamp-2">{study.challenge}</p>
-                                    </div>
-                                    <div>
-                                        <span className="text-xs font-medium text-zinc-500 uppercase tracking-wider block mb-1">Impact</span>
-                                        <p className="text-sm text-zinc-300 leading-relaxed font-medium line-clamp-2">{study.impact}</p>
-                                    </div>
-                                </div>
+                                {/* Inner Radial Gradient on Hover */}
+                                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
-                                <div className="flex items-center text-sm font-medium text-zinc-400 group-hover:text-primary transition-colors mt-auto pt-4 border-t border-white/5">
-                                    <Plus className="w-4 h-4 mr-2 group-hover:rotate-90 transition-transform duration-300" />
-                                    <span>Read Full Case Study</span>
+                                <div className="relative z-10 flex flex-col h-full">
+                                    <div className="flex justify-between items-start mb-8">
+                                        <div className="w-12 h-12 rounded-2xl bg-white/[0.02] border border-white/5 flex items-center justify-center text-zinc-400 group-hover:text-primary group-hover:bg-primary/10 group-hover:border-primary/20 transition-all duration-500 shadow-inner group-hover:scale-110">
+                                            <Icon className="w-6 h-6 stroke-[1.5]" />
+                                        </div>
+                                        <div className="text-right flex flex-col items-end">
+                                            <div className="text-2xl md:text-3xl font-bold text-white tracking-tight leading-none mb-1.5">{study.metric}</div>
+                                            <div className="text-[10px] font-bold text-primary uppercase tracking-widest">{study.metricLabel}</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <h3 className="text-xl md:text-2xl font-semibold text-white mb-6 group-hover:text-primary transition-colors duration-300 tracking-tight">
+                                        {study.client}
+                                    </h3>
+                                    
+                                    <div className="space-y-5 flex-grow mb-8">
+                                        <div>
+                                            <div className="inline-block px-2.5 py-1 bg-white/5 rounded-md text-[10px] font-bold text-zinc-400 uppercase tracking-widest mb-2 border border-white/5">Challenge</div>
+                                            <p className="text-sm text-zinc-400 leading-relaxed line-clamp-2">{study.challenge}</p>
+                                        </div>
+                                        <div>
+                                            <div className="inline-block px-2.5 py-1 bg-primary/10 rounded-md text-[10px] font-bold text-primary uppercase tracking-widest mb-2 border border-primary/20">Impact</div>
+                                            <p className="text-sm text-zinc-200 leading-relaxed font-medium line-clamp-2">{study.impact}</p>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex items-center justify-between text-sm font-semibold text-zinc-400 group-hover:text-white transition-colors mt-auto pt-5 border-t border-white/5">
+                                        <span className="group-hover:translate-x-1 transition-transform duration-300">Read Full Case Study</span>
+                                        <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-300 group-hover:rotate-45 group-hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]">
+                                            <ArrowUpRight className="w-4 h-4" />
+                                        </div>
+                                    </div>
                                 </div>
-                            </motion.div>
+                            </motion.article>
                         );
                     })}
                 </div>

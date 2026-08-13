@@ -16,19 +16,19 @@ export function Footer() {
                     </div>
 
                     <div className="flex flex-col items-center gap-4">
-                        <div className="flex items-center gap-8">
-                            <Link href="/services" className="hover:text-white transition-colors">Services</Link>
-                            <Link href="/case-studies" className="hover:text-white transition-colors">Work</Link>
-                            <Link href="/values" className="hover:text-white transition-colors">About</Link>
+                        <div className="flex items-center gap-4 md:gap-8 flex-wrap">
+                            <Link href="/services" className="hover:text-white transition-colors p-2 -ml-2">Services</Link>
+                            <Link href="/case-studies" className="hover:text-white transition-colors p-2">Work</Link>
+                            <Link href="/values" className="hover:text-white transition-colors p-2">About</Link>
                         </div>
                         <div className="text-zinc-600">
                             &copy; {year} Edura Technologies USA. All rights reserved.
                         </div>
                     </div>
 
-                    <div className="flex flex-col gap-2 md:items-end">
-                        <Link href="/contact" className="hover:text-white transition-colors">Contact Us</Link>
-                        <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
+                    <div className="flex flex-col md:items-end">
+                        <Link href="/contact" className="hover:text-white transition-colors p-2 -mr-2">Contact Us</Link>
+                        <Link href="#" className="hover:text-white transition-colors p-2 -mr-2">Privacy Policy</Link>
                     </div>
 
                 </div>

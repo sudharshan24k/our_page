@@ -3,11 +3,10 @@
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import {
-    Briefcase, Workflow, Code, Smartphone, Globe, Monitor,
+    Workflow, Smartphone, Globe,
     Layout, ShieldCheck, Zap
 } from "lucide-react";
-import Link from "next/link";
-import { ArrowRight, Plus } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { motion, Variants } from "framer-motion";
 import { useState } from "react";
 import { ContentModal } from "@/components/ui/ContentModal";
@@ -128,7 +127,7 @@ const itemVariants: Variants = {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } }
 };
 
-export function Services() {
+export function Services({ isMainHeading = false }: { isMainHeading?: boolean }) {
     const [selectedService, setSelectedService] = useState<typeof services[0] | null>(null);
 
     return (
@@ -138,7 +137,11 @@ export function Services() {
 
             <Container className="relative z-10">
                 <div className="mb-20 md:mb-24">
-                    <h2 className="text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tighter text-white mb-8">How We Scale Your Operations</h2>
+                    {isMainHeading ? (
+                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tighter text-white mb-8">How We Scale Your Operations</h1>
+                    ) : (
+                        <h2 className="text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tighter text-white mb-8">How We Scale Your Operations</h2>
+                    )}
                     <p className="text-xl md:text-2xl text-zinc-400 font-light leading-relaxed max-w-3xl tracking-tight">
                         We don't just build websites. We engineer end-to-end digital sales systems that predictably acquire high-ticket clients for your firm.
                     </p>
@@ -152,33 +155,38 @@ export function Services() {
                     className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
                 >
                     {services.map((service, i) => (
-                        <motion.div
+                        <motion.article
                             key={i}
                             variants={itemVariants}
-                            whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                            whileHover={{ y: -8, transition: { duration: 0.3 } }}
                             onClick={() => setSelectedService(service)}
-                            className="group cursor-pointer relative p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 hover:border-white/20 transition-all duration-300 flex flex-col overflow-hidden shadow-2xl"
+                            className="group cursor-pointer relative p-8 rounded-3xl border border-white/5 bg-[#0a0a0c] hover:border-white/10 transition-all duration-500 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.7)] flex flex-col overflow-hidden"
                         >
+                            {/* Top Accent Glow on Hover */}
+                            <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary/0 to-transparent group-hover:via-primary/70 transition-all duration-700" />
+                            
                             {/* Inner Glow */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
                             <div className="relative z-10 flex flex-col h-full">
-                                <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-primary/50 group-hover:bg-primary/10 transition-colors mb-8 shadow-inner">
-                                    <service.icon className="w-7 h-7 text-zinc-400 group-hover:text-primary transition-colors duration-300" />
+                                <div className="w-14 h-14 rounded-2xl bg-white/[0.02] border border-white/5 flex items-center justify-center group-hover:border-primary/20 group-hover:bg-primary/10 transition-all duration-500 mb-8 shadow-inner group-hover:scale-110">
+                                    <service.icon className="w-7 h-7 text-zinc-400 group-hover:text-primary transition-colors duration-300 stroke-[1.5]" />
                                 </div>
 
-                                <h3 className="text-2xl font-medium text-white mb-4 group-hover:text-primary transition-colors">{service.title}</h3>
+                                <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-primary transition-colors tracking-tight">{service.title}</h3>
 
                                 <p className="text-zinc-400 font-light leading-relaxed text-[15px] mb-8 flex-grow">
                                     {service.description}
                                 </p>
 
-                                <div className="flex items-center text-sm font-medium text-zinc-300 group-hover:text-primary transition-colors mt-auto pt-4 border-t border-white/5">
-                                    <Plus className="w-4 h-4 mr-2 group-hover:rotate-90 transition-transform duration-300" />
-                                    <span>Read Full Strategy</span>
+                                <div className="flex items-center justify-between text-sm font-semibold text-zinc-400 group-hover:text-white transition-colors mt-auto pt-5 border-t border-white/5">
+                                    <span className="group-hover:translate-x-1 transition-transform duration-300">Read Full Strategy</span>
+                                    <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-300 group-hover:rotate-45 group-hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]">
+                                        <ArrowRight className="w-4 h-4" />
+                                    </div>
                                 </div>
                             </div>
-                        </motion.div>
+                        </motion.article>
                     ))}
                 </motion.div>
             </Container>

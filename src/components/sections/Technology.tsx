@@ -65,24 +65,27 @@ export function Technology() {
                                 hidden: { opacity: 0, scale: 0.95 },
                                 visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } }
                             }}
-                             className="group relative p-8 rounded-xl border border-border bg-muted/20 hover:bg-muted/40 hover:border-primary/50 transition-all duration-300 overflow-hidden"
+                             className="group relative p-8 rounded-3xl border border-white/5 bg-[#0a0a0c] hover:border-white/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.7)] flex flex-col overflow-hidden"
                          >
-                             {/* Ambient Glow */}
-                             <div className="absolute inset-0 bg-[radial-gradient(600px_circle_at_center,theme(colors.primary.DEFAULT/0.03),transparent_40%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                             {/* Top Accent Glow on Hover */}
+                             <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary/0 to-transparent group-hover:via-primary/70 transition-all duration-700" />
+                             
+                             {/* Inner Radial Gradient on Hover */}
+                             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
  
-                             <div className="relative z-10">
-                                 <div className="flex items-center gap-3 mb-6">
-                                     <div className="p-2 rounded-lg bg-muted border border-border group-hover:border-primary/50 transition-colors">
-                                         <group.icon className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                             <div className="relative z-10 flex flex-col h-full">
+                                 <div className="flex items-center gap-4 mb-8">
+                                     <div className="p-3 rounded-2xl bg-white/[0.02] border border-white/5 flex items-center justify-center text-zinc-400 group-hover:text-primary group-hover:bg-primary/10 group-hover:border-primary/20 transition-all duration-500 shadow-inner group-hover:scale-110">
+                                         <group.icon className="w-6 h-6 stroke-[1.5]" />
                                      </div>
-                                     <h3 className="text-lg font-medium text-foreground group-hover:text-primary transition-colors">{group.category}</h3>
+                                     <h3 className="text-xl font-medium text-white group-hover:text-primary transition-colors tracking-tight">{group.category}</h3>
                                  </div>
  
                                  <div className="flex flex-wrap gap-2">
                                      {group.items.map((item, idx) => (
                                          <span
                                              key={idx}
-                                             className="px-3 py-1.5 text-xs font-medium rounded-full bg-muted/50 border border-border text-muted-foreground group-hover:border-primary/30 group-hover:text-foreground transition-all hover:bg-muted hover:text-foreground cursor-default"
+                                             className="px-3.5 py-1.5 text-xs font-semibold rounded-full bg-white/5 border border-white/5 text-zinc-400 group-hover:border-primary/30 group-hover:text-primary group-hover:bg-primary/10 transition-all duration-300 hover:scale-105 cursor-default shadow-sm"
                                          >
                                             {item}
                                         </span>

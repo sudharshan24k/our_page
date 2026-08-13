@@ -108,9 +108,11 @@ export function HowWeWork() {
                     variants={{
                         visible: { transition: { staggerChildren: 0.2 } }
                     }}
-                    className="hidden md:block relative"
+                    className="hidden md:block relative mt-24"
                 >
-                    <div className="absolute top-[28px] left-0 right-0 h-[1px] bg-border" />
+                    {/* The glowing timeline connector */}
+                    <div className="absolute top-[28px] left-0 right-0 h-[2px] bg-gradient-to-r from-primary/5 via-primary/40 to-primary/5" />
+                    
                     <div className="grid grid-cols-4 gap-8 relative">
                         {phases.map((phase, i) => (
                             <motion.div
@@ -119,19 +121,25 @@ export function HowWeWork() {
                                 className="group relative cursor-pointer"
                                 onClick={() => setSelectedPhase(phase)}
                             >
-                                <div className="absolute top-[16px] left-0 w-4 h-4 rounded-full bg-background border border-muted-foreground group-hover:border-primary group-hover:scale-110 transition-all duration-300 z-10" />
-                                <div className="pt-12 h-full flex flex-col">
-                                    <phase.icon className="w-8 h-8 text-muted-foreground mb-4 group-hover:text-primary transition-colors duration-300" />
-                                    <span className="text-[13px] font-bold text-muted-foreground uppercase tracking-[0.2em] block mb-2 group-hover:text-primary transition-colors">
+                                {/* Glowing node */}
+                                <div className="absolute top-[18px] left-0 w-6 h-6 rounded-full bg-[#0a0a0c] border-[2px] border-primary/30 group-hover:border-primary group-hover:bg-primary/20 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.7)] group-hover:scale-125 transition-all duration-500 z-10 flex items-center justify-center">
+                                    <div className="w-2 h-2 rounded-full bg-primary/50 group-hover:bg-primary transition-colors" />
+                                </div>
+
+                                <div className="pt-16 h-full flex flex-col">
+                                    <div className="mb-6 p-3 w-fit rounded-2xl bg-white/[0.02] border border-white/5 group-hover:border-primary/20 group-hover:bg-primary/10 transition-all duration-500 shadow-inner group-hover:scale-110">
+                                        <phase.icon className="w-6 h-6 text-zinc-400 group-hover:text-primary transition-colors duration-300 stroke-[1.5]" />
+                                    </div>
+                                    <span className="text-[11px] font-bold text-primary uppercase tracking-[0.2em] block mb-3">
                                         Phase {phase.id}
                                     </span>
-                                    <h3 className="text-xl font-medium text-foreground mb-3 group-hover:text-primary transition-colors">{phase.title}</h3>
-                                    <p className="text-muted-foreground font-light text-[15px] leading-relaxed group-hover:text-foreground transition-colors max-w-xs flex-grow mb-4">
+                                    <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-primary transition-colors tracking-tight">{phase.title}</h3>
+                                    <p className="text-zinc-400 font-light text-[15px] leading-relaxed flex-grow mb-8">
                                         {phase.description}
                                     </p>
                                     
-                                    <div className="flex items-center text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors mt-auto pt-2">
-                                        <Plus className="w-4 h-4 mr-2 group-hover:rotate-90 transition-transform duration-300" />
+                                    <div className="flex items-center text-sm font-semibold text-zinc-400 group-hover:text-white transition-colors mt-auto pt-5">
+                                        <Plus className="w-4 h-4 mr-2 group-hover:rotate-90 group-hover:text-primary transition-all duration-300" />
                                         <span>Read Methodology</span>
                                     </div>
                                 </div>
@@ -141,24 +149,30 @@ export function HowWeWork() {
                 </motion.div>
 
                 {/* Mobile View (Stacked with Line) */}
-                <div className="md:hidden space-y-12 relative border-l border-border ml-4 pl-10">
+                <div className="md:hidden space-y-16 relative border-l-2 border-primary/20 ml-4 pl-10 mt-16">
                     {phases.map((phase, i) => (
                         <div 
                             key={i} 
                             className="relative group cursor-pointer"
                             onClick={() => setSelectedPhase(phase)}
                         >
-                            <div className="absolute top-2 -left-[45px] w-3 h-3 rounded-full bg-background border border-muted-foreground" />
+                            {/* Glowing Node */}
+                            <div className="absolute top-2 -left-[49px] w-5 h-5 rounded-full bg-[#0a0a0c] border-[2px] border-primary/30 group-hover:border-primary group-hover:bg-primary/20 group-hover:shadow-[0_0_15px_rgba(59,130,246,0.6)] transition-all flex items-center justify-center">
+                                <div className="w-1.5 h-1.5 rounded-full bg-primary/50 group-hover:bg-primary transition-colors" />
+                            </div>
+                            
                             <div className="relative text-foreground">
-                                <phase.icon className="w-8 h-8 text-muted-foreground mb-3" />
-                                <span className="text-xs font-bold text-muted-foreground uppercase tracking-widest block">Phase {phase.id}</span>
-                                <h3 className="text-xl font-medium mb-3">{phase.title}</h3>
-                                <p className="text-muted-foreground font-light text-[15px] leading-relaxed mb-4">
+                                <div className="mb-6 p-3 w-fit rounded-2xl bg-white/[0.02] border border-white/5 group-hover:border-primary/20 group-hover:bg-primary/10 transition-all duration-500 shadow-inner">
+                                    <phase.icon className="w-6 h-6 text-zinc-400 group-hover:text-primary transition-colors duration-300 stroke-[1.5]" />
+                                </div>
+                                <span className="text-[11px] font-bold text-primary uppercase tracking-widest block mb-2">Phase {phase.id}</span>
+                                <h3 className="text-2xl font-semibold text-white mb-4 tracking-tight">{phase.title}</h3>
+                                <p className="text-zinc-400 font-light text-[15px] leading-relaxed mb-6">
                                     {phase.description}
                                 </p>
                                 
-                                <div className="flex items-center text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors">
-                                    <Plus className="w-4 h-4 mr-2 group-hover:rotate-90 transition-transform duration-300" />
+                                <div className="flex items-center text-sm font-semibold text-zinc-400 group-hover:text-white transition-colors">
+                                    <Plus className="w-4 h-4 mr-2 group-hover:rotate-90 group-hover:text-primary transition-all duration-300" />
                                     <span>Read Methodology</span>
                                 </div>
                             </div>

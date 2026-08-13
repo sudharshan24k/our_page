@@ -120,23 +120,33 @@ export function Values() {
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.1, duration: 0.5 }}
                             onClick={() => setSelectedValue(item)}
-                            className="group cursor-pointer relative p-8 rounded-2xl border border-border bg-muted/20 hover:bg-muted/40 transition-all duration-300 flex flex-col h-full"
+                            className="group cursor-pointer relative p-8 rounded-3xl border border-white/5 bg-[#0a0a0c] hover:border-white/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.7)] flex flex-col h-full overflow-hidden"
                         >
-                            <div className="mb-6 p-3 w-fit rounded-xl bg-muted border border-border group-hover:border-primary/50 transition-colors">
-                                <item.icon className="w-6 h-6 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
-                            </div>
+                            {/* Top Accent Glow on Hover */}
+                            <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary/0 to-transparent group-hover:via-primary/70 transition-all duration-700" />
+                            
+                            {/* Inner Radial Gradient on Hover */}
+                            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
-                            <h3 className="text-xl font-medium text-foreground mb-4 group-hover:text-primary transition-colors">
-                                {item.title}
-                            </h3>
+                            <div className="relative z-10 flex flex-col h-full">
+                                <div className="mb-8 p-3 w-fit rounded-2xl bg-white/[0.02] border border-white/5 group-hover:border-primary/20 group-hover:bg-primary/10 transition-all duration-500 shadow-inner group-hover:scale-110">
+                                    <item.icon className="w-6 h-6 text-zinc-400 group-hover:text-primary transition-colors duration-300 stroke-[1.5]" />
+                                </div>
 
-                            <p className="text-muted-foreground font-light leading-relaxed text-sm group-hover:text-foreground transition-colors flex-grow mb-6">
-                                {item.description}
-                            </p>
+                                <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-primary transition-colors tracking-tight">
+                                    {item.title}
+                                </h3>
 
-                            <div className="flex items-center text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors mt-auto">
-                                <Plus className="w-4 h-4 mr-2 group-hover:rotate-90 transition-transform duration-300" />
-                                <span>Learn More</span>
+                                <p className="text-zinc-400 font-light leading-relaxed text-[15px] flex-grow mb-8">
+                                    {item.description}
+                                </p>
+
+                                <div className="flex items-center justify-between text-sm font-semibold text-zinc-400 group-hover:text-white transition-colors mt-auto pt-5 border-t border-white/5">
+                                    <span className="group-hover:translate-x-1 transition-transform duration-300">Learn More</span>
+                                    <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-300 group-hover:rotate-45 group-hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]">
+                                        <Plus className="w-4 h-4" />
+                                    </div>
+                                </div>
                             </div>
                         </motion.div>
                     ))}

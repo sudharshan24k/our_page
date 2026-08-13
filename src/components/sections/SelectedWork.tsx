@@ -2,8 +2,6 @@
 
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
-import { ArrowRight } from "lucide-react";
-import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 const projects = [

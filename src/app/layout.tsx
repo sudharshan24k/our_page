@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { SmoothScroll } from "@/components/providers/SmoothScroll";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -73,6 +74,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <Script 
+          src="https://cdn-in.pagesense.io/js/eduratechnologies/4b485abf4fd1470b97e7ca5f0eae8283.js" 
+          strategy="afterInteractive" 
         />
       </head>
       <body className={cn(inter.className, "bg-background text-foreground min-h-screen antialiased relative")}>
