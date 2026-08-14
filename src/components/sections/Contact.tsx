@@ -56,9 +56,20 @@ export function Contact({ isPage = false }: { isPage?: boolean }) {
                     <div className="space-y-10">
                         <div>
                             <HeadingTag className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tighter text-white mb-6">Ready to scale?</HeadingTag>
-                            <p className="text-lg md:text-xl font-light text-zinc-400">
+                            <p className="text-lg md:text-xl font-light text-zinc-400 mb-6">
                                 Leave your details below and we&apos;ll reach out within 24 hours to schedule your free strategy audit.
                             </p>
+                            <div className="space-y-4 text-zinc-500 font-light text-sm md:text-base leading-relaxed">
+                                <p>
+                                    Our free business strategy audit is a comprehensive, 30-minute evaluation of your current digital infrastructure. We analyze your customer acquisition pipelines, identify high-friction bottlenecks in your sales funnel, and pinpoint exactly where your competitors are outperforming you.
+                                </p>
+                                <p>
+                                    Rather than proposing generic templates, our senior engineering team reviews your backend workflows to identify automation opportunities. You will walk away with a clear, actionable roadmap detailing exactly how custom software and practical AI integrations can optimize your operations and increase your profit margins.
+                                </p>
+                                <p>
+                                    Whether you choose to build with us or implement the roadmap independently, this session provides immediate, zero-risk value to help you make informed technology investments for the coming year.
+                                </p>
+                            </div>
                         </div>
 
                         {isSubmitted ? (
