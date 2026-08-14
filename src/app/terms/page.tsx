@@ -23,6 +23,7 @@ export default function TermsPage() {
                   Terms of Service
                 </h1>
                 <p className="text-zinc-400 text-sm font-mono">Last Updated: August 14, 2026</p>
+                <p className="text-zinc-500 text-sm mt-4 font-medium italic">Edura Technologies is a wing of Edura Global Solutions (<a href="https://eduraglobal.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">eduraglobal.com</a>).</p>
               </div>
 
               <div className="space-y-8 text-zinc-300 leading-relaxed font-light">
