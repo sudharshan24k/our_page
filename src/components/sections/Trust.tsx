@@ -12,7 +12,7 @@ const trustItems = [
 
 export function WhyClientsTrustUs() {
     return (
-        <Section className="bg-background text-foreground border-t border-border py-24 md:py-32">
+        <Section className="bg-background text-foreground border-t border-primary/20 py-24 md:py-32">
             <Container>
                 <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
                     <div className="flex-1 lg:max-w-[45%]">
@@ -22,12 +22,12 @@ export function WhyClientsTrustUs() {
                         </p>
                     </div>
                     <div className="flex-1 flex flex-col justify-center">
-                        <div className="bg-muted/30 border border-border p-8 md:p-10 lg:p-12">
+                        <div className="bg-[#0a0a0c] border border-primary/20 p-8 md:p-10 lg:p-12 hover:border-primary/40 hover:shadow-[0_20px_40px_-15px_rgba(59,130,246,0.15)] transition-all duration-500 rounded-3xl">
                             <ul className="space-y-6">
                                 {trustItems.map((item, i) => (
                                     <li key={i} className="flex gap-4 items-start">
-                                        <div className="mt-1 w-5 h-5 rounded-full bg-foreground/10 flex items-center justify-center flex-shrink-0">
-                                            <Check className="w-3 h-3 text-foreground" />
+                                        <div className="mt-1 w-5 h-5 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0">
+                                            <Check className="w-3 h-3 text-primary" />
                                         </div>
                                         <span className="text-foreground font-light leading-relaxed text-[15px]">{item}</span>
                                     </li>

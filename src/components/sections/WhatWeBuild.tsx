@@ -12,7 +12,7 @@ const capabilities = [
 
 export function WhatWeBuild() {
     return (
-        <Section className="bg-background text-foreground border-t border-border py-24 md:py-32">
+        <Section className="bg-background text-foreground border-t border-primary/20 py-24 md:py-32">
             <Container>
                 <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
                     <div className="flex-1 lg:max-w-[45%]">
@@ -26,7 +26,7 @@ export function WhatWeBuild() {
                         <ul className="grid sm:grid-cols-2 gap-y-6 gap-x-12">
                             {capabilities.map((item, i) => (
                                 <li key={i} className="flex items-start gap-4 group">
-                                    <Check className="w-5 h-5 text-primary/60 group-hover:text-primary transition-colors mt-1 shrink-0" />
+                                    <Check className="w-5 h-5 text-primary transition-colors mt-1 shrink-0" />
                                     <span className="text-lg font-light text-foreground/80 leading-relaxed">{item}</span>
                                 </li>
                             ))}

@@ -40,7 +40,7 @@ export function Focus() {
     ];
 
     return (
-        <Section className="bg-background text-foreground py-24 md:py-32 flex flex-col justify-center border-t border-border">
+        <Section className="bg-background text-foreground py-24 md:py-32 flex flex-col justify-center border-t border-primary/20">
             <Container>
 
                 {/* Section Title */}
@@ -71,16 +71,16 @@ export function Focus() {
                             className={`group space-y-6 md:col-span-2 ${i === 3 ? 'md:col-start-2' : ''}`}
                         >
                             <div className="flex items-center gap-4 mb-2">
-                                <span className="text-xs font-mono text-zinc-600 group-hover:text-blue-500 transition-colors uppercase tracking-widest border border-zinc-800 rounded-full px-3 py-1 bg-zinc-900/50">
+                                <span className="text-xs font-mono text-primary/60 group-hover:text-primary transition-colors uppercase tracking-widest border border-primary/20 rounded-full px-3 py-1 bg-primary/5">
                                     Principle {principle.number}
                                 </span>
                             </div>
 
-                            <principle.icon className="w-8 h-8 text-zinc-500 group-hover:text-white transition-colors" />
+                            <principle.icon className="w-8 h-8 text-primary transition-colors" />
 
                             <div className="space-y-4">
-                                <h3 className="text-2xl font-medium text-white group-hover:text-blue-100 transition-colors">{principle.title}</h3>
-                                <p className="text-zinc-400 font-light leading-relaxed text-[15px] group-hover:text-zinc-300 transition-colors border-l border-zinc-800 pl-4 group-hover:border-zinc-700">
+                                <h3 className="text-2xl font-medium text-white group-hover:text-primary transition-colors">{principle.title}</h3>
+                                <p className="text-zinc-400 font-light leading-relaxed text-[15px] group-hover:text-zinc-300 transition-colors border-l border-primary/20 pl-4 group-hover:border-primary/40">
                                     {principle.description}
                                 </p>
                             </div>

@@ -7,39 +7,83 @@ export function Footer() {
     const year = new Date().getFullYear();
 
     return (
-        <footer className="bg-[#0a0a0a] border-t border-white/5 py-12 text-zinc-500 text-sm">
-            <Container>
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 md:gap-6">
+        <footer className="bg-[#050505] border-t border-primary/20 pt-16 pb-8 text-zinc-500 text-sm relative overflow-hidden">
+            {/* Subtle background glow */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-primary/5 blur-[100px] pointer-events-none" />
+
+            <Container className="relative z-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-16">
                     
-                    <div className="flex flex-col gap-3">
-                        <div className="flex items-center gap-2">
-                            <Image src={logoImg} alt="Edura Technologies Logo" width={24} height={24} className="w-6 h-6 object-contain" />
-                            <span className="font-semibold text-white text-base">Edura Technologies</span>
+                    {/* Brand Column */}
+                    <div className="lg:col-span-2 flex flex-col gap-6">
+                        <div className="flex items-center gap-3">
+                            <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center shadow-[0_0_15px_rgba(59,130,246,0.15)]">
+                                <Image src={logoImg} alt="Edura Technologies Logo" width={24} height={24} className="w-6 h-6 object-contain" />
+                            </div>
+                            <span className="font-bold text-white text-xl tracking-tight">Edura Technologies</span>
                         </div>
-                        <div className="flex flex-col gap-1 text-xs">
-                            <span className="font-medium text-zinc-400">USA Headquarters</span>
-                            <span>100 Market Street, Suite 400</span>
-                            <span>San Francisco, CA 94105, United States</span>
-                        </div>
-                    </div>
-
-                    <div className="flex flex-col items-center gap-4">
-                        <div className="flex items-center gap-4 md:gap-8 flex-wrap">
-                            <Link href="/services" className="hover:text-white transition-colors p-2 -ml-2">Services</Link>
-                            <Link href="/case-studies" className="hover:text-white transition-colors p-2">Work</Link>
-                            <Link href="/values" className="hover:text-white transition-colors p-2">About</Link>
-                        </div>
-                        <div className="text-zinc-600">
-                            &copy; {year} Edura Technologies USA. All rights reserved.
+                        <p className="text-zinc-400 leading-relaxed max-w-sm">
+                            We partner with visionary enterprises to engineer scalable, high-performance digital systems that drive measurable growth and predictability.
+                        </p>
+                        <div className="flex flex-col gap-1 mt-2">
+                            <span className="font-semibold text-white text-xs uppercase tracking-widest mb-1">Global Headquarters</span>
+                            <span className="text-zinc-400">Mumbai, Maharashtra</span>
+                            <span className="text-zinc-400">India</span>
                         </div>
                     </div>
 
-                    <div className="flex flex-col md:items-end">
-                        <Link href="/contact" className="hover:text-white transition-colors p-2 -mr-2">Contact Us</Link>
-                        <Link href="/privacy" className="hover:text-white transition-colors p-2 -mr-2">Privacy Policy</Link>
-                        <Link href="/terms" className="hover:text-white transition-colors p-2 -mr-2">Terms of Service</Link>
+                    {/* Company Links */}
+                    <div className="flex flex-col gap-4">
+                        <h4 className="font-bold text-white text-sm uppercase tracking-widest mb-2">Company</h4>
+                        <Link href="/why-eduratech" className="text-zinc-400 hover:text-primary transition-colors flex items-center gap-2 group">
+                            <span className="w-0 h-[1px] bg-primary group-hover:w-2 transition-all duration-300"></span> Why EduraTech
+                        </Link>
+                        <Link href="/methodology" className="text-zinc-400 hover:text-primary transition-colors flex items-center gap-2 group">
+                            <span className="w-0 h-[1px] bg-primary group-hover:w-2 transition-all duration-300"></span> Methodology
+                        </Link>
+                        <Link href="/values" className="text-zinc-400 hover:text-primary transition-colors flex items-center gap-2 group">
+                            <span className="w-0 h-[1px] bg-primary group-hover:w-2 transition-all duration-300"></span> Our Values
+                        </Link>
+                        <Link href="/contact" className="text-zinc-400 hover:text-primary transition-colors flex items-center gap-2 group">
+                            <span className="w-0 h-[1px] bg-primary group-hover:w-2 transition-all duration-300"></span> Contact Us
+                        </Link>
                     </div>
 
+                    {/* Expertise Links */}
+                    <div className="flex flex-col gap-4">
+                        <h4 className="font-bold text-white text-sm uppercase tracking-widest mb-2">Expertise</h4>
+                        <Link href="/services" className="text-zinc-400 hover:text-primary transition-colors flex items-center gap-2 group">
+                            <span className="w-0 h-[1px] bg-primary group-hover:w-2 transition-all duration-300"></span> All Services
+                        </Link>
+                        <Link href="/industries" className="text-zinc-400 hover:text-primary transition-colors flex items-center gap-2 group">
+                            <span className="w-0 h-[1px] bg-primary group-hover:w-2 transition-all duration-300"></span> Industries
+                        </Link>
+                        <Link href="/case-studies" className="text-zinc-400 hover:text-primary transition-colors flex items-center gap-2 group">
+                            <span className="w-0 h-[1px] bg-primary group-hover:w-2 transition-all duration-300"></span> Case Studies
+                        </Link>
+                    </div>
+
+                    {/* Legal Links */}
+                    <div className="flex flex-col gap-4">
+                        <h4 className="font-bold text-white text-sm uppercase tracking-widest mb-2">Legal</h4>
+                        <Link href="/privacy" className="text-zinc-400 hover:text-primary transition-colors flex items-center gap-2 group">
+                            <span className="w-0 h-[1px] bg-primary group-hover:w-2 transition-all duration-300"></span> Privacy Policy
+                        </Link>
+                        <Link href="/terms" className="text-zinc-400 hover:text-primary transition-colors flex items-center gap-2 group">
+                            <span className="w-0 h-[1px] bg-primary group-hover:w-2 transition-all duration-300"></span> Terms of Service
+                        </Link>
+                    </div>
+
+                </div>
+
+                <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <div className="text-zinc-500 font-medium text-xs">
+                        &copy; {year} Edura Technologies. All rights reserved.
+                    </div>
+                    <div className="flex gap-6">
+                        <a href="mailto:hello@eduratech.com" className="text-zinc-500 hover:text-white transition-colors text-xs font-medium">hello@eduratech.com</a>
+                    </div>
                 </div>
             </Container>
         </footer>

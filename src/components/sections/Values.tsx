@@ -120,16 +120,16 @@ export function Values() {
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.1, duration: 0.5 }}
                             onClick={() => setSelectedValue(item)}
-                            className="group cursor-pointer relative p-8 rounded-3xl border border-primary/10 bg-[#0a0a0c] hover:border-primary/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(59,130,246,0.15)] flex flex-col h-full overflow-hidden"
+                            className="group cursor-pointer relative p-8 rounded-3xl border border-primary/20 bg-[#0a0a0c] hover:border-primary/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(59,130,246,0.2)] flex flex-col h-full overflow-hidden"
                         >
                             {/* Top Accent Glow on Hover */}
                             <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary/0 to-transparent group-hover:via-primary/70 transition-all duration-700" />
                             
                             {/* Inner Radial Gradient on Hover */}
-                            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/[0.05] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
                             <div className="relative z-10 flex flex-col h-full">
-                                <div className="mb-8 p-3 w-fit rounded-2xl bg-primary/5 border border-primary/20 transition-all duration-500 shadow-inner group-hover:scale-110">
+                                <div className="mb-8 p-3 w-fit rounded-2xl bg-primary/10 border border-primary/30 transition-all duration-500 shadow-inner group-hover:scale-110">
                                     <item.icon className="w-6 h-6 text-primary transition-colors duration-300 stroke-[1.5]" />
                                 </div>
 
@@ -141,7 +141,7 @@ export function Values() {
                                     {item.description}
                                 </p>
 
-                                <div className="flex items-center justify-between text-sm font-semibold text-zinc-400 group-hover:text-white transition-colors mt-auto pt-5 border-t border-primary/10">
+                                <div className="flex items-center justify-between text-sm font-semibold text-zinc-400 group-hover:text-white transition-colors mt-auto pt-5 border-t border-primary/20">
                                     <span className="group-hover:translate-x-1 transition-transform duration-300">Learn More</span>
                                     <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-300 group-hover:rotate-45 group-hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]">
                                         <Plus className="w-4 h-4" />

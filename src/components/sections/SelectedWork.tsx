@@ -47,7 +47,7 @@ export function SelectedWork() {
 
                 <div className="grid md:grid-cols-2 gap-8">
                     {projects.map((p, i) => (
-                        <div key={i} className="group relative border border-border bg-muted/20 hover:bg-muted/40 transition-colors p-8 md:p-10 aspect-[4/3] md:aspect-[16/9] flex flex-col justify-end overflow-hidden">
+                        <div key={i} className="group relative border border-primary/20 bg-[#0a0a0c] hover:border-primary/40 transition-all duration-500 p-8 md:p-10 aspect-[4/3] md:aspect-[16/9] flex flex-col justify-end overflow-hidden hover:shadow-[0_20px_40px_-15px_rgba(59,130,246,0.15)]">
                             <div className={cn("absolute inset-0 bg-gradient-to-br opacity-50 group-hover:opacity-70 transition-opacity", p.gradient)} />
                             <div className="relative z-10">
                                 <p className="text-muted-foreground font-mono text-sm uppercase tracking-wide">{p.outcome}</p>

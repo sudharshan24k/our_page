@@ -56,15 +56,15 @@ export function ContentModal({ isOpen, onClose, title, children }: ContentModalP
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.95, y: 20 }}
                         transition={{ duration: 0.4, type: "spring", bounce: 0.15 }}
-                        className="relative w-full max-w-3xl max-h-[85vh] bg-[#0a0a0c] border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col"
+                        className="relative w-full max-w-3xl max-h-[85vh] bg-[#0a0a0c] border border-primary/20 rounded-2xl shadow-2xl overflow-hidden flex flex-col"
                         onClick={(e) => e.stopPropagation()}
                     >
                         {/* Header */}
-                        <div className="flex items-center justify-between p-6 border-b border-white/10 bg-white/[0.02]">
+                        <div className="flex items-center justify-between p-6 border-b border-primary/20 bg-white/[0.02]">
                             <h3 className="text-xl md:text-2xl font-semibold text-white tracking-tight">{title}</h3>
                             <button 
                                 onClick={onClose}
-                                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-white/10 transition-colors"
+                                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-primary hover:bg-primary/10 hover:border-primary/30 transition-colors cursor-pointer"
                             >
                                 <X className="w-5 h-5" />
                             </button>

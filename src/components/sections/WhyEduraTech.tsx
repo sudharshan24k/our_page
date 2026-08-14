@@ -124,16 +124,16 @@ export function WhyEduraTech() {
                                     key={i}
                                     variants={itemVariants}
                                     whileHover={{ y: -8, transition: { duration: 0.3 } }}
-                                    className="group relative p-8 rounded-3xl border border-primary/10 bg-[#0a0a0c] hover:border-primary/30 transition-all duration-500 hover:shadow-[0_20px_40px_-15px_rgba(59,130,246,0.15)] flex flex-col overflow-hidden"
+                                    className="group relative p-8 rounded-3xl border border-primary/20 bg-[#0a0a0c] hover:border-primary/40 transition-all duration-500 hover:shadow-[0_20px_40px_-15px_rgba(59,130,246,0.2)] flex flex-col overflow-hidden"
                                 >
                                     {/* Top Accent Glow */}
                                     <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary/0 to-transparent group-hover:via-primary/70 transition-all duration-700" />
 
                                     {/* Inner Glow */}
-                                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/[0.05] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
                                     <div className="relative z-10 flex flex-col h-full">
-                                        <div className="w-14 h-14 rounded-2xl bg-primary/5 border border-primary/20 flex items-center justify-center group-hover:border-primary/40 group-hover:bg-primary/10 transition-all duration-500 mb-8 shadow-inner group-hover:scale-110">
+                                        <div className="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/30 flex items-center justify-center group-hover:border-primary/50 group-hover:bg-primary/20 transition-all duration-500 mb-8 shadow-inner group-hover:scale-110">
                                             <Icon className="w-7 h-7 text-primary transition-colors duration-300 stroke-[1.5]" />
                                         </div>
 
@@ -145,8 +145,8 @@ export function WhyEduraTech() {
                                             {value.description}
                                         </p>
 
-                                        <div className="flex items-center text-sm font-semibold text-primary pt-5 border-t border-primary/10 mt-auto">
-                                            <span className="bg-primary/10 px-3 py-1 rounded-lg text-xs">
+                                        <div className="flex items-center text-sm font-semibold text-primary pt-5 border-t border-primary/20 mt-auto">
+                                            <span className="bg-primary/20 px-3 py-1 rounded-lg text-xs text-white">
                                                 {value.highlight}
                                             </span>
                                         </div>
@@ -184,7 +184,7 @@ export function WhyEduraTech() {
                             <motion.div
                                 key={i}
                                 variants={itemVariants}
-                                className="flex items-start gap-4 p-6 rounded-2xl border border-primary/10 bg-[#0a0a0c] hover:border-primary/30 hover:bg-primary/[0.02] transition-all duration-500"
+                                className="flex items-start gap-4 p-6 rounded-2xl border border-primary/20 bg-[#0a0a0c] hover:border-primary/40 hover:bg-primary/5 transition-all duration-500"
                             >
                                 <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
                                     <TrendingUp className="w-4 h-4 text-primary" />

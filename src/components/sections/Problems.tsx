@@ -27,12 +27,12 @@ export function Problems() {
 
                     <div className="flex-1 md:max-w-[65%] space-y-8">
                         {problems.map((p, i) => (
-                            <div key={i} className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-12 py-4 border-b border-border last:border-0">
-                                <span className="text-3xl font-light text-primary/50 tabular-nums">{i + 1}</span>
+                            <div key={i} className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-12 py-4 border-b border-primary/20 last:border-0">
+                                <span className="text-3xl font-light text-primary tabular-nums">{i + 1}</span>
                                 <div className="flex-1">
                                     <span className="text-muted-foreground font-light text-[15px]">{p.problem}</span>
                                 </div>
-                                <div className="hidden sm:block text-muted-foreground">
+                                <div className="hidden sm:block text-primary">
                                     <ArrowRight className="w-4 h-4" />
                                 </div>
                                 <div className="sm:w-1/2">

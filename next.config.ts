@@ -2,13 +2,15 @@ import type { NextConfig } from "next";
 
 const cspHeader = `
     default-src 'self';
-    script-src 'self' 'unsafe-eval' 'unsafe-inline';
+    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdn-in.pagesense.io;
     style-src 'self' 'unsafe-inline';
-    img-src 'self' blob: data:;
+    img-src 'self' blob: data: https://cdn-in.pagesense.io;
     font-src 'self';
     object-src 'none';
     base-uri 'self';
-    form-action 'self';
+    form-action 'self' https://forms.zohopublic.in;
+    frame-src 'self' https://forms.zohopublic.in;
+    connect-src 'self' https://cdn-in.pagesense.io https://forms.zohopublic.in https://api.web3forms.com;
     frame-ancestors 'none';
     upgrade-insecure-requests;
 `;

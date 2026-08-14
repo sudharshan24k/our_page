@@ -39,7 +39,7 @@ const testimonials = [
 
 export function Testimonials() {
     return (
-        <Section className="bg-background border-t border-border py-24 md:py-32 overflow-hidden">
+        <Section className="bg-background border-t border-primary/20 py-24 md:py-32 overflow-hidden">
             <div className="mb-16 md:mb-24 text-center">
                 <h2 className="text-2xl font-medium text-slate-900 tracking-tight">Proven Results & Client Impact</h2>
             </div>
@@ -63,9 +63,9 @@ export function Testimonials() {
                     {[...testimonials, ...testimonials].map((t, i) => (
                         <div
                             key={i}
-                            className="w-[350px] md:w-[450px] flex-shrink-0 p-8 rounded-xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] transition-colors"
+                            className="w-[350px] md:w-[450px] flex-shrink-0 p-8 rounded-xl border border-primary/20 bg-[#0a0a0c] hover:border-primary/40 hover:bg-primary/[0.02] hover:shadow-[0_20px_40px_-15px_rgba(59,130,246,0.15)] transition-all duration-500"
                         >
-                            <Quote className="w-8 h-8 text-primary/20 mb-6" />
+                            <Quote className="w-8 h-8 text-primary mb-6" />
                             <p className="text-lg text-foreground/80 font-light leading-relaxed italic text-balance">
                                 "{t.content}"
                             </p>

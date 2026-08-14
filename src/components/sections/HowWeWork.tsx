@@ -135,7 +135,7 @@ export function HowWeWork() {
                                 </div>
 
                                 <div className="pt-16 h-full flex flex-col">
-                                    <div className="mb-6 p-3 w-fit rounded-2xl bg-primary/5 border border-primary/20 group-hover:border-primary/40 group-hover:bg-primary/10 transition-all duration-500 shadow-inner group-hover:scale-110">
+                                    <div className="mb-6 p-3 w-fit rounded-2xl bg-primary/10 border border-primary/30 group-hover:border-primary/50 group-hover:bg-primary/20 transition-all duration-500 shadow-inner group-hover:scale-110">
                                         <phase.icon className="w-6 h-6 text-primary transition-colors duration-300 stroke-[1.5]" />
                                     </div>
                                     <span className="text-[11px] font-bold text-primary uppercase tracking-[0.2em] block mb-3">
@@ -146,7 +146,7 @@ export function HowWeWork() {
                                         {phase.description}
                                     </p>
 
-                                    <div className="mb-6 pb-6 border-b border-primary/10">
+                                    <div className="mb-6 pb-6 border-b border-primary/20">
                                         <p className="text-xs text-primary font-bold uppercase tracking-widest mb-3">Timeline</p>
                                         <p className="text-white font-semibold">{phase.duration}</p>
                                     </div>
@@ -175,7 +175,7 @@ export function HowWeWork() {
                             </div>
                             
                             <div className="relative text-foreground">
-                                <div className="mb-6 p-3 w-fit rounded-2xl bg-primary/5 border border-primary/20 group-hover:border-primary/40 group-hover:bg-primary/10 transition-all duration-500 shadow-inner">
+                                <div className="mb-6 p-3 w-fit rounded-2xl bg-primary/10 border border-primary/30 group-hover:border-primary/50 group-hover:bg-primary/20 transition-all duration-500 shadow-inner">
                                     <phase.icon className="w-6 h-6 text-primary group-hover:text-primary transition-colors duration-300 stroke-[1.5]" />
                                 </div>
                                 <span className="text-[11px] font-bold text-primary uppercase tracking-widest block mb-2">Phase {phase.id}</span>
@@ -184,7 +184,7 @@ export function HowWeWork() {
                                     {phase.description}
                                 </p>
 
-                                <div className="mb-6 pb-6 border-b border-primary/10">
+                                <div className="mb-6 pb-6 border-b border-primary/20">
                                     <p className="text-xs text-primary font-bold uppercase tracking-widest mb-3">Timeline</p>
                                     <p className="text-white font-semibold">{phase.duration}</p>
                                 </div>

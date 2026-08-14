@@ -10,11 +10,11 @@ export function Philosophy() {
                     <p>
                         <strong className="text-foreground font-medium">Business first.</strong> We begin every engagement by understanding the economic drivers of your project. Technology is a lever for value, not an end in itself.
                     </p>
-                    <hr className="border-border/40 w-16" />
+                    <hr className="border-primary/30 w-16" />
                     <p>
                         <strong className="text-foreground font-medium">Rigorous standards.</strong> We apply enterprise-grade governance, security strategies, and scalability patterns from the start. We do not incur technical debt that we aren’t willing to service.
                     </p>
-                    <hr className="border-border/40 w-16" />
+                    <hr className="border-primary/30 w-16" />
                     <p>
                         <strong className="text-foreground font-medium">Long-term vision.</strong> We build systems designed to outlive their initial specifications. Maintainability and documentation are core deliverables, not afterthoughts.
                     </p>

@@ -3,7 +3,7 @@ import { Section } from "@/components/ui/Section";
 
 export function Experience() {
     return (
-        <Section id="methodology" className="bg-muted/30">
+        <Section id="methodology" className="bg-transparent border-t border-primary/20">
             <Container>
                 <div className="grid md:grid-cols-2 gap-16 items-start">
                     <div>
@@ -13,16 +13,16 @@ export function Experience() {
                         </p>
                     </div>
                     <div className="space-y-8">
-                        <div className="border-l-2 border-border pl-6">
-                            <h3 className="text-lg font-medium text-foreground mb-2">Senior-Only Talent</h3>
+                        <div className="group border-l-2 border-primary/30 pl-6 hover:border-primary/60 transition-all duration-300">
+                            <h3 className="text-lg font-medium text-foreground mb-2 group-hover:text-primary transition-colors">Senior-Only Talent</h3>
                             <p className="text-muted-foreground">No juniors, no learning on the job. Direct access to experts who have solved these problems before.</p>
                         </div>
-                        <div className="border-l-2 border-border pl-6">
-                            <h3 className="text-lg font-medium text-foreground mb-2">Production-Grade</h3>
+                        <div className="group border-l-2 border-primary/30 pl-6 hover:border-primary/60 transition-all duration-300">
+                            <h3 className="text-lg font-medium text-foreground mb-2 group-hover:text-primary transition-colors">Production-Grade</h3>
                             <p className="text-muted-foreground">Systems built for reliability, observability, and long-term maintainability from Day 1.</p>
                         </div>
-                        <div className="border-l-2 border-border pl-6">
-                            <h3 className="text-lg font-medium text-foreground mb-2">Business Aligned</h3>
+                        <div className="group border-l-2 border-primary/30 pl-6 hover:border-primary/60 transition-all duration-300">
+                            <h3 className="text-lg font-medium text-foreground mb-2 group-hover:text-primary transition-colors">Business Aligned</h3>
                             <p className="text-muted-foreground">Technical decisions driven by business goals, not hype or trends.</p>
                         </div>
                     </div>

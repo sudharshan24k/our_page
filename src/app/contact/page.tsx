@@ -31,10 +31,10 @@ export default function ContactPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Reveal width="100%">
-        <Problems />
+        <Contact />
       </Reveal>
       <Reveal width="100%">
-        <Contact />
+        <Problems />
       </Reveal>
     </main>
   );
