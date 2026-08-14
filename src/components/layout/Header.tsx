@@ -8,6 +8,7 @@ import { MenuOverlay } from "@/components/layout/MenuOverlay";
 import { ArrowRight } from "lucide-react";
 import { Magnetic } from "@/components/ui/Magnetic";
 import Image from "next/image";
+import logoImg from "../../../public/eduratech_logo.png";
 
 export function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -51,7 +52,7 @@ export function Header() {
             >
                 <Container width="wide" className="flex items-center justify-between">
                     <Link href="/" className="flex items-center gap-2.5 text-lg font-semibold tracking-tight text-white hover:text-primary transition-colors whitespace-nowrap">
-                        <Image src="/eduratech_logo.png" alt="Edura Technologies Logo" width={32} height={32} className="w-8 h-8 object-contain" />
+                        <Image src={logoImg} alt="Edura Technologies Logo" width={32} height={32} className="w-8 h-8 object-contain" />
                         <span>Edura Technologies</span>
                     </Link>
                     <nav className="hidden lg:flex items-center gap-5 xl:gap-8 text-sm xl:text-[15px] font-medium text-zinc-200">

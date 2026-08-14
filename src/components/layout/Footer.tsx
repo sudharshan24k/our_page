@@ -1,6 +1,7 @@
 import { Container } from "@/components/ui/Container";
 import Link from "next/link";
 import Image from "next/image";
+import logoImg from "../../../public/eduratech_logo.png";
 
 export function Footer() {
     const year = new Date().getFullYear();
@@ -12,7 +13,7 @@ export function Footer() {
                     
                     <div className="flex flex-col gap-3">
                         <div className="flex items-center gap-2">
-                            <Image src="/eduratech_logo.png" alt="Edura Technologies Logo" width={24} height={24} className="w-6 h-6 object-contain" />
+                            <Image src={logoImg} alt="Edura Technologies Logo" width={24} height={24} className="w-6 h-6 object-contain" />
                             <span className="font-semibold text-white text-base">Edura Technologies</span>
                         </div>
                         <div className="flex flex-col gap-1 text-xs">
