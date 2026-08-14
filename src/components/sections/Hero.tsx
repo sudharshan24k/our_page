@@ -25,7 +25,7 @@ export function Hero() {
             <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-primary/20 blur-[120px] rounded-full pointer-events-none opacity-50 mix-blend-screen" />
 
             <Container className="relative z-10 w-full h-full">
-                <div className="flex flex-col lg:flex-row h-full min-h-[70vh] lg:items-center gap-16 lg:gap-24 pt-32 lg:pt-0">
+                <div className="flex flex-col lg:flex-row h-full min-h-[70vh] lg:items-center gap-16 lg:gap-24 pt-36 lg:pt-24">
 
                     {/* Left Column: Authority Payload */}
                     <motion.div

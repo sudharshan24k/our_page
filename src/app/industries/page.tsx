@@ -72,7 +72,7 @@ export default function IndustriesHub() {
   return (
     <main>
       <Reveal width="100%">
-        <Section className="bg-transparent min-h-[60vh] flex items-center pt-32 pb-24 relative overflow-hidden">
+        <Section className="bg-transparent pt-36 pb-20 lg:pt-44 lg:pb-28 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-[800px] h-[600px] bg-primary/20 blur-[120px] rounded-full pointer-events-none opacity-50" />
 
           <Container className="relative z-10">

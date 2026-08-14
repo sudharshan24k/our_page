@@ -52,9 +52,9 @@ export function Header() {
                     <Link href="/" className="text-lg font-semibold tracking-tight text-white hover:text-primary transition-colors">
                         Edura Technologies
                     </Link>
-                    <nav className="hidden md:flex items-center gap-8 text-[15px] font-medium text-zinc-400">
+                    <nav className="hidden lg:flex items-center gap-5 xl:gap-8 text-sm xl:text-[15px] font-medium text-zinc-400">
                         {[
-                            { label: "Why Edura Technologies", href: "/why-eduratech" },
+                            { label: "Why Us", href: "/why-eduratech" },
                             { label: "How We Work", href: "/how-we-work" },
                             { label: "Services", href: "/services" },
                             { label: "Case Studies", href: "/case-studies" },
@@ -66,7 +66,7 @@ export function Header() {
                             <Link
                                 key={item.label}
                                 href={item.href}
-                                className="hover:text-white transition-colors relative group py-2"
+                                className="hover:text-white transition-colors relative group py-2 whitespace-nowrap"
                             >
                                 {item.label}
                                 <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span>
@@ -79,14 +79,14 @@ export function Header() {
                         <button
                             aria-label="Open mobile menu"
                             onClick={() => setIsMenuOpen(true)}
-                            className="md:hidden flex flex-col gap-1.5 items-end text-zinc-400 hover:text-white transition-colors p-2 -mr-2"
+                            className="lg:hidden flex flex-col gap-1.5 items-end text-zinc-400 hover:text-white transition-colors p-2 -mr-2"
                         >
                             <span className="w-6 h-0.5 bg-current"></span>
                             <span className="w-6 h-0.5 bg-current"></span>
                         </button>
 
                         <Magnetic>
-                            <Link href="/contact" className="hidden md:flex items-center gap-2 text-sm font-medium text-white px-6 py-2 rounded-full bg-primary hover:bg-primary/90 shadow-[0_0_20px_-5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_30px_-5px_rgba(59,130,246,0.7)] transition-all">
+                            <Link href="/contact" className="hidden lg:flex items-center gap-2 text-sm font-medium text-white px-6 py-2 rounded-full bg-primary hover:bg-primary/90 shadow-[0_0_20px_-5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_30px_-5px_rgba(59,130,246,0.7)] transition-all">
                                 Claim Free Audit
                                 <ArrowRight className="w-4 h-4" />
                             </Link>

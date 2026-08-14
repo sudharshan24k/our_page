@@ -68,7 +68,7 @@ export function WhyEduraTech() {
     return (
         <>
             {/* Hero Section */}
-            <Section className="bg-transparent min-h-[60vh] flex items-center pt-32 pb-24">
+            <Section className="bg-transparent pt-36 pb-20 lg:pt-44 lg:pb-28">
                 <Container>
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}

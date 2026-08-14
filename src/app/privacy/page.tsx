@@ -15,7 +15,7 @@ export default function PrivacyPage() {
   return (
     <main className="pt-20">
       <Reveal width="100%">
-        <Section className="bg-transparent min-h-[60vh] py-24 md:py-32">
+        <Section className="bg-transparent pt-36 pb-20 lg:pt-44 lg:pb-28">
           <Container>
             <div className="max-w-3xl mx-auto space-y-12">
               <div>

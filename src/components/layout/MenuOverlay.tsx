@@ -11,7 +11,7 @@ interface MenuOverlayProps {
 }
 
 const navLinks = [
-    { label: "Why Edura Technologies", href: "/why-eduratech" },
+    { label: "Why Us", href: "/why-eduratech" },
     { label: "How We Work", href: "/how-we-work" },
     { label: "Services", href: "/services" },
     { label: "Case Studies", href: "/case-studies" },
