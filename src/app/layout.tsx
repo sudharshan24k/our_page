@@ -78,8 +78,8 @@ const jsonLd = {
     "Digital Transformation"
   ],
   "sameAs": [
-    "https://linkedin.com/company/eduratech",
-    "https://twitter.com/eduratech"
+    "https://www.linkedin.com/showcase/eduratech/",
+    "https://www.instagram.com/edura_tech/"
   ],
   "contactPoint": {
     "@type": "ContactPoint",

@@ -75,6 +75,17 @@ export function Footer() {
                         </Link>
                     </div>
 
+                    {/* Social Links */}
+                    <div className="flex flex-col gap-4">
+                        <h4 className="font-bold text-white text-sm uppercase tracking-widest mb-2">Connect</h4>
+                        <a href="https://www.linkedin.com/showcase/eduratech/about/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-primary transition-colors flex items-center gap-2 group">
+                            <span className="w-0 h-[1px] bg-primary group-hover:w-2 transition-all duration-300"></span> LinkedIn
+                        </a>
+                        <a href="https://www.instagram.com/edura_tech/?hl=en" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-primary transition-colors flex items-center gap-2 group">
+                            <span className="w-0 h-[1px] bg-primary group-hover:w-2 transition-all duration-300"></span> Instagram
+                        </a>
+                    </div>
+
                 </div>
 
                 <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">

@@ -89,11 +89,22 @@ export function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
                                 </div>
                             </div>
                             <div className="flex gap-8">
-                                {["Twitter", "LinkedIn", "Clutch"].map((platform) => (
-                                    <Link key={platform} href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors p-2 -ml-2 first:ml-0">
-                                        {platform}
-                                    </Link>
-                                ))}
+                                <a 
+                                    href="https://www.linkedin.com/showcase/eduratech/about/?viewAsMember=true" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors p-2 -ml-2 first:ml-0"
+                                >
+                                    LinkedIn
+                                </a>
+                                <a 
+                                    href="https://www.instagram.com/edura_tech/?hl=en" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors p-2 -ml-2 first:ml-0"
+                                >
+                                    Instagram
+                                </a>
                             </div>
                         </div>
 
