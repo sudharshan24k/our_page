@@ -174,9 +174,14 @@ export function Contact() {
                             <div className="space-y-3">
                                 <div>
                                     <p className="text-zinc-400 text-xs uppercase tracking-widest mb-2">Email</p>
-                                    <a href="mailto:hello@eduratech.com" className="text-white hover:text-primary transition-colors font-medium">
-                                        hello@eduratech.com
-                                    </a>
+                                    <div className="flex flex-col gap-1">
+                                        <a href="mailto:hello@eduratech.com" className="text-white hover:text-primary transition-colors font-medium">
+                                            hello@eduratech.com
+                                        </a>
+                                        <a href="mailto:support@eduratech.com" className="text-white hover:text-primary transition-colors font-medium">
+                                            support@eduratech.com
+                                        </a>
+                                    </div>
                                 </div>
                                 <div>
                                     <p className="text-zinc-400 text-xs uppercase tracking-widest mb-2">Response Time</p>

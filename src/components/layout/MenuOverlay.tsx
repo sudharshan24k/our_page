@@ -82,7 +82,11 @@ export function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
                         <div className="flex flex-col md:flex-row justify-between items-end md:items-center gap-8 border-t border-border pt-8">
                             <div className="space-y-2">
                                 <p className="text-xs font-mono text-muted-foreground uppercase tracking-widest">Inquiries</p>
-                                <p className="text-lg">hello@eduratech.com</p>
+                                <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4">
+                                    <p className="text-lg">hello@eduratech.com</p>
+                                    <span className="hidden sm:inline text-zinc-700">|</span>
+                                    <p className="text-lg">support@eduratech.com</p>
+                                </div>
                             </div>
                             <div className="flex gap-8">
                                 {["Twitter", "LinkedIn", "Clutch"].map((platform) => (

@@ -82,8 +82,10 @@ export function Footer() {
                         <span>&copy; {year} Edura Technologies. All rights reserved.</span>
                         <span className="text-zinc-600">Edura Technologies is a wing of Edura Global Solutions (<a href="https://eduraglobal.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">eduraglobal.com</a>)</span>
                     </div>
-                    <div className="flex gap-6">
+                    <div className="flex gap-4 sm:gap-6">
                         <a href="mailto:hello@eduratech.com" className="text-zinc-500 hover:text-white transition-colors text-xs font-medium">hello@eduratech.com</a>
+                        <span className="text-zinc-700 text-xs font-medium">|</span>
+                        <a href="mailto:support@eduratech.com" className="text-zinc-500 hover:text-white transition-colors text-xs font-medium">support@eduratech.com</a>
                     </div>
                 </div>
             </Container>
