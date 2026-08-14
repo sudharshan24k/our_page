@@ -5,7 +5,7 @@ export const metadata = {
   alternates: {
     canonical: "/why-eduratech",
   },
-    title: "Why Edura Technologies | Strategic Technology Solutions",
+    title: "Why Edura Technologies",
     description: "Discover why businesses choose Edura Technologies for strategic technology solutions, modern engineering, and long-term partnerships."
 };
 

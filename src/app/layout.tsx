@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://eduratech.com"),
   title: {
     template: "%s | Edura Technologies",
-    default: "Edura Technologies | Custom AI & Software Development for US Small Businesses",
+    default: "Edura Technologies | Custom Software & AI",
   },
   description: "Custom AI development, software solutions, and digital transformation for US small businesses. Transparent process, proven results. Edura Technologies specializes in AI, automation, and custom software development.",
   keywords: ["custom software development", "AI development company", "SaaS development", "business automation", "web application development", "AI solutions", "cloud development"],

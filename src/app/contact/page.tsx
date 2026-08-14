@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/contact",
   },
-  title: "Contact Us | Free Custom Software & AI Audit",
+  title: "Free Custom Software & AI Audit",
   description: "Contact Edura Technologies to request your free business strategy audit. Get custom AI systems and custom software built to scale your business.",
 };
 
