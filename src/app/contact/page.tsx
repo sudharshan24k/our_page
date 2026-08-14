@@ -4,6 +4,9 @@ import { Reveal } from "@/components/ui/Reveal";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/contact",
+  },
   title: "Contact Us | Request a Strategy Call",
   description: "Ready to scale your enterprise digital system? Contact Edura Technologies to request a free growth audit and strategy consultation today.",
 };

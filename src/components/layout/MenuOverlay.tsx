@@ -11,12 +11,14 @@ interface MenuOverlayProps {
 }
 
 const navLinks = [
-    { label: "Why EduraTech", href: "/why-eduratech" },
+    { label: "Why Edura Technologies", href: "/why-eduratech" },
     { label: "How We Work", href: "/how-we-work" },
     { label: "Services", href: "/services" },
     { label: "Case Studies", href: "/case-studies" },
     { label: "Methodology", href: "/methodology" },
-    { label: "Technology", href: "/technology" }
+    { label: "Technology", href: "/technology" },
+    { label: "Industries", href: "/industries" },
+    { label: "Insights", href: "/insights" }
 ];
 
 export function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
@@ -38,7 +40,7 @@ export function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
                                 animate={{ opacity: 1, x: 0 }}
                             >
                                 <Link href="/" onClick={onClose} className="text-xl font-bold tracking-tighter">
-                                    NEOCIPHER
+                                    Edura Technologies
                                 </Link>
                             </motion.div>
                             <button
@@ -77,7 +79,7 @@ export function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
                         <div className="flex flex-col md:flex-row justify-between items-end md:items-center gap-8 border-t border-border pt-8">
                             <div className="space-y-2">
                                 <p className="text-xs font-mono text-muted-foreground uppercase tracking-widest">Inquiries</p>
-                                <p className="text-lg">hello@neocipher.io</p>
+                                <p className="text-lg">hello@eduratech.com</p>
                             </div>
                             <div className="flex gap-8">
                                 {["Twitter", "LinkedIn", "Clutch"].map((platform) => (

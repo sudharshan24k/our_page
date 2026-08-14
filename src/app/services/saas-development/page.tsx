@@ -4,6 +4,9 @@ import { Section } from "@/components/ui/Section";
 import { ArrowRight } from "lucide-react";
 
 export const metadata = {
+  alternates: {
+    canonical: "/services/saas-development",
+  },
   title: "SaaS Development Company - Build Your SaaS Product - EduraTech",
   description: "Custom SaaS development for startups and growing businesses. Full-stack, cloud-native, production-ready. From MVP to scaling.",
   openGraph: {

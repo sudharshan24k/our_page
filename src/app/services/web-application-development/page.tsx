@@ -4,6 +4,9 @@ import { Section } from "@/components/ui/Section";
 import { ArrowRight } from "lucide-react";
 
 export const metadata = {
+  alternates: {
+    canonical: "/services/web-application-development",
+  },
   title: "Web Application Development - Custom Business Apps - EduraTech",
   description: "Custom web applications that drive business results. Fast, secure, scalable. For internal operations or customer-facing platforms.",
   openGraph: {

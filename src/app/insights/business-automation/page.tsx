@@ -5,6 +5,9 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export const metadata = {
+  alternates: {
+    canonical: "/insights/business-automation",
+  },
   title: "Business Process Automation: Complete Guide - Examples & ROI - EduraTech",
   description: "What business processes can you automate? Real examples: invoice processing, lead routing, document generation, email. Cost and implementation timeline.",
   openGraph: {

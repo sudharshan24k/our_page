@@ -5,6 +5,9 @@ import Link from "next/link";
 import { ArrowRight, Stethoscope, Smile, Home, Briefcase, ShoppingCart, BookOpen, Truck, Rocket } from "lucide-react";
 
 export const metadata = {
+  alternates: {
+    canonical: "/industries",
+  },
   title: "Industry-Specific Software Solutions - EduraTech",
   description: "Custom software and AI solutions tailored to healthcare, dental, real estate, legal, e-commerce, education, logistics, and startups. Industry expertise you can trust.",
   openGraph: {

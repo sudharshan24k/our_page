@@ -4,6 +4,9 @@ import { Section } from "@/components/ui/Section";
 import { ArrowRight } from "lucide-react";
 
 export const metadata = {
+  alternates: {
+    canonical: "/industries/logistics",
+  },
   title: "Logistics Software - Supply Chain & Fleet Management - EduraTech",
   description: "Custom logistics software for supply chain, fleet tracking, route optimization, warehouse management.",
   openGraph: {

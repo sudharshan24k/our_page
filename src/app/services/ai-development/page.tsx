@@ -5,6 +5,9 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle } from "lucide-react";
 
 export const metadata = {
+  alternates: {
+    canonical: "/services/ai-development",
+  },
   title: "AI Development Company - Custom AI Solutions - EduraTech",
   description: "Custom AI solutions: chatbots, RAG, automation, data analysis. Practical AI for small business. Transparent process.",
   openGraph: {

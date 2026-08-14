@@ -3,6 +3,9 @@ import { Reveal } from "@/components/ui/Reveal";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/values",
+  },
   title: "Core Values | What Drives Us",
   description: "Read about the core values that drive our agency, from uncompromising quality to data-driven decision making and long-term partnership.",
 };

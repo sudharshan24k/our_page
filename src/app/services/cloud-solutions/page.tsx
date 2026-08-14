@@ -4,6 +4,9 @@ import { Section } from "@/components/ui/Section";
 import { ArrowRight } from "lucide-react";
 
 export const metadata = {
+  alternates: {
+    canonical: "/services/cloud-solutions",
+  },
   title: "Cloud Solutions & Migration Services - AWS Azure GCP - EduraTech",
   description: "Migrate to cloud. Build scalable infrastructure. AWS, Azure, Google Cloud. Expert implementation.",
   openGraph: {

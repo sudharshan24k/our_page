@@ -54,12 +54,14 @@ export function Header() {
                     </Link>
                     <nav className="hidden md:flex items-center gap-8 text-[15px] font-medium text-zinc-400">
                         {[
-                            { label: "Why EduraTech", href: "/why-eduratech" },
+                            { label: "Why Edura Technologies", href: "/why-eduratech" },
                             { label: "How We Work", href: "/how-we-work" },
                             { label: "Services", href: "/services" },
                             { label: "Case Studies", href: "/case-studies" },
                             { label: "Methodology", href: "/methodology" },
-                            { label: "Technology", href: "/technology" }
+                            { label: "Technology", href: "/technology" },
+                            { label: "Industries", href: "/industries" },
+                            { label: "Insights", href: "/insights" }
                         ].map((item) => (
                             <Link
                                 key={item.label}

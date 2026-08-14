@@ -4,6 +4,9 @@ import { Section } from "@/components/ui/Section";
 import { ArrowRight } from "lucide-react";
 
 export const metadata = {
+  alternates: {
+    canonical: "/industries/healthcare",
+  },
   title: "Healthcare Software Solutions - Medical Practice Management - EduraTech",
   description: "Custom healthcare software for clinics, hospitals, medical practices. EMR, patient portals, HIPAA-compliant.",
   openGraph: {

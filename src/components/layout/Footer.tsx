@@ -28,7 +28,8 @@ export function Footer() {
 
                     <div className="flex flex-col md:items-end">
                         <Link href="/contact" className="hover:text-white transition-colors p-2 -mr-2">Contact Us</Link>
-                        <Link href="#" className="hover:text-white transition-colors p-2 -mr-2">Privacy Policy</Link>
+                        <Link href="/privacy" className="hover:text-white transition-colors p-2 -mr-2">Privacy Policy</Link>
+                        <Link href="/terms" className="hover:text-white transition-colors p-2 -mr-2">Terms of Service</Link>
                     </div>
 
                 </div>

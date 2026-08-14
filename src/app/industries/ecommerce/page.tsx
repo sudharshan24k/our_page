@@ -4,6 +4,9 @@ import { Section } from "@/components/ui/Section";
 import { ArrowRight } from "lucide-react";
 
 export const metadata = {
+  alternates: {
+    canonical: "/industries/ecommerce",
+  },
   title: "E-commerce Platform Development - Custom Store Solutions - EduraTech",
   description: "Custom e-commerce platforms and automation for online businesses. Inventory management, fulfillment automation, and analytics. Build beyond Shopify.",
   openGraph: {

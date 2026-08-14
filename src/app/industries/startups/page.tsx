@@ -4,6 +4,9 @@ import { Section } from "@/components/ui/Section";
 import { ArrowRight } from "lucide-react";
 
 export const metadata = {
+  alternates: {
+    canonical: "/industries/startups",
+  },
   title: "Startup Technology - MVP Development & Scaling - EduraTech",
   description: "Build your startup tech. MVP development, fundraising support, rapid scaling. From idea to market.",
   openGraph: {

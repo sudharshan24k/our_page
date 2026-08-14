@@ -4,6 +4,9 @@ import { Section } from "@/components/ui/Section";
 import { ArrowRight } from "lucide-react";
 
 export const metadata = {
+  alternates: {
+    canonical: "/industries/professional-services",
+  },
   title: "Professional Services Software - Legal, Accounting, Consulting - EduraTech",
   description: "Custom software for law firms, accounting practices, consulting. Time tracking, billing, client management.",
   openGraph: {

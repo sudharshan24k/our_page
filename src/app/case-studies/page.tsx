@@ -3,6 +3,9 @@ import { Reveal } from "@/components/ui/Reveal";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/case-studies",
+  },
   title: "Case Studies & Featured Work",
   description: "Explore our portfolio of successful B2B tech implementations, showcasing proven ROI, lead velocity improvements, and robust digital architectures.",
 };

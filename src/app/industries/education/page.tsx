@@ -4,6 +4,9 @@ import { Section } from "@/components/ui/Section";
 import { ArrowRight } from "lucide-react";
 
 export const metadata = {
+  alternates: {
+    canonical: "/industries/education",
+  },
   title: "Education Software Solutions - School & LMS Systems - EduraTech",
   description: "Custom education software for schools, universities, training centers. Student management, LMS, attendance.",
   openGraph: {

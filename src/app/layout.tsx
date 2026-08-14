@@ -10,27 +10,25 @@ import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://eduratech.com"),
   title: {
-    template: "%s | EduraTech",
-    default: "EduraTech | Custom AI & Software Development for US Small Businesses",
+    template: "%s | Edura Technologies",
+    default: "Edura Technologies | Custom AI & Software Development for US Small Businesses",
   },
-  description: "Custom AI development, software solutions, and digital transformation for US small businesses. Transparent process, proven results. EduraTech specializes in AI, automation, and custom software development.",
+  description: "Custom AI development, software solutions, and digital transformation for US small businesses. Transparent process, proven results. Edura Technologies specializes in AI, automation, and custom software development.",
   keywords: ["custom software development", "AI development company", "SaaS development", "business automation", "web application development", "AI solutions", "cloud development"],
   openGraph: {
-    title: "EduraTech | Custom AI & Software Development",
+    title: "Edura Technologies | Custom AI & Software Development",
     description: "We build practical AI solutions and custom software that solve real business problems. No hype. Real results.",
     url: "https://eduratech.com",
-    siteName: "EduraTech",
+    siteName: "Edura Technologies",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "EduraTech | Custom AI & Software Development",
+    title: "Edura Technologies | Custom AI & Software Development",
     description: "Custom AI solutions and software development for US small businesses and startups.",
-  },
-  alternates: {
-    canonical: "https://eduratech.com",
   },
   robots: "index, follow",
   verification: {
@@ -41,10 +39,10 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "EduraTech",
+  "name": "Edura Technologies",
   "url": "https://eduratech.com",
   "logo": "https://eduratech.com/logo.png",
-  "description": "EduraTech is a technology division of Edura Global Solutions specializing in custom AI development, software solutions, and digital transformation for US small businesses.",
+  "description": "Edura Technologies is a technology division of Edura Global Solutions specializing in custom AI development, software solutions, and digital transformation for US small businesses.",
   "areaServed": [
     {
       "@type": "Country",

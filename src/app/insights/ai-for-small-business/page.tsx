@@ -5,6 +5,9 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export const metadata = {
+  alternates: {
+    canonical: "/insights/ai-for-small-business",
+  },
   title: "AI for Small Business: Practical Guide 2024 - Real Use Cases - EduraTech",
   description: "How can small businesses use AI? Real use cases: customer support, document processing, content creation, workflow automation. Cost and ROI expectations.",
   openGraph: {

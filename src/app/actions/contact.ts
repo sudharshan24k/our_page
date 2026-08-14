@@ -22,11 +22,11 @@ export async function submitContact(formData: FormData) {
     }
 
     const { error } = await resend.emails.send({
-      from: "EduraTech Contact Form <onboarding@resend.dev>",
+      from: "Edura Technologies <hello@eduratech.com>",
       to: "hello@eduratech.com",
       subject: `New Lead: ${name} from ${website || "No Website"}`,
       html: `
-        <h2>New Lead from EduraTech Contact Form</h2>
+        <h2>New Lead from Edura Technologies Contact Form</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Website:</strong> ${website || "N/A"}</p>

@@ -21,7 +21,7 @@ const values = [
     {
         icon: Users,
         title: "From Idea to Production",
-        description: "You don't need to coordinate multiple vendors. EduraTech supports the complete technology lifecycle from requirements through deployment and ongoing improvement.",
+        description: "You don't need to coordinate multiple vendors. Edura Technologies supports the complete technology lifecycle from requirements through deployment and ongoing improvement.",
         highlight: "End-to-end delivery"
     },
     {
@@ -77,13 +77,13 @@ export function WhyEduraTech() {
                         className="max-w-4xl"
                     >
                         <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tighter text-white mb-8">
-                            Why EduraTech
+                            Why Edura Technologies
                         </h1>
                         <p className="text-xl md:text-2xl text-zinc-400 font-light leading-relaxed mb-8">
                             Technology should do more than work. It should create business value.
                         </p>
                         <p className="text-lg md:text-xl text-zinc-300 leading-relaxed max-w-3xl">
-                            At EduraTech, we combine strategic thinking, strong engineering, and modern technology to build solutions that help businesses operate better, serve customers better, and grow with confidence.
+                            At Edura Technologies, we combine strategic thinking, strong engineering, and modern technology to build solutions that help businesses operate better, serve customers better, and grow with confidence.
                         </p>
                     </motion.div>
                 </Container>
@@ -169,7 +169,7 @@ export function WhyEduraTech() {
                         className="mb-16"
                     >
                         <h2 className="text-5xl md:text-6xl font-semibold tracking-tighter text-white mb-6">
-                            Why Businesses Choose EduraTech
+                            Why Businesses Choose Edura Technologies
                         </h2>
                     </motion.div>
 
@@ -242,13 +242,13 @@ export function WhyEduraTech() {
                         </p>
                         <div className="flex flex-col sm:flex-row gap-6 justify-center">
                             <a
-                                href="#contact"
+                                href="/contact"
                                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-primary/90 transition-all duration-300 shadow-[0_0_40px_-10px_rgba(59,130,246,0.6)]"
                             >
                                 Discuss Your Project
                             </a>
                             <a
-                                href="#contact"
+                                href="/contact"
                                 className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/10 text-white font-semibold rounded-xl hover:border-primary/50 hover:bg-white/5 transition-all duration-300"
                             >
                                 Request a Consultation

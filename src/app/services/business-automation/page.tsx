@@ -4,6 +4,9 @@ import { Section } from "@/components/ui/Section";
 import { ArrowRight } from "lucide-react";
 
 export const metadata = {
+  alternates: {
+    canonical: "/services/business-automation",
+  },
   title: "Business Process Automation Services - Workflow Automation - EduraTech",
   description: "Automate repetitive business processes. Reduce labor costs 50%+. Integrate systems, eliminate manual data entry.",
   openGraph: {

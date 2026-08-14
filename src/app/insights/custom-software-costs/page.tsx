@@ -5,6 +5,9 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export const metadata = {
+  alternates: {
+    canonical: "/insights/custom-software-costs",
+  },
   title: "Custom Software Development Costs 2024 - Complete Breakdown - EduraTech",
   description: "How much does custom software cost? Real pricing breakdown. Small projects $15K-$30K, medium $40K-$75K, complex $100K+. Detailed cost factors.",
   openGraph: {

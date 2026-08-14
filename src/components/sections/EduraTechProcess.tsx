@@ -361,19 +361,19 @@ export function EduraTechProcess() {
                         </p>
                         <div className="flex flex-col sm:flex-row gap-6 justify-center">
                             <a
-                                href="#contact"
+                                href="/contact"
                                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-primary/90 transition-all duration-300 shadow-[0_0_40px_-10px_rgba(59,130,246,0.6)]"
                             >
                                 Start Your Project
                             </a>
                             <a
-                                href="#contact"
+                                href="/contact"
                                 className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/10 text-white font-semibold rounded-xl hover:border-primary/50 hover:bg-white/5 transition-all duration-300"
                             >
                                 Talk to Our Team
                             </a>
                             <a
-                                href="#contact"
+                                href="/contact"
                                 className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/10 text-white font-semibold rounded-xl hover:border-primary/50 hover:bg-white/5 transition-all duration-300"
                             >
                                 Get a Project Assessment

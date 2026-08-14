@@ -4,6 +4,9 @@ import { Section } from "@/components/ui/Section";
 import { ArrowRight, CheckCircle } from "lucide-react";
 
 export const metadata = {
+  alternates: {
+    canonical: "/industries/dental",
+  },
   title: "Dental Practice Management Software - EduraTech",
   description: "Custom practice management software for dental clinics. Patient scheduling, billing, HIPAA compliance, and automation built for real dental practices.",
   openGraph: {

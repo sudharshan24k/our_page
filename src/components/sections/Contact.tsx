@@ -40,7 +40,7 @@ export function Contact() {
                         <div>
                             <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tighter text-white mb-6">Ready to scale?</h2>
                             <p className="text-lg md:text-xl font-light text-zinc-400">
-                                Leave your details below and we'll reach out within 24 hours to schedule your free strategy audit.
+                                Leave your details below and we&apos;ll reach out within 24 hours to schedule your free strategy audit.
                             </p>
                         </div>
 

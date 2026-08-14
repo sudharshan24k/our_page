@@ -4,6 +4,9 @@ import { Section } from "@/components/ui/Section";
 import { ArrowRight } from "lucide-react";
 
 export const metadata = {
+  alternates: {
+    canonical: "/services/crm-development",
+  },
   title: "CRM Development - Custom CRM Software for Sales & Support - EduraTech",
   description: "Custom CRM systems built for your sales workflow. Lead management, pipeline tracking, customer insights.",
   openGraph: {

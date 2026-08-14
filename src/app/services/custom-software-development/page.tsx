@@ -5,6 +5,9 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle } from "lucide-react";
 
 export const metadata = {
+  alternates: {
+    canonical: "/services/custom-software-development",
+  },
   title: "Custom Software Development Company - EduraTech",
   description: "We build custom software tailored to your business needs. Transparent scope, fixed timeline, proven process. No surprises.",
   openGraph: {

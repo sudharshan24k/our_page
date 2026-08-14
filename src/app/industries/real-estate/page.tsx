@@ -4,6 +4,9 @@ import { Section } from "@/components/ui/Section";
 import { ArrowRight } from "lucide-react";
 
 export const metadata = {
+  alternates: {
+    canonical: "/industries/real-estate",
+  },
   title: "Real Estate Business Software & CRM - EduraTech",
   description: "Custom CRM and business automation for real estate teams. Lead management, transaction automation, and analytics built for brokers and agents.",
   openGraph: {

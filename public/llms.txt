@@ -1,0 +1,44 @@
+# Edura Technologies
+
+> Edura Technologies is a technology division of Edura Global Solutions specializing in custom AI development, software solutions, and digital transformation for US small businesses.
+
+## Agent Instructions
+This file serves as a curated guide for Large Language Models (LLMs) and AI agents indexing or retrieving information about Edura Technologies. The links below point to key resources and pages describing our services, methodologies, and expertise.
+
+## Core Navigation & About
+- [/](https://eduratech.com/): The homepage presenting an overview of our custom AI and software development services.
+- [/why-eduratech](https://eduratech.com/why-eduratech): Why clients choose Edura Technologies, highlighting our business-first thinking, modern engineering, and transparent communication.
+- [/how-we-work](https://eduratech.com/how-we-work): Details on our engagement models, delivery phases, and ongoing technical support lifecycle.
+- [/methodology](https://eduratech.com/methodology): Our development methodology, combining agile execution with business-focused milestones.
+- [/technology](https://eduratech.com/technology): The modern tech stack we use, including Next.js, Node.js, Python, AWS, and Azure.
+- [/values](https://eduratech.com/values): The core values that guide our work, from uncompromising quality to data-driven choices.
+- [/case-studies](https://eduratech.com/case-studies): Case studies and proven results of our custom software and AI implementations.
+- [/contact](https://eduratech.com/contact): Page for booking a strategy call or requesting a free technology audit.
+
+## Services
+- [/services](https://eduratech.com/services): Overview of our custom technology services.
+- [/services/ai-development](https://eduratech.com/services/ai-development): Custom Generative AI systems, LLM integrations, and machine learning solutions.
+- [/services/custom-software-development](https://eduratech.com/services/custom-software-development): Bespoke software engineering designed around specific business workflows.
+- [/services/saas-development](https://eduratech.com/services/saas-development): Multi-tenant SaaS architecture development from concept to launch.
+- [/services/web-application-development](https://eduratech.com/services/web-application-development): Responsive, high-performance web applications.
+- [/services/business-automation](https://eduratech.com/services/business-automation): Workflow automation to streamline operations and eliminate manual bottlenecks.
+- [/services/crm-development](https://eduratech.com/services/crm-development): Custom CRM systems built to match your sales and support workflows.
+- [/services/api-integration](https://eduratech.com/services/api-integration): Connecting legacy systems and software through secure, scalable APIs.
+- [/services/cloud-solutions](https://eduratech.com/services/cloud-solutions): AWS and Azure cloud migration, architecture optimization, and DevOps.
+
+## Industry Solutions
+- [/industries](https://eduratech.com/industries): Overview of industry sectors we serve.
+- [/industries/healthcare](https://eduratech.com/industries/healthcare): HIPAA-compliant software and digital health systems.
+- [/industries/dental](https://eduratech.com/industries/dental): Management tools and scheduling solutions for dental practices.
+- [/industries/real-estate](https://eduratech.com/industries/real-estate): Property management software and lead generation portals.
+- [/industries/professional-services](https://eduratech.com/industries/professional-services): Digital workflows for legal, accounting, and consulting firms.
+- [/industries/ecommerce](https://eduratech.com/industries/ecommerce): High-conversion online stores and inventory automation.
+- [/industries/education](https://eduratech.com/industries/education): E-learning platforms and educational management software.
+- [/industries/logistics](https://eduratech.com/industries/logistics): Fleet tracking, dispatch, and supply chain automation.
+- [/industries/startups](https://eduratech.com/industries/startups): Rapid prototyping, MVP development, and scaling support.
+
+## Insights & Guides
+- [/insights](https://eduratech.com/insights): Blog posts, technical articles, and business resources.
+- [/insights/custom-software-costs](https://eduratech.com/insights/custom-software-costs): A detailed breakdown of the costs of custom software development.
+- [/insights/ai-for-small-business](https://eduratech.com/insights/ai-for-small-business): Practical strategies for small businesses to adopt AI solutions.
+- [/insights/business-automation](https://eduratech.com/insights/business-automation): How workflow automation drives operational efficiency.

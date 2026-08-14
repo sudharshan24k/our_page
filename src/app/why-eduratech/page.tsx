@@ -2,8 +2,11 @@ import { Reveal } from "@/components/ui/Reveal";
 import { WhyEduraTech } from "@/components/sections/WhyEduraTech";
 
 export const metadata = {
-    title: "Why EduraTech | Strategic Technology Solutions",
-    description: "Discover why businesses choose EduraTech for strategic technology solutions, modern engineering, and long-term partnerships."
+  alternates: {
+    canonical: "/why-eduratech",
+  },
+    title: "Why Edura Technologies | Strategic Technology Solutions",
+    description: "Discover why businesses choose Edura Technologies for strategic technology solutions, modern engineering, and long-term partnerships."
 };
 
 export default function WhyEduraTechPage() {

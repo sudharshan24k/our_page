@@ -5,6 +5,9 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export const metadata = {
+  alternates: {
+    canonical: "/insights",
+  },
   title: "EduraTech Insights - AI & Software Development Articles",
   description: "Expert guides on custom software development, AI implementation, business automation, and digital transformation for small businesses.",
   openGraph: {

@@ -4,6 +4,9 @@ import { Section } from "@/components/ui/Section";
 import { ArrowRight } from "lucide-react";
 
 export const metadata = {
+  alternates: {
+    canonical: "/services/api-integration",
+  },
   title: "API Integration Services - Third-Party System Integration - EduraTech",
   description: "Connect your business systems. Real-time data sync, automated workflows, single source of truth.",
   openGraph: {

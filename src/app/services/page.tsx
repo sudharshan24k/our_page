@@ -3,6 +3,9 @@ import { Reveal } from "@/components/ui/Reveal";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/services",
+  },
   title: "Our Services | Enterprise Digital Solutions",
   description: "Discover our suite of B2B tech services including Authority Positioning, Conversion Engine optimization, Revenue Automation, and Zero-Downtime Infrastructure.",
 };

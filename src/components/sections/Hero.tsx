@@ -82,13 +82,13 @@ export function Hero() {
 
                         <div className="flex flex-col sm:flex-row gap-5 pt-4">
                             <Magnetic>
-                                <Button href="#contact" size="lg" className="bg-primary text-white hover:bg-primary/90 font-medium flex items-center gap-2 rounded-xl shadow-[0_0_40px_-10px_rgba(59,130,246,0.6)] hover:shadow-[0_0_60px_-15px_rgba(59,130,246,0.8)] transition-all duration-300 px-8">
+                                <Button href="/contact" size="lg" className="bg-primary text-white hover:bg-primary/90 font-medium flex items-center gap-2 rounded-xl shadow-[0_0_40px_-10px_rgba(59,130,246,0.6)] hover:shadow-[0_0_60px_-15px_rgba(59,130,246,0.8)] transition-all duration-300 px-8">
                                     Book a Strategy Call
                                     <ArrowRight className="w-4 h-4" />
                                 </Button>
                             </Magnetic>
                             <Magnetic>
-                                <Button href="#services" variant="ghost" size="lg" className="text-zinc-300 hover:text-white hover:bg-white/10 border border-white/10 backdrop-blur-sm rounded-xl px-8 transition-all duration-300">
+                                <Button href="/services" variant="ghost" size="lg" className="text-zinc-300 hover:text-white hover:bg-white/10 border border-white/10 backdrop-blur-sm rounded-xl px-8 transition-all duration-300">
                                     View Our Results
                                 </Button>
                             </Magnetic>
