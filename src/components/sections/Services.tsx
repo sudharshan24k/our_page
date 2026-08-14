@@ -322,7 +322,7 @@ export function Services({ isMainHeading = false }: { isMainHeading?: boolean })
 
                 {/* Tab Switcher */}
                 <div className="flex justify-center mb-16">
-                    <div className="inline-flex p-1.5 rounded-2xl bg-white/[0.03] border border-white/5 backdrop-blur-xl">
+                    <div className="inline-flex p-1.5 rounded-2xl bg-primary/5 border border-primary/20 backdrop-blur-xl">
                         <button
                             onClick={() => setActiveTab("engineering")}
                             className={`px-6 py-3 text-sm font-semibold rounded-xl transition-all duration-300 cursor-pointer ${
@@ -359,7 +359,7 @@ export function Services({ isMainHeading = false }: { isMainHeading?: boolean })
                             variants={itemVariants}
                             whileHover={{ y: -8, transition: { duration: 0.3 } }}
                             onClick={() => setSelectedService(service)}
-                            className="group cursor-pointer relative p-8 rounded-3xl border border-white/5 bg-[#0a0a0c] hover:border-white/10 transition-all duration-500 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.7)] flex flex-col overflow-hidden"
+                            className="group cursor-pointer relative p-8 rounded-3xl border border-primary/10 bg-[#0a0a0c] hover:border-primary/30 transition-all duration-500 hover:shadow-[0_20px_40px_-15px_rgba(59,130,246,0.15)] flex flex-col overflow-hidden"
                         >
                             {/* Top Accent Glow on Hover */}
                             <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary/0 to-transparent group-hover:via-primary/70 transition-all duration-700" />
@@ -368,8 +368,8 @@ export function Services({ isMainHeading = false }: { isMainHeading?: boolean })
                             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
                             <div className="relative z-10 flex flex-col h-full">
-                                <div className="w-14 h-14 rounded-2xl bg-white/[0.02] border border-white/5 flex items-center justify-center group-hover:border-primary/20 group-hover:bg-primary/10 transition-all duration-500 mb-8 shadow-inner group-hover:scale-110">
-                                    <service.icon className="w-7 h-7 text-zinc-400 group-hover:text-primary transition-colors duration-300 stroke-[1.5]" />
+                                <div className="w-14 h-14 rounded-2xl bg-primary/5 border border-primary/20 flex items-center justify-center group-hover:border-primary/40 group-hover:bg-primary/10 transition-all duration-500 mb-8 shadow-inner group-hover:scale-110">
+                                    <service.icon className="w-7 h-7 text-primary transition-colors duration-300 stroke-[1.5]" />
                                 </div>
 
                                 <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-primary transition-colors tracking-tight">{service.title}</h3>
@@ -378,7 +378,7 @@ export function Services({ isMainHeading = false }: { isMainHeading?: boolean })
                                     {service.description}
                                 </p>
 
-                                <div className="flex items-center justify-between text-sm font-semibold text-zinc-400 group-hover:text-white transition-colors mt-auto pt-5 border-t border-white/5">
+                                <div className="flex items-center justify-between text-sm font-semibold text-zinc-400 group-hover:text-white transition-colors mt-auto pt-5 border-t border-primary/10">
                                     <span className="group-hover:translate-x-1 transition-transform duration-300">Read Details</span>
                                     <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-300 group-hover:rotate-45 group-hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]">
                                         <ArrowRight className="w-4 h-4" />
@@ -395,7 +395,7 @@ export function Services({ isMainHeading = false }: { isMainHeading?: boolean })
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.3 }}
-                    className="mt-24 pt-24 border-t border-white/5"
+                    className="mt-24 pt-24 border-t border-primary/10"
                 >
                     <div className="max-w-3xl">
                         <h3 className="text-3xl md:text-4xl font-semibold text-white mb-6">

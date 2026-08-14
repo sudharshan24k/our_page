@@ -184,13 +184,13 @@ export function EduraTechProcess() {
             </Section>
 
             {/* Process Steps Timeline */}
-            <Section className="bg-transparent border-t border-white/5 py-24 md:py-32 relative overflow-hidden">
+            <Section className="bg-transparent border-t border-primary/10 py-24 md:py-32 relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full pointer-events-none" />
 
                 <Container className="relative z-10">
                     <div className="relative max-w-6xl mx-auto">
                         {/* Central Animated Line */}
-                        <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/0 via-white/10 to-primary/0 md:-translate-x-1/2" />
+                        <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/0 via-primary/30 to-primary/0 md:-translate-x-1/2" />
                         
                         <motion.div
                             initial="hidden"
@@ -206,8 +206,8 @@ export function EduraTechProcess() {
                                     <div key={i} className={`relative flex flex-col md:flex-row items-start md:items-center w-full mb-16 md:mb-32 last:mb-0 group ${isEven ? 'md:justify-start' : 'md:justify-end'}`}>
                                         
                                         {/* Timeline Node */}
-                                        <div className="absolute left-8 md:left-1/2 w-12 h-12 rounded-full bg-[#0a0a0c] border border-white/10 md:-translate-x-1/2 z-10 flex items-center justify-center mt-6 md:mt-0 group-hover:border-primary/50 group-hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-all duration-700">
-                                            <div className="w-4 h-4 rounded-full bg-white/5 border border-white/20 group-hover:bg-primary group-hover:border-primary transition-all duration-500 group-hover:scale-110 shadow-[inset_0_0_10px_rgba(0,0,0,0.5)]" />
+                                        <div className="absolute left-8 md:left-1/2 w-12 h-12 rounded-full bg-[#0a0a0c] border border-primary/20 md:-translate-x-1/2 z-10 flex items-center justify-center mt-6 md:mt-0 group-hover:border-primary/50 group-hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-all duration-700">
+                                            <div className="w-4 h-4 rounded-full bg-primary/10 border border-primary/30 group-hover:bg-primary group-hover:border-primary transition-all duration-500 group-hover:scale-110 shadow-[inset_0_0_10px_rgba(0,0,0,0.5)]" />
                                         </div>
 
                                         {/* Content Card Wrapper */}
@@ -218,19 +218,19 @@ export function EduraTechProcess() {
                                                     visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] } }
                                                 }}
                                                 onClick={() => setSelectedStep(step)}
-                                                className="relative p-8 md:p-10 rounded-3xl bg-white/[0.02] border border-white/[0.05] hover:border-primary/30 transition-all duration-700 hover:-translate-y-2 backdrop-blur-xl cursor-pointer overflow-hidden group/card text-left"
-                                            >
+                                                className="relative p-8 md:p-10 rounded-3xl bg-[#0a0a0c] border border-primary/10 hover:border-primary/30 transition-all duration-700 hover:-translate-y-2 backdrop-blur-xl cursor-pointer overflow-hidden group/card text-left hover:shadow-[0_20px_40px_-15px_rgba(59,130,246,0.15)]"
+                                              >
                                                 {/* Ambient Background Glow */}
                                                 <div className="absolute -inset-px rounded-3xl opacity-0 group-hover/card:opacity-100 transition-opacity duration-1000 z-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent blur-2xl" />
                                                 
                                                 {/* Top Accent Line */}
-                                                <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover/card:via-primary/70 transition-all duration-700 z-10" />
+                                                <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent group-hover/card:via-primary/70 transition-all duration-700 z-10" />
 
                                                 <div className="relative z-20">
                                                     <div className={`flex items-center gap-6 mb-6 ${isEven ? 'md:flex-row-reverse' : ''}`}>
-                                                        <div className="w-16 h-16 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center flex-shrink-0 group-hover/card:bg-primary/20 group-hover/card:border-primary/40 transition-all duration-500 shadow-inner group-hover/card:scale-110 relative overflow-hidden">
+                                                        <div className="w-16 h-16 rounded-2xl bg-primary/5 border border-primary/20 flex items-center justify-center flex-shrink-0 group-hover/card:bg-primary/20 group-hover/card:border-primary/40 transition-all duration-500 shadow-inner group-hover/card:scale-110 relative overflow-hidden">
                                                             <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover/card:opacity-100 blur-xl transition-opacity duration-500" />
-                                                            <Icon className="w-8 h-8 text-zinc-400 group-hover/card:text-primary transition-colors duration-300 stroke-[1.5] relative z-10" />
+                                                            <Icon className="w-8 h-8 text-primary group-hover/card:text-primary transition-colors duration-300 stroke-[1.5] relative z-10" />
                                                         </div>
                                                         <div>
                                                             <span className="text-sm font-bold text-primary tracking-widest uppercase mb-1 block">Phase {step.id}</span>
@@ -261,7 +261,7 @@ export function EduraTechProcess() {
             </Section>
 
             {/* Delivery Principles Section */}
-            <Section className="bg-transparent border-t border-white/5 py-24 md:py-32">
+            <Section className="bg-transparent border-t border-primary/10 py-24 md:py-32">
                 <Container>
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -286,7 +286,7 @@ export function EduraTechProcess() {
                             <motion.div
                                 key={i}
                                 variants={itemVariants}
-                                className="flex items-start gap-4 p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-primary/20 hover:bg-primary/5 transition-all duration-500"
+                                className="flex items-start gap-4 p-6 rounded-2xl border border-primary/10 bg-[#0a0a0c] hover:border-primary/30 hover:bg-primary/[0.02] transition-all duration-500"
                             >
                                 <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
                                     <CheckCircle className="w-4 h-4 text-primary" />
@@ -341,7 +341,7 @@ export function EduraTechProcess() {
             </Section>
 
             {/* Final CTA Section */}
-            <Section className="bg-transparent border-t border-white/5 py-24 md:py-32">
+            <Section className="bg-transparent border-t border-primary/10 py-24 md:py-32">
                 <Container>
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
