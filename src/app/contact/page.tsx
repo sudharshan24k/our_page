@@ -7,8 +7,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/contact",
   },
-  title: "Contact Us | Request a Strategy Call",
-  description: "Ready to scale your enterprise digital system? Contact Edura Technologies to request a free growth audit and strategy consultation today.",
+  title: "Contact Us | Free Custom Software & AI Audit",
+  description: "Contact Edura Technologies to request your free business strategy audit. Get custom AI systems and custom software built to scale your business.",
 };
 
 export default function ContactPage() {
@@ -31,7 +31,7 @@ export default function ContactPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Reveal width="100%">
-        <Contact />
+        <Contact isPage />
       </Reveal>
       <Reveal width="100%">
         <Problems />

@@ -6,7 +6,7 @@ import { Section } from "@/components/ui/Section";
 import { Lock, ArrowRight, ShieldCheck } from "lucide-react";
 import { useState } from "react";
 
-export function Contact() {
+export function Contact({ isPage = false }: { isPage?: boolean }) {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -44,6 +44,8 @@ export function Contact() {
         }
     };
 
+    const HeadingTag = isPage ? "h1" : "h2";
+
     return (
         <Section id="contact" className="bg-transparent border-t border-primary/20 py-24 md:py-32 relative">
             <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
@@ -53,7 +55,7 @@ export function Contact() {
                     {/* Left Column: Form */}
                     <div className="space-y-10">
                         <div>
-                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tighter text-white mb-6">Ready to scale?</h2>
+                            <HeadingTag className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tighter text-white mb-6">Ready to scale?</HeadingTag>
                             <p className="text-lg md:text-xl font-light text-zinc-400">
                                 Leave your details below and we&apos;ll reach out within 24 hours to schedule your free strategy audit.
                             </p>

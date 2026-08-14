@@ -8,6 +8,8 @@ import { Reveal } from "@/components/ui/Reveal";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  title: "Edura Technologies | Custom AI & Software Development for Small Businesses",
+  description: "Edura Technologies builds custom AI systems, automation solutions, and premium software to help US small businesses secure high-ticket clients and scale operations.",
   alternates: {
     canonical: "/",
   },
