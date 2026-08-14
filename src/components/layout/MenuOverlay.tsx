@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { X } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import Image from "next/image";
 
 interface MenuOverlayProps {
     isOpen: boolean;
@@ -39,8 +40,9 @@ export function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={{ opacity: 1, x: 0 }}
                             >
-                                <Link href="/" onClick={onClose} className="text-xl font-bold tracking-tighter">
-                                    Edura Technologies
+                                <Link href="/" onClick={onClose} className="flex items-center gap-2.5 text-xl font-bold tracking-tighter">
+                                    <Image src="/eduratech_logo.png" alt="Edura Technologies Logo" width={32} height={32} className="w-8 h-8 object-contain" />
+                                    <span>Edura Technologies</span>
                                 </Link>
                             </motion.div>
                             <button

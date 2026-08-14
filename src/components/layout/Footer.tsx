@@ -1,5 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
     const year = new Date().getFullYear();
@@ -9,10 +10,16 @@ export function Footer() {
             <Container>
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 md:gap-6">
                     
-                    <div className="flex flex-col gap-2">
-                        <span className="font-semibold text-zinc-300">USA Headquarters</span>
-                        <span>100 Market Street, Suite 400</span>
-                        <span>San Francisco, CA 94105, United States</span>
+                    <div className="flex flex-col gap-3">
+                        <div className="flex items-center gap-2">
+                            <Image src="/eduratech_logo.png" alt="Edura Technologies Logo" width={24} height={24} className="w-6 h-6 object-contain" />
+                            <span className="font-semibold text-white text-base">Edura Technologies</span>
+                        </div>
+                        <div className="flex flex-col gap-1 text-xs">
+                            <span className="font-medium text-zinc-400">USA Headquarters</span>
+                            <span>100 Market Street, Suite 400</span>
+                            <span>San Francisco, CA 94105, United States</span>
+                        </div>
                     </div>
 
                     <div className="flex flex-col items-center gap-4">

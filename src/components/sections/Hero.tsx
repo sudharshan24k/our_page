@@ -34,23 +34,6 @@ export function Hero() {
                         transition={{ duration: 0.8, ease: "easeOut" }}
                         className="flex-1 lg:max-w-[50%] space-y-8 relative"
                     >
-                        {/* Trust Badge */}
-                        <motion.div
-                            initial={{ opacity: 0, y: -10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 0.2 }}
-                            className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-primary/30 bg-primary/10 backdrop-blur-md text-sm text-primary font-medium tracking-wide"
-                        >
-                            <div className="flex items-center gap-1">
-                                <span className="text-lg">⭐</span>
-                                <span>⭐</span>
-                                <span>⭐</span>
-                                <span>⭐</span>
-                                <span>⭐</span>
-                            </div>
-                            <span className="text-white">50+ 5-star clients</span>
-                        </motion.div>
-
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-sm text-zinc-300 font-medium tracking-wide">
                             <Sparkles className="w-4 h-4 text-primary" />
                             <span>Digital Systems that Scale</span>

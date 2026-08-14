@@ -7,6 +7,7 @@ import { Container } from "@/components/ui/Container";
 import { MenuOverlay } from "@/components/layout/MenuOverlay";
 import { ArrowRight } from "lucide-react";
 import { Magnetic } from "@/components/ui/Magnetic";
+import Image from "next/image";
 
 export function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -48,11 +49,12 @@ export function Header() {
                     isHidden ? "-translate-y-full" : "translate-y-0"
                 )}
             >
-                <Container className="flex items-center justify-between">
-                    <Link href="/" className="text-lg font-semibold tracking-tight text-white hover:text-primary transition-colors">
-                        Edura Technologies
+                <Container width="wide" className="flex items-center justify-between">
+                    <Link href="/" className="flex items-center gap-2.5 text-lg font-semibold tracking-tight text-white hover:text-primary transition-colors whitespace-nowrap">
+                        <Image src="/eduratech_logo.png" alt="Edura Technologies Logo" width={32} height={32} className="w-8 h-8 object-contain" />
+                        <span>Edura Technologies</span>
                     </Link>
-                    <nav className="hidden lg:flex items-center gap-5 xl:gap-8 text-sm xl:text-[15px] font-medium text-zinc-400">
+                    <nav className="hidden lg:flex items-center gap-5 xl:gap-8 text-sm xl:text-[15px] font-medium text-zinc-200">
                         {[
                             { label: "Why Us", href: "/why-eduratech" },
                             { label: "How We Work", href: "/how-we-work" },
@@ -79,14 +81,14 @@ export function Header() {
                         <button
                             aria-label="Open mobile menu"
                             onClick={() => setIsMenuOpen(true)}
-                            className="lg:hidden flex flex-col gap-1.5 items-end text-zinc-400 hover:text-white transition-colors p-2 -mr-2"
+                            className="lg:hidden flex flex-col gap-1.5 items-end text-zinc-300 hover:text-white transition-colors p-2 -mr-2"
                         >
                             <span className="w-6 h-0.5 bg-current"></span>
                             <span className="w-6 h-0.5 bg-current"></span>
                         </button>
 
                         <Magnetic>
-                            <Link href="/contact" className="hidden lg:flex items-center gap-2 text-sm font-medium text-white px-6 py-2 rounded-full bg-primary hover:bg-primary/90 shadow-[0_0_20px_-5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_30px_-5px_rgba(59,130,246,0.7)] transition-all">
+                            <Link href="/contact" className="hidden lg:flex items-center gap-2 text-sm font-medium text-white px-6 py-2 rounded-full bg-primary hover:bg-primary/90 shadow-[0_0_20px_-5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_30px_-5px_rgba(59,130,246,0.7)] transition-all whitespace-nowrap">
                                 Claim Free Audit
                                 <ArrowRight className="w-4 h-4" />
                             </Link>

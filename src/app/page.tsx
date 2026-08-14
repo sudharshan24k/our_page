@@ -1,8 +1,10 @@
 import { Hero } from "@/components/sections/Hero";
+import { Problems } from "@/components/sections/Problems";
+import { WhyUs } from "@/components/sections/WhyUs";
+import { SelectedWork } from "@/components/sections/SelectedWork";
 import { Testimonials } from "@/components/sections/Testimonials";
+import { Contact } from "@/components/sections/Contact";
 import { Reveal } from "@/components/ui/Reveal";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -19,15 +21,24 @@ export default function Home() {
       </Reveal>
 
       <Reveal width="100%">
+        <Problems />
+      </Reveal>
+
+      <Reveal width="100%">
+        <WhyUs />
+      </Reveal>
+
+      <Reveal width="100%">
+        <SelectedWork />
+      </Reveal>
+
+      <Reveal width="100%">
         <Testimonials />
       </Reveal>
 
-      <div className="py-24 flex justify-center">
-        <Link href="/services" className="group inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors">
-          Explore Our Services
-          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-        </Link>
-      </div>
+      <Reveal width="100%">
+        <Contact />
+      </Reveal>
     </main>
   );
 }
