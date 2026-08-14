@@ -8,7 +8,7 @@ import { MenuOverlay } from "@/components/layout/MenuOverlay";
 import { ArrowRight } from "lucide-react";
 import { Magnetic } from "@/components/ui/Magnetic";
 import Image from "next/image";
-import logoImg from "../../../public/eduratech_logo.png";
+import logoImg from "../../../public/eduratech_logo_mark.png";
 
 export function Header() {
     const [isScrolled, setIsScrolled] = useState(false);

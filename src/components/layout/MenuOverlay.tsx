@@ -5,7 +5,7 @@ import Link from "next/link";
 import { X } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import Image from "next/image";
-import logoImg from "../../../public/eduratech_logo.png";
+import logoImg from "../../../public/eduratech_logo_mark.png";
 
 interface MenuOverlayProps {
     isOpen: boolean;

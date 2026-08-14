@@ -1,7 +1,7 @@
 import { Container } from "@/components/ui/Container";
 import Link from "next/link";
 import Image from "next/image";
-import logoImg from "../../../public/eduratech_logo.png";
+import logoImg from "../../../public/eduratech_logo_mark.png";
 
 export function Footer() {
     const year = new Date().getFullYear();
