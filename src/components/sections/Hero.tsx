@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/Button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Magnetic } from "@/components/ui/Magnetic";
 
-const ANIMATED_WORDS = ["Growth", "Leads", "Conversions", "ROI", "Efficiency", "Automation", "AI Systems", "Scale"];
+const ANIMATED_WORDS = ["Growth", "Leads", "ROI", "Scale", "Revenue", "Impact"];
 
 export function Hero() {
     const [wordIndex, setWordIndex] = useState(0);
@@ -82,7 +82,7 @@ export function Hero() {
                             transition={{ duration: 1, delay: 0.3 }}
                             className="relative w-full"
                         >
-                            <div className="text-4xl sm:text-5xl md:text-7xl lg:text-[5.5rem] xl:text-[6.5rem] font-bold tracking-tighter leading-[1.1] text-zinc-800 uppercase relative z-10 flex flex-col lg:items-end w-full pl-4 lg:pl-0">
+                            <div className="text-3xl sm:text-5xl md:text-7xl lg:text-[5.5rem] xl:text-[6.5rem] font-bold tracking-tighter leading-[1.1] text-zinc-800 uppercase relative z-10 flex flex-col lg:items-end w-full">
                                 <span className="block text-zinc-800/80">Driving</span>
                                 <span className="block relative h-[1.2em] w-full overflow-hidden">
                                     <AnimatePresence>
@@ -92,7 +92,7 @@ export function Hero() {
                                             animate={{ y: "0%", opacity: 1 }}
                                             exit={{ y: "-100%", opacity: 0 }}
                                             transition={{ duration: 0.5, ease: "easeOut" }}
-                                            className="absolute top-0 left-0 lg:left-auto lg:right-0 whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500 px-2 pb-2 -ml-2 lg:-mr-2 lg:ml-0"
+                                            className="absolute top-0 left-0 lg:left-auto lg:right-0 whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500 pb-2"
                                         >
                                             {ANIMATED_WORDS[wordIndex]}
                                         </motion.span>
