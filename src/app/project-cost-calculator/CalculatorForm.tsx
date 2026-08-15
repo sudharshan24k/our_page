@@ -131,7 +131,7 @@ export default function CalculatorForm() {
   };
 
   // Submit Lead with Web3Forms
-  const handleSubmitLead = async (e: React.FormEvent) => {
+  const handleSubmitLead = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setFormError("");
 
@@ -148,37 +148,37 @@ export default function CalculatorForm() {
 
     setIsSubmitting(true);
 
-    const submissionData = {
-      access_key: "9d711988-0631-4518-aba1-4cb9aab6a4fe",
-      subject: `New Lead: Software Estimate for ${company}`,
-      from_name: name,
-      email: email,
-      phone: phone,
-      company: company,
-      message: `
-Project Type: ${selectedType?.label}
-Expected Scale: ${selectedScale?.label}
-Expected Users: ${selectedUsers?.label}
-Launch Timeline: ${selectedTimeline?.label}
-Design Readiness: ${selectedDesign?.label}
-Selected Features: ${selectedFeatures.map(f => f.label).join(", ")}
-Calculated Budget Estimate: $${minCost.toLocaleString()} - $${maxCost.toLocaleString()}
-Calculated Timeline: ${minWeeks} - ${maxWeeks} weeks
-Complexity Rating: ${complexity}
-Additional Project Info: ${description || "None provided"}
-      `.trim()
-    };
+    const formData = new FormData(e.currentTarget);
+    formData.append("access_key", "9d711988-0631-4518-aba1-4cb9aab6a4fe");
+    formData.append("subject", `New Lead: Software Estimate for ${company}`);
+    formData.append("from_name", "Edura Technologies Calculator");
+    formData.append("Project Type", selectedType?.label || "Not specified");
+    formData.append("Scale Option", selectedScale?.label || "Not specified");
+    formData.append("Expected Users", selectedUsers?.label || "Not specified");
+    formData.append("Launch Timeline", selectedTimeline?.label || "Not specified");
+    formData.append("Design Readiness", selectedDesign?.label || "Not specified");
+    formData.append("Selected Features", selectedFeatures.map(f => f.label).join(", ") || "None");
+    formData.append("Calculated Cost Range", `$${minCost.toLocaleString()} - $${maxCost.toLocaleString()}`);
+    formData.append("Calculated Duration", `${minWeeks} - ${maxWeeks} weeks`);
+    formData.append("Complexity Level", complexity);
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
 
     try {
       const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(submissionData)
+        headers: { 
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: json
       });
-      if (res.ok) {
+      const result = await res.json();
+      if (result.success) {
         setFormSubmitted(true);
       } else {
-        setFormError("Submission failed. Please try again.");
+        setFormError("Submission failed: " + (result.message || "Please check your network connection."));
       }
     } catch (err) {
       setFormError("An error occurred. Please try again.");
@@ -696,6 +696,7 @@ Additional Project Info: ${description || "None provided"}
                       <input
                         type="text"
                         id="name"
+                        name="Name"
                         required
                         value={name}
                         onChange={(e) => setName(e.target.value)}
@@ -708,6 +709,7 @@ Additional Project Info: ${description || "None provided"}
                       <input
                         type="text"
                         id="company"
+                        name="Company"
                         required
                         value={company}
                         onChange={(e) => setCompany(e.target.value)}
@@ -723,6 +725,7 @@ Additional Project Info: ${description || "None provided"}
                       <input
                         type="email"
                         id="email"
+                        name="Email"
                         required
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
@@ -735,6 +738,7 @@ Additional Project Info: ${description || "None provided"}
                       <input
                         type="tel"
                         id="phone"
+                        name="Phone"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
                         placeholder="+1 (555) 000-0000"
@@ -747,6 +751,7 @@ Additional Project Info: ${description || "None provided"}
                     <label htmlFor="description" className="text-xs font-mono uppercase tracking-widest text-zinc-400">Additional Project Details (Optional)</label>
                     <textarea
                       id="description"
+                      name="Message"
                       rows={3}
                       value={description}
                       onChange={(e) => setDescription(e.target.value)}
