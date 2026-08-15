@@ -62,6 +62,9 @@ export function Footer() {
                         <Link href="/case-studies" className="text-zinc-400 hover:text-primary transition-colors flex items-center gap-2 group">
                             <span className="w-0 h-[1px] bg-primary group-hover:w-2 transition-all duration-300"></span> Case Studies Portfolio
                         </Link>
+                        <Link href="/project-cost-calculator" className="text-zinc-400 hover:text-primary transition-colors flex items-center gap-2 group">
+                            <span className="w-0 h-[1px] bg-primary group-hover:w-2 transition-all duration-300"></span> Cost Calculator
+                        </Link>
                     </div>
 
                     {/* Legal Links */}

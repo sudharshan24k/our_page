@@ -20,7 +20,8 @@ const navLinks = [
     { label: "Methodology", href: "/methodology" },
     { label: "Technology", href: "/technology" },
     { label: "Industries", href: "/industries" },
-    { label: "Insights", href: "/insights" }
+    { label: "Insights", href: "/insights" },
+    { label: "Cost Calculator", href: "/project-cost-calculator" }
 ];
 
 export function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
