@@ -9,6 +9,7 @@ import { useState } from "react";
 export function Contact({ isPage = false }: { isPage?: boolean }) {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [activeTab, setActiveTab] = useState<"schedule" | "message">("schedule");
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -72,7 +73,43 @@ export function Contact({ isPage = false }: { isPage?: boolean }) {
                             </div>
                         </div>
 
-                        {isSubmitted ? (
+                        {/* Tabs Navigation */}
+                        <div className="flex gap-4 p-1.5 rounded-2xl bg-white/[0.02] border border-white/5 max-w-sm">
+                            <button
+                                type="button"
+                                onClick={() => setActiveTab("schedule")}
+                                className={`flex-1 py-3.5 text-xs font-bold uppercase tracking-wider rounded-xl transition-all cursor-pointer ${
+                                    activeTab === "schedule"
+                                        ? "bg-primary text-white shadow-lg"
+                                        : "text-zinc-500 hover:text-white"
+                                }`}
+                            >
+                                Schedule Instantly
+                            </button>
+                            <button
+                                type="button"
+                                onClick={() => setActiveTab("message")}
+                                className={`flex-1 py-3.5 text-xs font-bold uppercase tracking-wider rounded-xl transition-all cursor-pointer ${
+                                    activeTab === "message"
+                                        ? "bg-primary text-white shadow-lg"
+                                        : "text-zinc-500 hover:text-white"
+                                }`}
+                            >
+                                Send Message
+                            </button>
+                        </div>
+
+                        {activeTab === "schedule" ? (
+                            <div className="w-full rounded-3xl border border-primary/20 bg-[#0a0a0c] overflow-hidden shadow-2xl p-2 relative">
+                                <div className="absolute inset-0 bg-primary/5 pointer-events-none rounded-3xl" />
+                                <iframe
+                                    src="https://cal.com/eduratech/15min?embed=true&theme=dark"
+                                    style={{ width: "100%", height: "580px", border: "none" }}
+                                    title="Schedule a meeting with EduraTech"
+                                    className="relative z-10 rounded-2xl"
+                                />
+                            </div>
+                        ) : isSubmitted ? (
                             <div className="p-8 rounded-2xl bg-primary/10 border border-primary/20 backdrop-blur-xl flex flex-col items-center justify-center text-center space-y-4 animate-in fade-in zoom-in duration-500">
                                 <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mb-4">
                                     <ShieldCheck className="w-8 h-8 text-primary" />
