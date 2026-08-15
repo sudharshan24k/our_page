@@ -4,11 +4,19 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { Lock, ArrowRight, ShieldCheck } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Cal, { getCalApi } from "@calcom/embed-react";
 
 export function Contact({ isPage = false }: { isPage?: boolean }) {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
+
+    useEffect(() => {
+        (async function () {
+            const cal = await getCalApi({"namespace":"15min"});
+            cal("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+        })();
+    }, []);
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -146,55 +154,19 @@ export function Contact({ isPage = false }: { isPage?: boolean }) {
                         </div>
                     </div>
 
-                    {/* Right Column: Instant Scheduler CTA Card */}
+                    {/* Right Column: Embedded Cal.com React Widget */}
                     <div className="space-y-10 lg:pl-4">
-                        <div className="bg-[#0a0a0c] border border-primary/20 shadow-2xl rounded-3xl p-10 relative overflow-hidden flex flex-col justify-between min-h-[500px]">
-                            <div className="absolute top-0 right-0 w-48 h-48 bg-primary/10 rounded-full blur-[80px] pointer-events-none" />
+                        <div className="bg-[#0a0a0c] border border-primary/20 shadow-2xl rounded-3xl p-6 relative overflow-hidden">
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full blur-[60px]" />
+                            <h3 className="text-xl font-semibold text-white mb-6 relative z-10">Schedule Instantly</h3>
                             
-                            <div className="relative z-10 space-y-6">
-                                <span className="inline-flex items-center px-3 py-1 rounded-full border border-primary/20 bg-primary/5 text-xs font-semibold text-primary">
-                                    Instant Booking
-                                </span>
-                                <h3 className="text-3xl font-semibold tracking-tighter text-white">Book a Strategy Call</h3>
-                                <p className="text-zinc-400 font-light leading-relaxed text-base">
-                                    Choose a time on our calendar to discuss your software project, automation requirements, or AI ideas directly with our senior engineering team.
-                                </p>
-                                
-                                <ul className="space-y-4 pt-4 border-t border-white/5">
-                                    <li className="flex items-center gap-3 text-zinc-300">
-                                        <div className="w-5 h-5 rounded-full bg-primary/10 border border-primary/25 flex items-center justify-center text-primary shrink-0">
-                                            <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                                        </div>
-                                        <span className="text-sm font-light">15-minute diagnostic discovery session</span>
-                                    </li>
-                                    <li className="flex items-center gap-3 text-zinc-300">
-                                        <div className="w-5 h-5 rounded-full bg-primary/10 border border-primary/25 flex items-center justify-center text-primary shrink-0">
-                                            <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                                        </div>
-                                        <span className="text-sm font-light">Direct roadmap & architecture consultation</span>
-                                    </li>
-                                    <li className="flex items-center gap-3 text-zinc-300">
-                                        <div className="w-5 h-5 rounded-full bg-primary/10 border border-primary/25 flex items-center justify-center text-primary shrink-0">
-                                            <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                                        </div>
-                                        <span className="text-sm font-light">Zero sales pressure, practical value first</span>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div className="relative z-10 pt-10">
-                                <a 
-                                    href="https://cal.com/eduratech/15min" 
-                                    target="_blank" 
-                                    rel="noopener noreferrer"
-                                    className="w-full py-4 bg-primary text-white font-semibold rounded-xl hover:bg-primary/90 transition-all duration-300 shadow-[0_0_45px_-10px_rgba(59,130,246,0.6)] flex items-center justify-center gap-2"
-                                >
-                                    Schedule Call on Cal.com
-                                    <ArrowRight className="w-4 h-4" />
-                                </a>
-                                <p className="text-[10px] text-zinc-500 text-center mt-3 font-light">
-                                    Integrates directly with your Google or Outlook Calendar
-                                </p>
+                            <div className="relative z-10 w-full overflow-hidden rounded-2xl bg-[#08080a] border border-white/5 p-2 h-[550px] overflow-y-scroll">
+                                <Cal 
+                                    namespace="15min"
+                                    calLink="eduratech/15min"
+                                    style={{ width: "100%", height: "100%" }}
+                                    config={{ "layout": "month_view", "theme": "dark" }}
+                                />
                             </div>
                         </div>
                     </div>
