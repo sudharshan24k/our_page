@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Container } from "@/components/ui/Container";
 import { MenuOverlay } from "@/components/layout/MenuOverlay";
@@ -11,6 +12,7 @@ import Image from "next/image";
 import logoImg from "../../../public/eduratech_logo_mark.png";
 
 export function Header() {
+    const pathname = usePathname();
     const [isScrolled, setIsScrolled] = useState(false);
     const [isHidden, setIsHidden] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -65,16 +67,25 @@ export function Header() {
                             { label: "Technology", href: "/technology" },
                             { label: "Industries", href: "/industries" },
                             { label: "Insights", href: "/insights" }
-                        ].map((item) => (
-                            <Link
-                                key={item.label}
-                                href={item.href}
-                                className="hover:text-white transition-colors relative group py-2 whitespace-nowrap"
-                            >
-                                {item.label}
-                                <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span>
-                            </Link>
-                        ))}
+                        ].map((item) => {
+                            const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
+                            return (
+                                <Link
+                                    key={item.label}
+                                    href={item.href}
+                                    className={cn(
+                                        "transition-colors relative group py-2 whitespace-nowrap",
+                                        isActive ? "text-white font-semibold" : "text-zinc-400 hover:text-white"
+                                    )}
+                                >
+                                    {item.label}
+                                    <span className={cn(
+                                        "absolute -bottom-1 left-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full",
+                                        isActive ? "w-full" : "w-0"
+                                    )}></span>
+                                </Link>
+                            );
+                        })}
                     </nav>
 
                     <div className="flex items-center gap-6">
