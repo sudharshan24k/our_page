@@ -18,6 +18,10 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "WebSite", "name": "Edura Technologies", "url": "https://eduratech.com", "potentialAction": {"@type": "SearchAction", "target": "https://eduratech.com/search?q={search_term_string}", "query-input": "required name=search_term_string"}}) }}
+      />
       <Reveal width="100%">
         <Hero />
       </Reveal>
