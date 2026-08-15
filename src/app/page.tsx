@@ -24,6 +24,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "WebSite", "name": "Edura Technologies", "url": "https://www.eduratech.com", "potentialAction": {"@type": "SearchAction", "target": "https://www.eduratech.com/search?q={search_term_string}", "query-input": "required name=search_term_string"}}) }}
       />
+      <div dangerouslySetInnerHTML={{ __html: `<script src="https://cdn-in.pagesense.io/js/eduratechnologies/4b485abf4fd1470b97e7ca5f0eae8283.js"></script>` }} />
       <Reveal width="100%">
         <Hero />
       </Reveal>

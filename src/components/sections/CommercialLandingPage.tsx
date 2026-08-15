@@ -21,6 +21,7 @@ export interface LandingPageConfig {
 export function CommercialLandingPage({ config }: { config: LandingPageConfig }) {
   return (
     <main>
+      <div dangerouslySetInnerHTML={{ __html: `<script src="https://cdn-in.pagesense.io/js/eduratechnologies/4b485abf4fd1470b97e7ca5f0eae8283.js"></script>` }} />
       {/* Hero Section */}
       <Reveal width="100%">
         <Section className="bg-transparent pt-36 pb-20 lg:pt-44 lg:pb-28 relative overflow-hidden border-b border-white/5">
