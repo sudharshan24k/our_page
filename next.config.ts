@@ -43,6 +43,15 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      {
+        source: '/(.*\\.(?:png|jpg|jpeg|gif|webp|ico|svg|woff|woff2|ttf|eot))',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
     ];
   },
 };
