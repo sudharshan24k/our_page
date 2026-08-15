@@ -103,13 +103,13 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{
           __html: `</script><script src="https://cdn-in.pagesense.io/js/eduratechnologies/4b485abf4fd1470b97e7ca5f0eae8283.js"></script><script>`
         }} />
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX" strategy="lazyOnload" />
-        <Script id="google-analytics" strategy="lazyOnload">
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-NR9FSP61R6" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-XXXXXXXXXX');
+            gtag('config', 'G-NR9FSP61R6');
           `}
         </Script>
       </head>
