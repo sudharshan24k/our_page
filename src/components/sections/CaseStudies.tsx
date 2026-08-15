@@ -5,7 +5,21 @@ import { Section } from "@/components/ui/Section";
 import { motion } from "framer-motion";
 import { ArrowUpRight, BarChart3, TrendingUp, Users, Zap, Clock, ShieldCheck, Globe, Building2 } from "lucide-react";
 import { useState } from "react";
-import { ContentModal } from "@/components/ui/ContentModal";
+import { useRouter } from "next/navigation";
+
+const getSlug = (id: number) => {
+    switch (id) {
+        case 1: return "global-saas-lead-generation";
+        case 2: return "fintech-cac-reduction";
+        case 3: return "logistics-partner-portal-automation";
+        case 4: return "healthcare-tech-demo-acceleration";
+        case 5: return "ecommerce-checkout-speed-optimization";
+        case 6: return "enterprise-ai-roi-calculator-generation";
+        case 7: return "hr-software-onboarding-gamification";
+        case 8: return "manufacturing-erp-sales-cycle-reduction";
+        default: return "";
+    }
+};
 
 const caseStudies = [
     {
@@ -197,7 +211,7 @@ const caseStudies = [
 ];
 
 export function CaseStudies({ isMainHeading = false }: { isMainHeading?: boolean }) {
-    const [selectedStudy, setSelectedStudy] = useState<typeof caseStudies[0] | null>(null);
+    const router = useRouter();
     const [selectedMetric, setSelectedMetric] = useState<string | null>(null);
 
     const filteredStudies = selectedMetric
@@ -265,7 +279,7 @@ export function CaseStudies({ isMainHeading = false }: { isMainHeading?: boolean
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                                onClick={() => setSelectedStudy(study)}
+                                onClick={() => router.push(`/case-studies/${getSlug(study.id)}`)}
                                  className="group cursor-pointer relative bg-gradient-to-b from-white/[0.04] to-[#0a0a0c] border border-white/10 hover:border-primary/50 rounded-3xl p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(59,130,246,0.25)] flex flex-col h-full overflow-hidden"
                             >
                                 {/* Top Accent Glow on Hover */}
@@ -342,59 +356,6 @@ export function CaseStudies({ isMainHeading = false }: { isMainHeading?: boolean
                     </div>
                 </motion.div>
             </Container>
-
-            {/* Read More Modal */}
-            <ContentModal
-                isOpen={!!selectedStudy}
-                onClose={() => setSelectedStudy(null)}
-                title={`${selectedStudy?.client} — Case Study`}
-            >
-                {selectedStudy && (
-                    <div className="space-y-10 py-2">
-                        {/* Stat Highlight Block */}
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 p-6 rounded-2xl bg-gradient-to-r from-primary/10 to-indigo-500/5 border border-primary/20 shadow-inner">
-                            <div className="space-y-1">
-                                <p className="text-xs font-bold text-primary uppercase tracking-widest">Key Outcome</p>
-                                <p className="text-3xl md:text-4xl font-extrabold text-white tracking-tight drop-shadow-[0_0_15px_rgba(59,130,246,0.3)]">{selectedStudy.metric}</p>
-                                <p className="text-sm text-zinc-400 font-light">{selectedStudy.metricLabel}</p>
-                            </div>
-                            <div className="space-y-1">
-                                <p className="text-xs font-bold text-primary uppercase tracking-widest">Client Sector</p>
-                                <p className="text-2xl md:text-3xl font-semibold text-white tracking-tight">{selectedStudy.client.split(' ').slice(-1)[0]}</p>
-                                <p className="text-sm text-zinc-400 font-light">B2B Market</p>
-                            </div>
-                            <div className="col-span-2 md:col-span-1 space-y-1">
-                                <p className="text-xs font-bold text-primary uppercase tracking-widest">Status</p>
-                                <p className="text-lg font-semibold text-emerald-400 flex items-center gap-1.5 mt-1">
-                                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse inline-block" />
-                                    100% Delivered
-                                </p>
-                                <p className="text-sm text-zinc-400 font-light">Production Live</p>
-                            </div>
-                        </div>
-
-                        {/* Split Challenge & Solution Grid */}
-                        <div className="grid md:grid-cols-2 gap-8">
-                            <div className="p-6 rounded-2xl border border-red-500/10 bg-red-500/[0.01] space-y-3">
-                                <span className="px-2.5 py-1 rounded bg-red-500/10 text-red-400 text-[10px] font-bold uppercase tracking-widest border border-red-500/20">The Challenge</span>
-                                <p className="text-zinc-300 font-light leading-relaxed text-[15px]">{selectedStudy.challenge}</p>
-                            </div>
-                            <div className="p-6 rounded-2xl border border-emerald-500/10 bg-emerald-500/[0.01] space-y-3">
-                                <span className="px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 text-[10px] font-bold uppercase tracking-widest border border-emerald-500/20">The Impact</span>
-                                <p className="text-zinc-300 font-light leading-relaxed text-[15px]">{selectedStudy.impact}</p>
-                            </div>
-                        </div>
-
-                        {/* Detailed Methodology Content */}
-                        <div className="border-t border-primary/10 pt-8 space-y-6">
-                            <h4 className="text-xl font-semibold text-white tracking-tight">Technical Implementation & Methodology</h4>
-                            <div className="prose prose-invert prose-blue max-w-none prose-p:text-zinc-400 prose-p:leading-relaxed prose-li:text-zinc-300 prose-li:leading-relaxed prose-strong:text-white">
-                                {selectedStudy.detailedContent}
-                            </div>
-                        </div>
-                    </div>
-                )}
-            </ContentModal>
         </Section>
     );
 }

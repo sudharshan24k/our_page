@@ -141,5 +141,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...corePages, ...servicePages, ...industryPages, ...contentPages];
+  // Case Study pages with high priority
+  const caseStudyPages: MetadataRoute.Sitemap = [
+    '/case-studies/global-saas-lead-generation',
+    '/case-studies/fintech-cac-reduction',
+    '/case-studies/logistics-partner-portal-automation',
+    '/case-studies/healthcare-tech-demo-acceleration',
+    '/case-studies/ecommerce-checkout-speed-optimization',
+    '/case-studies/enterprise-ai-roi-calculator-generation',
+    '/case-studies/hr-software-onboarding-gamification',
+    '/case-studies/manufacturing-erp-sales-cycle-reduction',
+  ].map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }));
+
+  return [...corePages, ...servicePages, ...industryPages, ...contentPages, ...caseStudyPages];
 }
