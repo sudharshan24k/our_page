@@ -92,7 +92,7 @@ export function Hero() {
                                             animate={{ y: "0%", opacity: 1 }}
                                             exit={{ y: "-100%", opacity: 0 }}
                                             transition={{ duration: 0.5, ease: "easeOut" }}
-                                            className="absolute top-0 left-0 lg:left-auto lg:right-0 whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500 pb-2"
+                                            className="absolute top-0 left-0 lg:left-auto lg:right-0 whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500 px-2 pb-2 -ml-2 lg:-mr-2 lg:ml-0"
                                         >
                                             {ANIMATED_WORDS[wordIndex]}
                                         </motion.span>
