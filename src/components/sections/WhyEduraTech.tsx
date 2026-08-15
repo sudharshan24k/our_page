@@ -254,6 +254,52 @@ export function WhyEduraTech() {
                 </Container>
             </Section>
 
+            {/* Team Section */}
+            <Section className="bg-transparent border-t border-primary/10 py-24 md:py-32">
+                <Container>
+                    <div className="max-w-3xl mx-auto text-center mb-16 space-y-4">
+                        <p className="text-xs font-mono text-primary tracking-widest uppercase">Expertise</p>
+                        <h2 className="text-4xl md:text-5xl font-semibold tracking-tighter text-white">
+                            Leadership & Engineering Team
+                        </h2>
+                        <p className="text-zinc-400 font-light leading-relaxed">
+                            Our team combines years of experience in custom software engineering, Generative AI models, and cloud systems architecture.
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                        {[
+                            {
+                                name: "Sudharshan Venkatraman",
+                                role: "Founder & Principal Architect",
+                                bio: "Specializes in enterprise systems, high-scale API integrations, and conversion-optimized software architectures.",
+                                credentials: "Ex-Systems Engineer"
+                            },
+                            {
+                                name: "Advaith Swaminathan",
+                                role: "Co-Founder & Head of AI Systems",
+                                bio: "Leads neural network engineering, LLM fine-tuning, and Retrieval-Augmented Generation (RAG) system pipelines.",
+                                credentials: "AI Systems Researcher"
+                            }
+                        ].map((member) => (
+                            <div key={member.name} className="p-8 rounded-3xl border border-white/5 bg-[#0a0a0c] hover:border-primary/20 transition-all duration-300 relative overflow-hidden group text-left">
+                                <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full blur-2xl pointer-events-none" />
+                                <div className="space-y-4">
+                                    <div>
+                                        <span className="text-[10px] font-mono text-primary uppercase tracking-wider block mb-1">{member.credentials}</span>
+                                        <h3 className="text-xl font-semibold text-white group-hover:text-primary transition-colors">{member.name}</h3>
+                                        <p className="text-xs text-zinc-500 font-medium">{member.role}</p>
+                                    </div>
+                                    <p className="text-sm text-zinc-400 font-light leading-relaxed">
+                                        {member.bio}
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </Container>
+            </Section>
+
             {/* CTA Section */}
             <Section className="bg-transparent border-t border-primary/10 py-24 md:py-32">
                 <Container>
