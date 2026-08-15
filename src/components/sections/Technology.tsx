@@ -38,12 +38,15 @@ const techStack = [
     }
 ];
 
-export function Technology() {
+export function Technology({ isPage = false }: { isPage?: boolean }) {
+    const HeadingTag = isPage ? "h1" : "h2";
+    const headingText = isPage ? "Our Technology Stack" : "Tech That Enables Us";
+
     return (
         <Section id="technology" className="bg-background text-foreground border-t border-primary/20 py-24 md:py-32">
             <Container>
                 <div className="mb-20 md:mb-24 max-w-3xl">
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tighter text-foreground mb-6">Tech That Enables Us</h2>
+                    <HeadingTag className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tighter text-foreground mb-6">{headingText}</HeadingTag>
                     <p className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed tracking-tight">
                         A modern, type-safe stack chosen for performance, scalability, and developer experience.
                     </p>

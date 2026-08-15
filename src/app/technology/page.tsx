@@ -15,7 +15,7 @@ export default function TechnologyPage() {
   return (
     <main className="pt-20">
       <Reveal width="100%">
-        <Technology />
+        <Technology isPage />
       </Reveal>
       <Reveal width="100%">
         <Focus />

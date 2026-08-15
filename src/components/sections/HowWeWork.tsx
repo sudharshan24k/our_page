@@ -95,14 +95,16 @@ const itemVariants: Variants = {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
 };
 
-export function HowWeWork() {
+export function HowWeWork({ isPage = false }: { isPage?: boolean }) {
     const [selectedPhase, setSelectedPhase] = useState<typeof phases[0] | null>(null);
+    const HeadingTag = isPage ? "h1" : "h2";
+    const headingText = isPage ? "Our Methodology & Process" : "Process Over Promotion";
 
     return (
         <Section id="methodology" className="bg-background text-foreground border-t border-border py-24 md:py-32 overflow-hidden">
             <Container>
                 <div className="mb-20 md:mb-24">
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tighter text-foreground mb-8">Process Over Promotion</h2>
+                    <HeadingTag className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tighter text-foreground mb-8">{headingText}</HeadingTag>
                     <p className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed">
                         A transparent delivery model designed for clarity, control, and outcomes.
                     </p>

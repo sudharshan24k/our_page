@@ -15,7 +15,7 @@ export default function MethodologyPage() {
   return (
     <main className="pt-20">
       <Reveal width="100%">
-        <HowWeWork />
+        <HowWeWork isPage />
       </Reveal>
       <Reveal width="100%">
         <EngagementModel />

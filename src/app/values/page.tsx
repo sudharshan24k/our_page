@@ -14,7 +14,7 @@ export default function ValuesPage() {
   return (
     <main className="pt-20">
       <Reveal width="100%">
-        <Values />
+        <Values isPage />
       </Reveal>
     </main>
   );
