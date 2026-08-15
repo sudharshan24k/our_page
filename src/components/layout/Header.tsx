@@ -99,12 +99,10 @@ export function Header() {
                             <span className="w-6 h-0.5 bg-current"></span>
                         </button>
 
-                        <Magnetic>
-                            <Link href="/contact" className="hidden xl:flex items-center gap-2 text-sm font-medium text-white px-6 py-2 rounded-full bg-primary hover:bg-primary/90 shadow-[0_0_20px_-5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_30px_-5px_rgba(59,130,246,0.7)] transition-all whitespace-nowrap">
-                                Claim Free Audit
-                                <ArrowRight className="w-4 h-4" />
-                            </Link>
-                        </Magnetic>
+                        <Link href="/contact" className="hidden xl:flex items-center gap-2 text-sm font-medium text-white px-6 py-2 rounded-full bg-primary hover:bg-primary/90 shadow-[0_0_20px_-5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_30px_-5px_rgba(59,130,246,0.7)] transition-all whitespace-nowrap">
+                            Claim Free Audit
+                            <ArrowRight className="w-4 h-4" />
+                        </Link>
                     </div>
                 </Container>
             </header>
