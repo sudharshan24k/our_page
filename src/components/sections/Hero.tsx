@@ -40,27 +40,23 @@ export function Hero() {
                         </div>
 
                         <div className="space-y-6">
-                            <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight text-white leading-[1.05] overflow-hidden">
-                                <motion.span
-                                    initial={{ y: "100%" }}
-                                    animate={{ y: 0 }}
-                                    transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-                                    className="block text-balance"
-                                >
-                                    Stop Losing <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">High-Ticket</span> Clients to Competitors.
-                                </motion.span>
-                            </h1>
+                            <motion.h1
+                                initial={{ opacity: 0, y: 15 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
+                                className="text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight text-white leading-[1.05] text-balance"
+                            >
+                                Stop Losing <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">High-Ticket</span> Clients to Competitors.
+                            </motion.h1>
 
-                            <div className="overflow-hidden">
-                                <motion.p
-                                    initial={{ y: "100%" }}
-                                    animate={{ y: 0 }}
-                                    transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-                                    className="text-lg md:text-xl text-zinc-400 leading-relaxed font-light max-w-xl text-balance"
-                                >
-                                    We build conversion-optimized digital systems that predictably generate qualified inbound leads and scale revenue for top firms across the United States.
-                                </motion.p>
-                            </div>
+                            <motion.p
+                                initial={{ opacity: 0, y: 15 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+                                className="text-lg md:text-xl text-zinc-400 leading-relaxed font-light max-w-xl text-balance"
+                            >
+                                We build conversion-optimized digital systems that predictably generate qualified inbound leads and scale revenue for top firms across the United States.
+                            </motion.p>
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-5 pt-4">

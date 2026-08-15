@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     template: "%s | Edura Technologies",
     default: "Edura Technologies | Custom Software & AI",
   },
-  description: "Custom AI systems, business automation, and custom software development. We build scalable digital products that deliver real results for your business.",
+  description: "Custom software development, business automation, and AI systems. We engineer scalable digital products that deliver measurable business growth.",
   keywords: ["custom software development", "AI development company", "SaaS development", "business automation", "web application development", "AI solutions", "cloud development"],
   openGraph: {
     title: "Edura Technologies | Custom AI & Software Development",

@@ -9,7 +9,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Custom Software & AI Solutions",
-  description: "Edura Technologies builds custom AI systems, automation solutions, and premium software to help US small businesses secure high-ticket clients and scale operations.",
+  description: "Edura Technologies builds custom AI, automation, and software to help US small businesses secure high-ticket clients and scale operations dynamically.",
   alternates: {
     canonical: "/",
   },
