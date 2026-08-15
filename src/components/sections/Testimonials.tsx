@@ -41,7 +41,7 @@ export function Testimonials() {
     return (
         <Section className="bg-background border-t border-primary/20 py-24 md:py-32 overflow-hidden">
             <div className="mb-16 md:mb-24 text-center">
-                <h2 className="text-2xl font-medium text-slate-900 tracking-tight">Proven Results & Client Impact</h2>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tighter text-white animate-fade-in">Proven Results & Client Impact</h2>
             </div>
 
             {/* Marquee Container */}
