@@ -1,4 +1,4 @@
-﻿import { Reveal } from "@/components/ui/Reveal";
+import { Reveal } from "@/components/ui/Reveal";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { ArrowRight } from "lucide-react";
@@ -321,15 +321,20 @@ export default function CustomSoftwareCosts() {
           <Container>
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-4xl font-semibold tracking-tighter text-white mb-8">
-                Get Your Custom Software Estimate
+                Estimate Your Software Cost Range
               </h2>
               <p className="text-xl text-zinc-300 font-light mb-12">
-                Share your idea with us. We'll provide a detailed breakdown of cost, timeline, and ROI.
+                Use our interactive project cost estimator to calculate your ballpark budget range, duration timeline, and complexity profile.
               </p>
-              <a href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-primary/90 transition-all">
-                Get Your Free Estimate
-                <ArrowRight className="w-4 h-4" />
-              </a>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <Link href="/project-cost-calculator" className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-primary/90 transition-all shadow-[0_0_30px_rgba(59,130,246,0.3)]">
+                  Try Cost Calculator
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 border border-white/10 text-white font-semibold rounded-xl hover:border-primary/50 hover:bg-white/5 transition-all">
+                  Discuss Your Project
+                </Link>
+              </div>
             </div>
           </Container>
         </Section>
