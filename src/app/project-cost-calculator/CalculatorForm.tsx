@@ -667,7 +667,7 @@ Additional Project Info: ${description || "None provided"}
               </div>
 
               <p className="text-xs text-zinc-500 font-light mt-8 leading-relaxed">
-                *This estimate is based on the requirements you provided. Final pricing depends on the detailed scope, technical architecture, integrations and project requirements.
+                *This is an approximate valuation model based on project configurations. Actual timeline and final project complexity may adjust after a full technical specification discovery.
               </p>
             </div>
 
