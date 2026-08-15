@@ -119,16 +119,16 @@ export function WhyUs() {
                     className="grid grid-cols-3 gap-8 mt-24 pt-24 border-t border-primary/20"
                 >
                     <div className="text-center">
-                        <div className="text-4xl md:text-5xl font-bold text-primary mb-3">12+</div>
-                        <p className="text-zinc-400 font-light">High-ticket clients served</p>
+                        <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 tracking-tight">12+</div>
+                        <p className="text-zinc-300 text-sm md:text-base font-normal">High-ticket clients served</p>
                     </div>
                     <div className="text-center">
-                        <div className="text-4xl md:text-5xl font-bold text-primary mb-3">$200M+</div>
-                        <p className="text-zinc-400 font-light">In client pipeline generated</p>
+                        <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 tracking-tight">$200M+</div>
+                        <p className="text-zinc-300 text-sm md:text-base font-normal">In client pipeline generated</p>
                     </div>
                     <div className="text-center">
-                        <div className="text-4xl md:text-5xl font-bold text-primary mb-3">215%</div>
-                        <p className="text-zinc-400 font-light">Average lead velocity increase</p>
+                        <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 tracking-tight">215%</div>
+                        <p className="text-zinc-300 text-sm md:text-base font-normal">Average lead velocity increase</p>
                     </div>
                 </motion.div>
             </Container>

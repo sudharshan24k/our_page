@@ -28,8 +28,8 @@ export function Footer() {
                         </p>
                         <div className="flex flex-col gap-1 mt-2">
                             <span className="font-semibold text-white text-xs uppercase tracking-widest mb-1">Global Headquarters</span>
-                            <span className="text-zinc-400">100 Market Street, Suite 400</span>
-                            <span className="text-zinc-400">San Francisco, CA 94105, United States</span>
+                            <span className="text-zinc-400">Mumbai, Maharashtra</span>
+                            <span className="text-zinc-400">India</span>
                         </div>
                     </div>
 

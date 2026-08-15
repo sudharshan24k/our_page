@@ -158,5 +158,61 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...corePages, ...servicePages, ...industryPages, ...contentPages, ...caseStudyPages];
+  // Major US business cities to generate dynamic Local SEO landing pages in sitemap
+  // Expanded list of 50 top US business cities for comprehensive Local SEO sitemap mapping
+  const targetCities = [
+    'new-york', 'los-angeles', 'chicago', 'houston', 'phoenix', 
+    'philadelphia', 'san-antonio', 'san-diego', 'dallas', 'austin', 
+    'san-jose', 'fort-worth', 'jacksonville', 'charlotte', 'columbus', 
+    'san-francisco', 'indianapolis', 'seattle', 'denver', 'washington', 
+    'boston', 'el-paso', 'nashville', 'detroit', 'oklahoma-city', 
+    'portland', 'las-vegas', 'memphis', 'louisville', 'baltimore', 
+    'milwaukee', 'albuquerque', 'tucson', 'fresno', 'sacramento', 
+    'mesa', 'kansas-city', 'atlanta', 'omaha', 'colorado-springs', 
+    'raleigh', 'virginia-beach', 'long-beach', 'miami', 'oakland', 
+    'minneapolis', 'tulsa', 'bakersfield', 'wichita', 'arlington'
+  ];
+
+  // All 17 core services to be dynamically mapped to all 50 cities
+  const localServices = [
+    'custom-software-development',
+    'web-application-development',
+    'saas-development',
+    'crm-development',
+    'business-automation',
+    'ai-development',
+    'generative-ai-development',
+    'ai-automation',
+    'ai-chatbot-development',
+    'rag-development',
+    'web-development',
+    'website-development',
+    'ecommerce-development',
+    'aws-cloud-solutions',
+    'azure-cloud-solutions',
+    'api-development',
+    'data-analytics'
+  ];
+
+  const localSEOPages: MetadataRoute.Sitemap = [];
+  
+  targetCities.forEach(city => {
+    localServices.forEach(service => {
+      localSEOPages.push({
+        url: `${baseUrl}/services/${service}-${city}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly' as const,
+        priority: 0.6,
+      });
+    });
+  });
+
+  return [
+    ...corePages,
+    ...servicePages,
+    ...industryPages,
+    ...contentPages,
+    ...caseStudyPages,
+    ...localSEOPages
+  ];
 }

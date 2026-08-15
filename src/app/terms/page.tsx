@@ -97,9 +97,7 @@ export default function TermsPage() {
                     In order to resolve a complaint regarding the Site or to receive further information regarding use of the Site, please contact us at:
                   </p>
                   <div className="p-6 rounded-2xl border border-white/5 bg-white/[0.02] space-y-2 font-mono text-sm">
-                    <p className="text-white font-semibold">Edura Technologies</p>
-                    <p>100 Market Street, Suite 400</p>
-                    <p>San Francisco, CA 94105, United States</p>
+                    <p>Mumbai, India</p>
                     <p className="text-primary hover:underline"><a href="mailto:hello@eduratech.com">hello@eduratech.com</a></p>
                   </div>
                 </section>
