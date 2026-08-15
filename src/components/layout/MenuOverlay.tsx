@@ -58,19 +58,19 @@ export function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
                         </div>
 
                         {/* Navigation Links */}
-                        <div className="flex-1 flex flex-col justify-center my-6 overflow-y-auto">
-                            <nav className="flex flex-col gap-3 md:gap-5">
+                        <div className="flex-1 flex flex-col justify-center my-4">
+                            <nav className="grid grid-cols-2 gap-x-8 gap-y-4 sm:gap-y-6 max-w-3xl">
                                 {navLinks.map((link, i) => (
                                     <motion.div
                                         key={link.label}
                                         initial={{ x: -20, opacity: 0 }}
                                         animate={{ x: 0, opacity: 1 }}
-                                        transition={{ delay: 0.05 + i * 0.05 }}
+                                        transition={{ delay: 0.03 + i * 0.03 }}
                                     >
                                         <Link
                                             href={link.href}
                                             onClick={onClose}
-                                            className="block text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight hover:text-primary transition-colors py-1"
+                                            className="block text-xl sm:text-2xl md:text-3xl font-semibold tracking-tight hover:text-primary transition-colors py-1"
                                         >
                                             {link.label}
                                         </Link>
