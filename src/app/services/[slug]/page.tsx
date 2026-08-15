@@ -4,6 +4,7 @@ import { Section } from "@/components/ui/Section";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import Link from "next/link";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -530,6 +531,25 @@ export default async function DynamicServicePage({ params }: Props) {
                   <p key={i}>{para}</p>
                 ))}
               </div>
+            </div>
+          </Container>
+        </Section>
+      </Reveal>
+
+      {/* Dynamic Project Cost Calculator CTA */}
+      <Reveal width="100%">
+        <Section className="bg-transparent border-t border-white/5 py-20 relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent pointer-events-none" />
+          <Container className="text-center">
+            <div className="max-w-2xl mx-auto space-y-6">
+              <h3 className="text-3xl md:text-4xl font-semibold tracking-tighter text-white">Estimate Your Project Budget</h3>
+              <p className="text-zinc-400 font-light leading-relaxed text-sm md:text-base">
+                Need a ballpark budget range and timeline projection for your software build in {city}? Use our interactive cost calculator to build your spec report in minutes.
+              </p>
+              <Link href="/project-cost-calculator" className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-primary/90 transition-all shadow-[0_0_30px_rgba(59,130,246,0.3)]">
+                Try Project Cost Calculator
+                <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
           </Container>
         </Section>
