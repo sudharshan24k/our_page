@@ -54,7 +54,7 @@ export function Header() {
             >
                 <Container width="wide" className="flex items-center justify-between">
                     <Link href="/" className="flex items-center gap-2.5 text-lg font-semibold tracking-tight text-white hover:text-primary transition-colors whitespace-nowrap">
-                        <Image src={logoImg} alt="Edura Technologies Logo" width={32} height={32} className="w-8 h-8 object-contain" />
+                        <Image src={logoImg} alt="Edura Technologies Logo" width={637} height={470} className="h-8 w-auto object-contain" />
                         <span>Edura Technologies</span>
                     </Link>
                     <nav className="hidden xl:flex items-center gap-4 2xl:gap-6 text-xs xl:text-sm font-medium text-zinc-200">
