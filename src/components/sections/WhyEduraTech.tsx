@@ -67,25 +67,55 @@ const itemVariants: Variants = {
 export function WhyEduraTech() {
     return (
         <>
-            {/* Hero Section */}
             <Section className="bg-transparent pt-36 pb-20 lg:pt-44 lg:pb-28">
                 <Container>
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                        className="max-w-4xl"
-                    >
-                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tighter text-white mb-8">
-                            Why Edura Technologies
-                        </h1>
-                        <p className="text-xl md:text-2xl text-zinc-400 font-light leading-relaxed mb-8">
-                            Technology should do more than work. It should create business value.
-                        </p>
-                        <p className="text-lg md:text-xl text-zinc-300 leading-relaxed max-w-3xl">
-                            At Edura Technologies, we combine strategic thinking, strong engineering, and modern technology to build solutions that help businesses operate better, serve customers better, and grow with confidence.
-                        </p>
-                    </motion.div>
+                    <div className="flex flex-col lg:flex-row gap-16 lg:items-center justify-between">
+                        {/* Left Column: Core Headline */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8 }}
+                            className="flex-1 lg:max-w-[55%] space-y-6"
+                        >
+                            <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tighter text-white">
+                                Why Edura Technologies
+                            </h1>
+                            <p className="text-xl md:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500 font-medium leading-relaxed">
+                                Technology should do more than work. It should create business value.
+                            </p>
+                            <p className="text-base md:text-lg text-zinc-400 leading-relaxed font-light">
+                                At Edura Technologies, we combine strategic thinking, strong engineering, and modern technology to build solutions that help businesses operate better, serve customers better, and grow with confidence.
+                            </p>
+                            <div className="flex flex-wrap gap-3 pt-4">
+                                {["No Tech Debt", "Business First", "Scalable Dev Ops", "24/7 SLA Support"].map((badge) => (
+                                    <span key={badge} className="px-3.5 py-1.5 rounded-full border border-white/10 bg-white/[0.03] text-xs font-mono text-zinc-300">
+                                        {badge}
+                                    </span>
+                                ))}
+                            </div>
+                        </motion.div>
+
+                        {/* Right Column: Interactive Trust Indicators */}
+                        <motion.div
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                            className="flex-1 lg:max-w-[40%] grid grid-cols-2 gap-4"
+                        >
+                            {[
+                                { number: "100%", label: "SLA Guarantee", detail: "Fast support resolution" },
+                                { number: "Zero", label: "Legacy Debt", detail: "Clean, modular codebases" },
+                                { number: "40%", label: "Efficiency Boost", detail: "Through custom automations" },
+                                { number: "24/7", label: "System Health", detail: "Proactive cloud monitoring" }
+                            ].map((stat) => (
+                                <div key={stat.label} className="p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-primary/20 hover:bg-white/[0.04] transition-all duration-300">
+                                    <p className="text-3xl font-bold text-white mb-1.5">{stat.number}</p>
+                                    <p className="text-xs font-mono text-zinc-300 uppercase tracking-wider mb-1">{stat.label}</p>
+                                    <p className="text-[11px] text-zinc-500 leading-tight">{stat.detail}</p>
+                                </div>
+                            ))}
+                        </motion.div>
+                    </div>
                 </Container>
             </Section>
 

@@ -82,8 +82,8 @@ export function Hero() {
                             transition={{ duration: 1, delay: 0.3 }}
                             className="relative w-full"
                         >
-                            <div className="text-3xl sm:text-5xl md:text-7xl lg:text-[5.5rem] xl:text-[6.5rem] font-bold tracking-tighter leading-[1.1] text-zinc-800 uppercase relative z-10 flex flex-col lg:items-end w-full">
-                                <span className="block text-zinc-800/80">Driving</span>
+                            <div className="text-3xl sm:text-5xl md:text-7xl lg:text-[5.5rem] xl:text-[6.5rem] font-bold tracking-tighter leading-[1.1] text-zinc-200 uppercase relative z-10 flex flex-col lg:items-end w-full">
+                                <span className="block text-zinc-400">Driving</span>
                                 <span className="block relative h-[1.2em] w-full overflow-hidden">
                                     <AnimatePresence>
                                         <motion.span
