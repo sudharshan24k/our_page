@@ -37,10 +37,10 @@ export function Footer() {
                     <div className="flex flex-col gap-4">
                         <h4 className="font-bold text-white text-sm uppercase tracking-widest mb-2">Company</h4>
                         <Link href="/why-eduratech" className="text-zinc-400 hover:text-primary transition-colors flex items-center gap-2 group">
-                            <span className="w-0 h-[1px] bg-primary group-hover:w-2 transition-all duration-300"></span> Why EduraTech
+                            <span className="w-0 h-[1px] bg-primary group-hover:w-2 transition-all duration-300"></span> Why Choose EduraTech
                         </Link>
                         <Link href="/methodology" className="text-zinc-400 hover:text-primary transition-colors flex items-center gap-2 group">
-                            <span className="w-0 h-[1px] bg-primary group-hover:w-2 transition-all duration-300"></span> Methodology
+                            <span className="w-0 h-[1px] bg-primary group-hover:w-2 transition-all duration-300"></span> Proven Methodology
                         </Link>
                         <Link href="/values" className="text-zinc-400 hover:text-primary transition-colors flex items-center gap-2 group">
                             <span className="w-0 h-[1px] bg-primary group-hover:w-2 transition-all duration-300"></span> Our Values
@@ -54,13 +54,13 @@ export function Footer() {
                     <div className="flex flex-col gap-4">
                         <h4 className="font-bold text-white text-sm uppercase tracking-widest mb-2">Expertise</h4>
                         <Link href="/services" className="text-zinc-400 hover:text-primary transition-colors flex items-center gap-2 group">
-                            <span className="w-0 h-[1px] bg-primary group-hover:w-2 transition-all duration-300"></span> All Services
+                            <span className="w-0 h-[1px] bg-primary group-hover:w-2 transition-all duration-300"></span> Explore All Services
                         </Link>
                         <Link href="/industries" className="text-zinc-400 hover:text-primary transition-colors flex items-center gap-2 group">
-                            <span className="w-0 h-[1px] bg-primary group-hover:w-2 transition-all duration-300"></span> Industries
+                            <span className="w-0 h-[1px] bg-primary group-hover:w-2 transition-all duration-300"></span> Industries We Serve
                         </Link>
                         <Link href="/case-studies" className="text-zinc-400 hover:text-primary transition-colors flex items-center gap-2 group">
-                            <span className="w-0 h-[1px] bg-primary group-hover:w-2 transition-all duration-300"></span> Case Studies
+                            <span className="w-0 h-[1px] bg-primary group-hover:w-2 transition-all duration-300"></span> Case Studies Portfolio
                         </Link>
                     </div>
 
@@ -68,10 +68,10 @@ export function Footer() {
                     <div className="flex flex-col gap-4">
                         <h4 className="font-bold text-white text-sm uppercase tracking-widest mb-2">Legal</h4>
                         <Link href="/privacy" className="text-zinc-400 hover:text-primary transition-colors flex items-center gap-2 group">
-                            <span className="w-0 h-[1px] bg-primary group-hover:w-2 transition-all duration-300"></span> Privacy Policy
+                            <span className="w-0 h-[1px] bg-primary group-hover:w-2 transition-all duration-300"></span> Privacy Policy Terms
                         </Link>
                         <Link href="/terms" className="text-zinc-400 hover:text-primary transition-colors flex items-center gap-2 group">
-                            <span className="w-0 h-[1px] bg-primary group-hover:w-2 transition-all duration-300"></span> Terms of Service
+                            <span className="w-0 h-[1px] bg-primary group-hover:w-2 transition-all duration-300"></span> Terms of Service Agreement
                         </Link>
                     </div>
 
