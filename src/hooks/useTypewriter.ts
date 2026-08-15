@@ -70,7 +70,7 @@ export function useTypewriter(
                 }, typingSpeed + randomVariance);
             } else {
                 // Finished typing
-                setPhase("pausing");
+                schedule(() => setPhase("pausing"), 0);
             }
         }
 

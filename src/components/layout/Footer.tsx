@@ -19,7 +19,7 @@ export function Footer() {
                     <div className="lg:col-span-2 flex flex-col gap-6">
                         <div className="flex items-center gap-3">
                             <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center shadow-[0_0_15px_rgba(59,130,246,0.15)]">
-                                <Image src={logoImg} alt="Edura Technologies Logo" width={637} height={470} className="h-6 w-auto object-contain" />
+                                <Image src={logoImg} alt="Edura Technologies Logo" width={637} height={470} className="w-10 h-auto object-contain" />
                             </div>
                             <span className="font-bold text-white text-xl tracking-tight">Edura Technologies</span>
                         </div>

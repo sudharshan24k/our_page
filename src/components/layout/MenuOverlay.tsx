@@ -43,7 +43,7 @@ export function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
                                 animate={{ opacity: 1, x: 0 }}
                             >
                                 <Link href="/" onClick={onClose} className="flex items-center gap-2.5 text-xl font-bold tracking-tighter">
-                                    <Image src={logoImg} alt="Edura Technologies Logo" width={637} height={470} className="h-8 w-auto object-contain" />
+                                    <Image src={logoImg} alt="Edura Technologies Logo" width={637} height={470} className="w-12 h-auto object-contain" />
                                     <span>Edura Technologies</span>
                                 </Link>
                             </motion.div>
