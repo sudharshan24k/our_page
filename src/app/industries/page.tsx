@@ -13,7 +13,7 @@ export const metadata = {
   openGraph: {
     title: "Industry-Specific Software Solutions - EduraTech",
     description: "We build software solutions tailored to your industry's unique challenges and workflows.",
-    url: "https://eduratech.com/industries",
+    url: "https://www.eduratech.com/industries",
   },
 };
 

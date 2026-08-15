@@ -14,7 +14,7 @@ export const metadata = {
     title: "AI Development Company - Custom AI Solutions - EduraTech",
     description: "We build practical AI solutions that solve real business problems. No hype. Real results.",
     type: "website",
-    url: "https://eduratech.com/services/ai-development",
+    url: "https://www.eduratech.com/services/ai-development",
   },
 };
 
@@ -23,11 +23,11 @@ export default function AIDevelopment() {
     <main>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://eduratech.com"}, {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://eduratech.com/services"}, {"@type": "ListItem", "position": 3, "name": "Ai Development", "item": "https://eduratech.com/services/ai-development"}]}) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.eduratech.com"}, {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.eduratech.com/services"}, {"@type": "ListItem", "position": 3, "name": "Ai Development", "item": "https://www.eduratech.com/services/ai-development"}]}) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Service", "name": "Ai Development Services", "description": "Professional B2B technical solutions for ai development.", "provider": {"@type": "Organization", "name": "Edura Technologies", "url": "https://eduratech.com"}, "areaServed": "US", "serviceType": "Software & AI Development"}) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Service", "name": "Ai Development Services", "description": "Professional B2B technical solutions for ai development.", "provider": {"@type": "Organization", "name": "Edura Technologies", "url": "https://www.eduratech.com"}, "areaServed": "US", "serviceType": "Software & AI Development"}) }}
       />
       <Reveal width="100%">
         <Section className="bg-transparent pt-36 pb-20 lg:pt-44 lg:pb-28 relative overflow-hidden">

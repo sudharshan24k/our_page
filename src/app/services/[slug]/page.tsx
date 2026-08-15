@@ -384,7 +384,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: metaTitle,
       description: metaDescription,
-      url: `https://eduratech.com/services/${slug}`,
+      url: `https://www.eduratech.com/services/${slug}`,
     },
   };
 }
@@ -418,19 +418,19 @@ export default async function DynamicServicePage({ params }: Props) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://eduratech.com"
+        "item": "https://www.eduratech.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Services",
-        "item": "https://eduratech.com/services"
+        "item": "https://www.eduratech.com/services"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": `${template.title} in ${city}`,
-        "item": `https://eduratech.com/services/${slug}`
+        "item": `https://www.eduratech.com/services/${slug}`
       }
     ]
   };
@@ -443,7 +443,7 @@ export default async function DynamicServicePage({ params }: Props) {
     "provider": {
       "@type": "Organization",
       "name": "Edura Technologies",
-      "url": "https://eduratech.com"
+      "url": "https://www.eduratech.com"
     },
     "areaServed": {
       "@type": "City",

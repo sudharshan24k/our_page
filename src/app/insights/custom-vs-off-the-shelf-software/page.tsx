@@ -13,7 +13,7 @@ export const metadata = {
   openGraph: {
     title: "Custom Software vs Off-the-Shelf: Which Is Better? - EduraTech",
     description: "Compare the pros, cons, and hidden costs of custom software vs off-the-shelf SaaS. Make the right tech choice for your small business scale.",
-    url: "https://eduratech.com/insights/custom-vs-off-the-shelf-software",
+    url: "https://www.eduratech.com/insights/custom-vs-off-the-shelf-software",
   },
 };
 
@@ -22,11 +22,11 @@ export default function CustomVsOffTheShelfPage() {
     <main>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://eduratech.com"}, {"@type": "ListItem", "position": 2, "name": "Insights", "item": "https://eduratech.com/insights"}, {"@type": "ListItem", "position": 3, "name": "Custom Vs Off The Shelf Software", "item": "https://eduratech.com/insights/custom-vs-off-the-shelf-software"}]}) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.eduratech.com"}, {"@type": "ListItem", "position": 2, "name": "Insights", "item": "https://www.eduratech.com/insights"}, {"@type": "ListItem", "position": 3, "name": "Custom Vs Off The Shelf Software", "item": "https://www.eduratech.com/insights/custom-vs-off-the-shelf-software"}]}) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "Custom Vs Off The Shelf Software", "description": "Expert guide and analysis on custom vs off the shelf software for B2B growth and digital acceleration.", "datePublished": "2024-08-15T00:00:00Z", "dateModified": "2024-08-15T00:00:00Z", "author": {"@type": "Organization", "name": "Edura Technologies", "url": "https://eduratech.com"}, "publisher": {"@type": "Organization", "name": "Edura Technologies", "logo": {"@type": "ImageObject", "url": "https://eduratech.com/logo.png"}}, "mainEntityOfPage": "https://eduratech.com/insights/custom-vs-off-the-shelf-software"}) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "Custom Vs Off The Shelf Software", "description": "Expert guide and analysis on custom vs off the shelf software for B2B growth and digital acceleration.", "datePublished": "2024-08-15T00:00:00Z", "dateModified": "2024-08-15T00:00:00Z", "author": {"@type": "Organization", "name": "Edura Technologies", "url": "https://www.eduratech.com"}, "publisher": {"@type": "Organization", "name": "Edura Technologies", "logo": {"@type": "ImageObject", "url": "https://www.eduratech.com/logo.png"}}, "mainEntityOfPage": "https://www.eduratech.com/insights/custom-vs-off-the-shelf-software"}) }}
       />
       <Reveal width="100%">
         <Section className="bg-transparent pt-36 pb-20 lg:pt-44 lg:pb-28 relative overflow-hidden">

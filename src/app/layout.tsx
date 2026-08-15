@@ -10,7 +10,7 @@ import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://eduratech.com"),
+  metadataBase: new URL("https://www.eduratech.com"),
   title: {
     template: "%s | Edura Technologies",
     default: "Edura Technologies | Custom Software & AI",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Edura Technologies | Custom AI & Software Development",
     description: "We build practical AI solutions and custom software that solve real business problems. No hype. Real results.",
-    url: "https://eduratech.com",
+    url: "https://www.eduratech.com",
     siteName: "Edura Technologies",
     locale: "en_US",
     type: "website",
@@ -44,8 +44,8 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Edura Technologies",
-  "url": "https://eduratech.com",
-  "logo": "https://eduratech.com/logo.png",
+  "url": "https://www.eduratech.com",
+  "logo": "https://www.eduratech.com/logo.png",
   "description": "Edura Technologies is a technology division of Edura Global Solutions specializing in custom AI development, software solutions, and digital transformation for US small businesses.",
   "areaServed": [
     {
@@ -84,7 +84,7 @@ const jsonLd = {
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "Sales",
-    "url": "https://eduratech.com/contact"
+    "url": "https://www.eduratech.com/contact"
   }
 };
 
@@ -104,6 +104,15 @@ export default function RootLayout({
           src="https://cdn-in.pagesense.io/js/eduratechnologies/4b485abf4fd1470b97e7ca5f0eae8283.js" 
           strategy="lazyOnload" 
         />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX" strategy="lazyOnload" />
+        <Script id="google-analytics" strategy="lazyOnload">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XXXXXXXXXX');
+          `}
+        </Script>
       </head>
       <body className={cn(inter.className, "bg-background text-foreground min-h-screen antialiased relative")}>
         {/* Premium Dark Background Pattern */}

@@ -12,7 +12,7 @@ export const metadata = {
   openGraph: {
     title: "Web Application Development - EduraTech",
     description: "We build custom web apps designed to solve real business problems. Not templates. Real solutions.",
-    url: "https://eduratech.com/services/web-application-development",
+    url: "https://www.eduratech.com/services/web-application-development",
   },
 };
 
@@ -21,11 +21,11 @@ export default function WebAppDevelopment() {
     <main>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://eduratech.com"}, {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://eduratech.com/services"}, {"@type": "ListItem", "position": 3, "name": "Web Application Development", "item": "https://eduratech.com/services/web-application-development"}]}) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.eduratech.com"}, {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.eduratech.com/services"}, {"@type": "ListItem", "position": 3, "name": "Web Application Development", "item": "https://www.eduratech.com/services/web-application-development"}]}) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Service", "name": "Web Application Development Services", "description": "Professional B2B technical solutions for web application development.", "provider": {"@type": "Organization", "name": "Edura Technologies", "url": "https://eduratech.com"}, "areaServed": "US", "serviceType": "Software & AI Development"}) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Service", "name": "Web Application Development Services", "description": "Professional B2B technical solutions for web application development.", "provider": {"@type": "Organization", "name": "Edura Technologies", "url": "https://www.eduratech.com"}, "areaServed": "US", "serviceType": "Software & AI Development"}) }}
       />
       <Reveal width="100%">
         <Section className="bg-transparent pt-36 pb-20 lg:pt-44 lg:pb-28 relative overflow-hidden">

@@ -46,7 +46,7 @@ export function Hero() {
                                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
                                 className="text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight text-white leading-[1.05] text-balance"
                             >
-                                Stop Losing <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">High-Ticket</span> Clients to Competitors.
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">Custom Software</span> & AI Automation to Secure High-Ticket Clients.
                             </motion.h1>
 
                             <motion.p

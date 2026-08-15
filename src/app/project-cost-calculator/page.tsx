@@ -14,7 +14,7 @@ export const metadata = {
   openGraph: {
     title: "Software & AI Project Cost Calculator | EduraTech",
     description: "Get an instant, transparent estimate for custom software, mobile apps, SaaS, and AI development projects. Real-time cost modeling based on USA development parameters.",
-    url: "https://eduratech.com/project-cost-calculator",
+    url: "https://www.eduratech.com/project-cost-calculator",
   },
 };
 

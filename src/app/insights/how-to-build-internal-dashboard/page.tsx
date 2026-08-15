@@ -13,7 +13,7 @@ export const metadata = {
   openGraph: {
     title: "How to Build an Internal Business Dashboard - Complete Guide - EduraTech",
     description: "Learn how to build secure internal database dashboards and portals. Consolidate sales, operational, and advertising metrics into one portal.",
-    url: "https://eduratech.com/insights/how-to-build-internal-dashboard",
+    url: "https://www.eduratech.com/insights/how-to-build-internal-dashboard",
   },
 };
 
@@ -22,11 +22,11 @@ export default function HowToBuildInternalDashboardPage() {
     <main>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://eduratech.com"}, {"@type": "ListItem", "position": 2, "name": "Insights", "item": "https://eduratech.com/insights"}, {"@type": "ListItem", "position": 3, "name": "How To Build Internal Dashboard", "item": "https://eduratech.com/insights/how-to-build-internal-dashboard"}]}) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.eduratech.com"}, {"@type": "ListItem", "position": 2, "name": "Insights", "item": "https://www.eduratech.com/insights"}, {"@type": "ListItem", "position": 3, "name": "How To Build Internal Dashboard", "item": "https://www.eduratech.com/insights/how-to-build-internal-dashboard"}]}) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "How To Build Internal Dashboard", "description": "Expert guide and analysis on how to build internal dashboard for B2B growth and digital acceleration.", "datePublished": "2024-08-15T00:00:00Z", "dateModified": "2024-08-15T00:00:00Z", "author": {"@type": "Organization", "name": "Edura Technologies", "url": "https://eduratech.com"}, "publisher": {"@type": "Organization", "name": "Edura Technologies", "logo": {"@type": "ImageObject", "url": "https://eduratech.com/logo.png"}}, "mainEntityOfPage": "https://eduratech.com/insights/how-to-build-internal-dashboard"}) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "How To Build Internal Dashboard", "description": "Expert guide and analysis on how to build internal dashboard for B2B growth and digital acceleration.", "datePublished": "2024-08-15T00:00:00Z", "dateModified": "2024-08-15T00:00:00Z", "author": {"@type": "Organization", "name": "Edura Technologies", "url": "https://www.eduratech.com"}, "publisher": {"@type": "Organization", "name": "Edura Technologies", "logo": {"@type": "ImageObject", "url": "https://www.eduratech.com/logo.png"}}, "mainEntityOfPage": "https://www.eduratech.com/insights/how-to-build-internal-dashboard"}) }}
       />
       <Reveal width="100%">
         <Section className="bg-transparent pt-36 pb-20 lg:pt-44 lg:pb-28 relative overflow-hidden">

@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title,
       description,
-      url: `https://eduratech.com/case-studies/${slug}`,
+      url: `https://www.eduratech.com/case-studies/${slug}`,
     },
   };
 }
@@ -45,23 +45,23 @@ export default async function CaseStudyPage({ params }: Props) {
     "@type": "TechArticle",
     "headline": `${study.client} — ${study.category} Case Study`,
     "description": study.challenge,
-    "image": "https://eduratech.com/icon.png",
+    "image": "https://www.eduratech.com/icon.png",
     "author": {
       "@type": "Organization",
       "name": "Edura Technologies",
-      "url": "https://eduratech.com"
+      "url": "https://www.eduratech.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Edura Technologies",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://eduratech.com/icon.png"
+        "url": "https://www.eduratech.com/icon.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://eduratech.com/case-studies/${slug}`
+      "@id": `https://www.eduratech.com/case-studies/${slug}`
     }
   };
 

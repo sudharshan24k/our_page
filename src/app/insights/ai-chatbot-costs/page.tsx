@@ -13,7 +13,7 @@ export const metadata = {
   openGraph: {
     title: "How Much Does an AI Chatbot Cost for a Small Business? - EduraTech",
     description: "Find out the cost factors for developing an AI chatbot in 2024. Custom builds, API integrations, and expected ROI for small businesses.",
-    url: "https://eduratech.com/insights/ai-chatbot-costs",
+    url: "https://www.eduratech.com/insights/ai-chatbot-costs",
   },
 };
 
@@ -22,11 +22,11 @@ export default function AIChatbotCostsPage() {
     <main>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://eduratech.com"}, {"@type": "ListItem", "position": 2, "name": "Insights", "item": "https://eduratech.com/insights"}, {"@type": "ListItem", "position": 3, "name": "Ai Chatbot Costs", "item": "https://eduratech.com/insights/ai-chatbot-costs"}]}) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.eduratech.com"}, {"@type": "ListItem", "position": 2, "name": "Insights", "item": "https://www.eduratech.com/insights"}, {"@type": "ListItem", "position": 3, "name": "Ai Chatbot Costs", "item": "https://www.eduratech.com/insights/ai-chatbot-costs"}]}) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "Ai Chatbot Costs", "description": "Expert guide and analysis on ai chatbot costs for B2B growth and digital acceleration.", "datePublished": "2024-08-15T00:00:00Z", "dateModified": "2024-08-15T00:00:00Z", "author": {"@type": "Organization", "name": "Edura Technologies", "url": "https://eduratech.com"}, "publisher": {"@type": "Organization", "name": "Edura Technologies", "logo": {"@type": "ImageObject", "url": "https://eduratech.com/logo.png"}}, "mainEntityOfPage": "https://eduratech.com/insights/ai-chatbot-costs"}) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "Ai Chatbot Costs", "description": "Expert guide and analysis on ai chatbot costs for B2B growth and digital acceleration.", "datePublished": "2024-08-15T00:00:00Z", "dateModified": "2024-08-15T00:00:00Z", "author": {"@type": "Organization", "name": "Edura Technologies", "url": "https://www.eduratech.com"}, "publisher": {"@type": "Organization", "name": "Edura Technologies", "logo": {"@type": "ImageObject", "url": "https://www.eduratech.com/logo.png"}}, "mainEntityOfPage": "https://www.eduratech.com/insights/ai-chatbot-costs"}) }}
       />
       <Reveal width="100%">
         <Section className="bg-transparent pt-36 pb-20 lg:pt-44 lg:pb-28 relative overflow-hidden">

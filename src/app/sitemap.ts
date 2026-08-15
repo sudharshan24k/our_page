@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://eduratech.com';
+  const baseUrl = 'https://www.eduratech.com';
 
   // Core pages with high priority
   const corePages: MetadataRoute.Sitemap = [

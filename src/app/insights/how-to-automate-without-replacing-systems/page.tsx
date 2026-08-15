@@ -13,7 +13,7 @@ export const metadata = {
   openGraph: {
     title: "How to Automate a Business Without Replacing Existing Systems - EduraTech",
     description: "Learn how to automate manual operations using webhooks and custom APIs to sync data without replacing your legacy business systems.",
-    url: "https://eduratech.com/insights/how-to-automate-without-replacing-systems",
+    url: "https://www.eduratech.com/insights/how-to-automate-without-replacing-systems",
   },
 };
 
@@ -22,11 +22,11 @@ export default function HowToAutomateWithoutReplacingPage() {
     <main>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://eduratech.com"}, {"@type": "ListItem", "position": 2, "name": "Insights", "item": "https://eduratech.com/insights"}, {"@type": "ListItem", "position": 3, "name": "How To Automate Without Replacing Systems", "item": "https://eduratech.com/insights/how-to-automate-without-replacing-systems"}]}) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.eduratech.com"}, {"@type": "ListItem", "position": 2, "name": "Insights", "item": "https://www.eduratech.com/insights"}, {"@type": "ListItem", "position": 3, "name": "How To Automate Without Replacing Systems", "item": "https://www.eduratech.com/insights/how-to-automate-without-replacing-systems"}]}) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "How To Automate Without Replacing Systems", "description": "Expert guide and analysis on how to automate without replacing systems for B2B growth and digital acceleration.", "datePublished": "2024-08-15T00:00:00Z", "dateModified": "2024-08-15T00:00:00Z", "author": {"@type": "Organization", "name": "Edura Technologies", "url": "https://eduratech.com"}, "publisher": {"@type": "Organization", "name": "Edura Technologies", "logo": {"@type": "ImageObject", "url": "https://eduratech.com/logo.png"}}, "mainEntityOfPage": "https://eduratech.com/insights/how-to-automate-without-replacing-systems"}) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "How To Automate Without Replacing Systems", "description": "Expert guide and analysis on how to automate without replacing systems for B2B growth and digital acceleration.", "datePublished": "2024-08-15T00:00:00Z", "dateModified": "2024-08-15T00:00:00Z", "author": {"@type": "Organization", "name": "Edura Technologies", "url": "https://www.eduratech.com"}, "publisher": {"@type": "Organization", "name": "Edura Technologies", "logo": {"@type": "ImageObject", "url": "https://www.eduratech.com/logo.png"}}, "mainEntityOfPage": "https://www.eduratech.com/insights/how-to-automate-without-replacing-systems"}) }}
       />
       <Reveal width="100%">
         <Section className="bg-transparent pt-36 pb-20 lg:pt-44 lg:pb-28 relative overflow-hidden">

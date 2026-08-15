@@ -208,7 +208,7 @@ export default function CalculatorForm() {
     doc.setFontSize(10);
     doc.setFont("helvetica", "normal");
     doc.text("Custom AI Systems & Premium Software", 15, 27);
-    doc.text("https://eduratech.com | support@eduratech.com", 15, 34);
+    doc.text("https://www.eduratech.com | support@eduratech.com", 15, 34);
 
     // Document info
     doc.setFont("helvetica", "bold");
@@ -334,7 +334,7 @@ export default function CalculatorForm() {
     doc.text("Schedule Your Free Strategy Audit:", 20, 267);
     doc.setFont("helvetica", "normal");
     doc.setFontSize(9);
-    doc.text("Connect directly via hello@eduratech.com or book online at https://eduratech.com/contact.", 20, 273);
+    doc.text("Connect directly via hello@eduratech.com or book online at https://www.eduratech.com/contact.", 20, 273);
 
     doc.save(`EduraTech_Estimate_${company.replace(/\s+/g, "_")}.pdf`);
   };

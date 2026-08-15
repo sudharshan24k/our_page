@@ -13,7 +13,7 @@ export const metadata = {
   openGraph: {
     title: "EduraTech Insights - AI & Software Development",
     description: "Learn about software development costs, AI adoption, automation opportunities, and technology strategy for growing businesses.",
-    url: "https://eduratech.com/insights",
+    url: "https://www.eduratech.com/insights",
   },
 };
 

@@ -8,8 +8,8 @@ import { Reveal } from "@/components/ui/Reveal";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Edura Technologies | Custom Software & AI Automation Firm",
-  description: "Edura Technologies is a premier digital software engineering firm. We build custom AI solutions, business automation, and high-performance tools to drive lead generation, optimize operations, and scale client growth.",
+  title: "Custom Software Development & AI Automation | Edura Technologies",
+  description: "Edura Technologies is a custom software development company. We build AI automation, business automation, and custom web applications to scale your digital growth.",
   alternates: {
     canonical: "/",
   },
@@ -20,7 +20,7 @@ export default function Home() {
     <main>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "WebSite", "name": "Edura Technologies", "url": "https://eduratech.com", "potentialAction": {"@type": "SearchAction", "target": "https://eduratech.com/search?q={search_term_string}", "query-input": "required name=search_term_string"}}) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "WebSite", "name": "Edura Technologies", "url": "https://www.eduratech.com", "potentialAction": {"@type": "SearchAction", "target": "https://www.eduratech.com/search?q={search_term_string}", "query-input": "required name=search_term_string"}}) }}
       />
       <Reveal width="100%">
         <Hero />

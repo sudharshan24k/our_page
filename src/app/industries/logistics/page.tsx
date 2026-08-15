@@ -9,7 +9,7 @@ export const metadata = {
   openGraph: {
     title: "Logistics & Supply Chain Software - EduraTech",
     description: "Software that reduces delivery costs and improves customer visibility.",
-    url: "https://eduratech.com/industries/logistics",
+    url: "https://www.eduratech.com/industries/logistics",
   },
 };
 
