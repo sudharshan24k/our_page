@@ -164,95 +164,111 @@ export function EduraTechProcess() {
                 <div className="absolute top-0 right-0 w-[800px] h-[600px] bg-primary/20 blur-[120px] rounded-full pointer-events-none opacity-50" />
 
                 <Container className="relative z-10">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                        className="max-w-4xl"
-                    >
-                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tighter text-white mb-8">
-                            How We Work
-                        </h1>
-                        <p className="text-xl md:text-2xl text-zinc-400 font-light leading-relaxed mb-8">
-                            A clear process. Strong engineering. No unnecessary complexity.
-                        </p>
-                        <p className="text-lg md:text-xl text-zinc-300 leading-relaxed max-w-3xl">
-                            Every successful technology project starts with clarity. Our process is designed to reduce uncertainty, align technology with business goals, and move from idea to working product with confidence.
-                        </p>
-                    </motion.div>
+                    <div className="flex flex-col lg:flex-row gap-16 lg:items-center justify-between">
+                        {/* Left Column: Core Process Headline */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8 }}
+                            className="flex-1 lg:max-w-[55%] space-y-6"
+                        >
+                            <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tighter text-white">
+                                How We Work
+                            </h1>
+                            <p className="text-xl md:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500 font-medium leading-relaxed">
+                                A clear process. Strong engineering. No unnecessary complexity.
+                            </p>
+                            <p className="text-base md:text-lg text-zinc-400 leading-relaxed font-light">
+                                Every successful technology project starts with clarity. Our process is designed to reduce uncertainty, align technology with business goals, and move from idea to working product with confidence.
+                            </p>
+                            <div className="flex flex-wrap gap-3 pt-4">
+                                {["Milestone Tracking", "Slack Sync", "Weekly Demos", "Git Access"].map((badge) => (
+                                    <span key={badge} className="px-3.5 py-1.5 rounded-full border border-white/10 bg-white/[0.03] text-xs font-mono text-zinc-300">
+                                        {badge}
+                                    </span>
+                                ))}
+                            </div>
+                        </motion.div>
+
+                        {/* Right Column: Execution Standards Cards */}
+                        <motion.div
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                            className="flex-1 lg:max-w-[40%] grid grid-cols-2 gap-4"
+                        >
+                            {[
+                                { title: "Milestone Billing", detail: "Pay only after reviewing completed work milestones." },
+                                { title: "Direct Eng Sync", detail: "No project managers. Speak directly to builders." },
+                                { title: "2-Week Sprints", detail: "Regular features pushed to staging every fortnight." },
+                                { title: "Full Code IP", detail: "You own 100% of the repository source code and assets." }
+                            ].map((standard) => (
+                                <div key={standard.title} className="p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-primary/20 hover:bg-white/[0.04] transition-all duration-300">
+                                    <p className="text-sm font-semibold text-white mb-2">{standard.title}</p>
+                                    <p className="text-[11px] text-zinc-500 leading-normal">{standard.detail}</p>
+                                </div>
+                            ))}
+                        </motion.div>
+                    </div>
                 </Container>
             </Section>
 
-            {/* Process Steps Timeline */}
+            {/* Process Steps Grid */}
             <Section className="bg-transparent border-t border-primary/10 py-24 md:py-32 relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full pointer-events-none" />
 
                 <Container className="relative z-10">
-                    <div className="relative max-w-6xl mx-auto">
-                        {/* Central Animated Line */}
-                        <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/0 via-primary/30 to-primary/0 md:-translate-x-1/2" />
-                        
+                    <div className="max-w-6xl mx-auto">
                         <motion.div
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true, margin: "-100px" }}
-                            variants={{ visible: { transition: { staggerChildren: 0.15 } } }}
+                            variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
+                            className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8"
                         >
                             {processSteps.map((step, i) => {
                                 const Icon = step.icon;
-                                const isEven = i % 2 === 0;
 
                                 return (
-                                    <div key={i} className={`relative flex flex-col md:flex-row items-start md:items-center w-full mb-16 md:mb-32 last:mb-0 group ${isEven ? 'md:justify-start' : 'md:justify-end'}`}>
+                                    <motion.div
+                                        key={i}
+                                        variants={{
+                                            hidden: { opacity: 0, y: 30 },
+                                            visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] } }
+                                        }}
+                                        onClick={() => setSelectedStep(step)}
+                                        className="relative p-8 md:p-10 rounded-3xl bg-[#0a0a0c] border border-primary/10 hover:border-primary/30 transition-all duration-500 hover:-translate-y-1.5 backdrop-blur-xl cursor-pointer overflow-hidden group/card text-left hover:shadow-[0_20px_40px_-15px_rgba(59,130,246,0.15)]"
+                                    >
+                                        {/* Ambient Background Glow */}
+                                        <div className="absolute -inset-px rounded-3xl opacity-0 group-hover/card:opacity-100 transition-opacity duration-1000 z-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent blur-2xl" />
                                         
-                                        {/* Timeline Node */}
-                                        <div className="absolute left-8 md:left-1/2 w-12 h-12 rounded-full bg-[#0a0a0c] border border-primary/20 md:-translate-x-1/2 z-10 flex items-center justify-center mt-6 md:mt-0 group-hover:border-primary/50 group-hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-all duration-700">
-                                            <div className="w-4 h-4 rounded-full bg-primary/10 border border-primary/30 group-hover:bg-primary group-hover:border-primary transition-all duration-500 group-hover:scale-110 shadow-[inset_0_0_10px_rgba(0,0,0,0.5)]" />
-                                        </div>
+                                        {/* Top Accent Line */}
+                                        <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent group-hover/card:via-primary/70 transition-all duration-700 z-10" />
 
-                                        {/* Content Card Wrapper */}
-                                        <div className={`w-full md:w-[45%] pl-24 md:pl-0 mt-2 md:mt-0 ${isEven ? 'md:pr-16 md:text-right' : 'md:pl-16 md:text-left'}`}>
-                                            <motion.div
-                                                variants={{
-                                                    hidden: { opacity: 0, x: isEven ? -40 : 40 },
-                                                    visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] } }
-                                                }}
-                                                onClick={() => setSelectedStep(step)}
-                                                className="relative p-8 md:p-10 rounded-3xl bg-[#0a0a0c] border border-primary/10 hover:border-primary/30 transition-all duration-700 hover:-translate-y-2 backdrop-blur-xl cursor-pointer overflow-hidden group/card text-left hover:shadow-[0_20px_40px_-15px_rgba(59,130,246,0.15)]"
-                                              >
-                                                {/* Ambient Background Glow */}
-                                                <div className="absolute -inset-px rounded-3xl opacity-0 group-hover/card:opacity-100 transition-opacity duration-1000 z-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent blur-2xl" />
-                                                
-                                                {/* Top Accent Line */}
-                                                <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent group-hover/card:via-primary/70 transition-all duration-700 z-10" />
-
-                                                <div className="relative z-20">
-                                                    <div className={`flex items-center gap-6 mb-6 ${isEven ? 'md:flex-row-reverse' : ''}`}>
-                                                        <div className="w-16 h-16 rounded-2xl bg-primary/5 border border-primary/20 flex items-center justify-center flex-shrink-0 group-hover/card:bg-primary/20 group-hover/card:border-primary/40 transition-all duration-500 shadow-inner group-hover/card:scale-110 relative overflow-hidden">
-                                                            <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover/card:opacity-100 blur-xl transition-opacity duration-500" />
-                                                            <Icon className="w-8 h-8 text-primary group-hover/card:text-primary transition-colors duration-300 stroke-[1.5] relative z-10" />
-                                                        </div>
-                                                        <div>
-                                                            <span className="text-sm font-bold text-primary tracking-widest uppercase mb-1 block">Phase {step.id}</span>
-                                                            <h3 className="text-2xl md:text-3xl font-medium text-white group-hover/card:text-primary transition-colors tracking-tight">
-                                                                {step.title}
-                                                            </h3>
-                                                        </div>
-                                                    </div>
-
-                                                    <p className={`text-zinc-400 font-light leading-relaxed text-base md:text-lg mb-8 ${isEven ? 'md:text-right' : 'md:text-left'}`}>
-                                                        {step.description}
-                                                    </p>
-
-                                                    <div className={`flex items-center text-sm font-medium text-zinc-400 group-hover/card:text-white transition-colors ${isEven ? 'md:justify-end' : 'md:justify-start'}`}>
-                                                        {!isEven && <Plus className="w-4 h-4 mr-2 group-hover/card:rotate-90 group-hover/card:text-primary transition-all duration-300" />}
-                                                        <span>View Deliverables</span>
-                                                        {isEven && <Plus className="w-4 h-4 ml-2 group-hover/card:rotate-90 group-hover/card:text-primary transition-all duration-300" />}
-                                                    </div>
+                                        <div className="relative z-20 space-y-6">
+                                            <div className="flex items-center gap-5">
+                                                <div className="w-14 h-14 rounded-2xl bg-primary/5 border border-primary/20 flex items-center justify-center flex-shrink-0 group-hover/card:bg-primary/20 group-hover/card:border-primary/40 transition-all duration-500 shadow-inner group-hover/card:scale-110 relative overflow-hidden">
+                                                    <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover/card:opacity-100 blur-xl transition-opacity duration-500" />
+                                                    <Icon className="w-7 h-7 text-primary group-hover/card:text-primary transition-colors duration-300 stroke-[1.5] relative z-10" />
                                                 </div>
-                                            </motion.div>
+                                                <div>
+                                                    <span className="text-xs font-bold text-primary tracking-widest uppercase mb-0.5 block">Phase {step.id}</span>
+                                                    <h3 className="text-xl md:text-2xl font-semibold text-white group-hover/card:text-primary transition-colors tracking-tight">
+                                                        {step.title}
+                                                    </h3>
+                                                </div>
+                                            </div>
+
+                                            <p className="text-zinc-400 font-light leading-relaxed text-sm md:text-base min-h-[72px]">
+                                                {step.description}
+                                            </p>
+
+                                            <div className="flex items-center text-xs font-medium text-zinc-400 group-hover/card:text-white transition-colors gap-1.5 pt-2">
+                                                <Plus className="w-3.5 h-3.5 group-hover/card:rotate-90 group-hover/card:text-primary transition-all duration-300" />
+                                                <span>View Deliverables</span>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </motion.div>
                                 );
                             })}
                         </motion.div>
@@ -364,7 +380,7 @@ export function EduraTechProcess() {
                                 href="/contact"
                                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-primary/90 transition-all duration-300 shadow-[0_0_40px_-10px_rgba(59,130,246,0.6)]"
                             >
-                                Start Your Project
+                                Contact Us
                             </a>
                             <a
                                 href="/contact"

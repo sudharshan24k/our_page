@@ -275,7 +275,7 @@ export function WhyEduraTech() {
                                 href="/contact"
                                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-primary/90 transition-all duration-300 shadow-[0_0_40px_-10px_rgba(59,130,246,0.6)]"
                             >
-                                Discuss Your Project
+                                Contact Us
                             </a>
                             <a
                                 href="/contact"
