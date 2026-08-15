@@ -3,7 +3,7 @@ import { Section } from "@/components/ui/Section";
 
 const metrics = [
     { label: "Average Experience", value: "7+ Years" },
-    { label: "Systems Architected", value: "50+" },
+    { label: "Systems Architected", value: "20+" },
     { label: "Uptime Delivered", value: "99.99%" },
     { label: "Client Retention", value: "100%" },
 ];

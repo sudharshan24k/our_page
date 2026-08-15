@@ -119,7 +119,7 @@ export function WhyUs() {
                     className="grid grid-cols-3 gap-8 mt-24 pt-24 border-t border-primary/20"
                 >
                     <div className="text-center">
-                        <div className="text-4xl md:text-5xl font-bold text-primary mb-3">50+</div>
+                        <div className="text-4xl md:text-5xl font-bold text-primary mb-3">12+</div>
                         <p className="text-zinc-400 font-light">High-ticket clients served</p>
                     </div>
                     <div className="text-center">
