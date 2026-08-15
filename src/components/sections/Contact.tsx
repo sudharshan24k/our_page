@@ -86,33 +86,71 @@ export function Contact({ isPage = false }: { isPage?: boolean }) {
                                     <input type="hidden" name="from_name" value="Edura Technologies" />
                                     
                                     <div className="space-y-4">
-                                        <input 
-                                            type="text" 
-                                            name="Name"
-                                            required 
-                                            placeholder="Full Name" 
-                                            className="w-full h-14 px-6 rounded-xl bg-[#0a0a0c] border border-primary/20 text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all font-light text-sm"
-                                        />
-                                        <input 
-                                            type="email" 
-                                            name="Email"
-                                            required 
-                                            placeholder="Work Email" 
-                                            className="w-full h-14 px-6 rounded-xl bg-[#0a0a0c] border border-primary/20 text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all font-light text-sm"
-                                        />
+                                        <div className="grid grid-cols-2 gap-4">
+                                            <input 
+                                                type="text" 
+                                                name="Name"
+                                                required 
+                                                placeholder="Full Name" 
+                                                className="w-full h-14 px-6 rounded-xl bg-[#0a0a0c] border border-primary/20 text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all font-light text-sm"
+                                            />
+                                            <input 
+                                                type="email" 
+                                                name="Email"
+                                                required 
+                                                placeholder="Work Email" 
+                                                className="w-full h-14 px-6 rounded-xl bg-[#0a0a0c] border border-primary/20 text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all font-light text-sm"
+                                            />
+                                        </div>
                                         <input 
                                             type="url" 
                                             name="Website"
                                             placeholder="Company Website (Optional)" 
                                             className="w-full h-14 px-6 rounded-xl bg-[#0a0a0c] border border-primary/20 text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all font-light text-sm"
                                         />
-                                        <textarea 
-                                            name="Growth_Challenge"
-                                            required 
-                                            rows={4}
-                                            placeholder="What is your biggest growth challenge right now?" 
-                                            className="w-full p-6 rounded-xl bg-[#0a0a0c] border border-primary/20 text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all resize-none font-light text-sm"
-                                        />
+                                        <select 
+                                            name="Service_Required"
+                                            required
+                                            defaultValue=""
+                                            className="w-full h-14 px-6 rounded-xl bg-[#0a0a0c] border border-primary/20 text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all font-light text-sm appearance-none"
+                                        >
+                                            <option value="" disabled className="text-zinc-500">What do you need help with?</option>
+                                            <option value="AI / Automation">AI / Automation</option>
+                                            <option value="Custom Software">Custom Software</option>
+                                            <option value="SaaS">SaaS</option>
+                                            <option value="CRM / Integration">CRM / Integration</option>
+                                            <option value="Website / Web Application">Website / Web Application</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                        
+                                        <div className="grid grid-cols-2 gap-4">
+                                            <select 
+                                                name="Budget"
+                                                required
+                                                defaultValue=""
+                                                className="w-full h-14 px-6 rounded-xl bg-[#0a0a0c] border border-primary/20 text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all font-light text-sm appearance-none"
+                                            >
+                                                <option value="" disabled>Estimated Budget</option>
+                                                <option value="<$2,500">&lt;$2,500</option>
+                                                <option value="$2,500–$5,000">$2,500–$5,000</option>
+                                                <option value="$5,000–$10,000">$5,000–$10,000</option>
+                                                <option value="$10,000–$25,000">$10,000–$25,000</option>
+                                                <option value="$25,000+">$25,000+</option>
+                                            </select>
+
+                                            <select 
+                                                name="Timeline"
+                                                required
+                                                defaultValue=""
+                                                className="w-full h-14 px-6 rounded-xl bg-[#0a0a0c] border border-primary/20 text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all font-light text-sm appearance-none"
+                                            >
+                                                <option value="" disabled>Project Timeline</option>
+                                                <option value="ASAP">ASAP</option>
+                                                <option value="1–3 months">1–3 months</option>
+                                                <option value="3–6 months">3–6 months</option>
+                                                <option value="Exploring">Exploring</option>
+                                            </select>
+                                        </div>
                                     </div>
 
                                     <Button type="submit" disabled={isSubmitting} className="w-full bg-primary text-white hover:bg-primary/90 h-14 text-xs tracking-widest font-bold uppercase rounded-xl flex items-center justify-center gap-3 shadow-[0_0_20px_-5px_rgba(59,130,246,0.5)] transition-all disabled:opacity-50 disabled:cursor-not-allowed">

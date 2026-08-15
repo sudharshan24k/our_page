@@ -2,7 +2,7 @@
 
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
-import { Search, PenTool, Code2, ShieldCheck, Plus } from "lucide-react";
+import { Search, PenTool, Code2, ShieldCheck, Plus, FileText, Users, CheckSquare, MessageSquare, Wrench, Activity, HeartHandshake } from "lucide-react";
 import { motion, Variants } from "framer-motion";
 import { useState } from "react";
 import { ContentModal } from "@/components/ui/ContentModal";
@@ -11,81 +11,190 @@ const phases = [
     {
         id: "01",
         title: "Audit & Analysis",
-        description: "We start by auditing your current website and identifying leaks in your conversion funnel. We define the exact strategy needed to turn your site into a lead machine.",
+        description: "We start by auditing your current architecture and identifying bottlenecks. We define the exact technical strategy needed to hit your business goals.",
         icon: Search,
         duration: "1-2 weeks",
-        deliverables: ["Competitive analysis report", "Conversion audit", "Custom growth strategy deck", "Implementation roadmap"],
         detailedContent: (
-            <>
-                <p><strong>The Business Reality:</strong> You cannot fix what you cannot measure. Before we write a single line of code or design a single pixel, we must understand exactly where your business is currently bleeding revenue online.</p>
-                <h4>Our Technical & Business Approach</h4>
-                <ul>
-                    <li><strong>Funnel Teardown:</strong> We analyze your current website traffic, looking at bounce rates, exit pages, and conversion drops. We identify the exact moments where prospects lose interest.</li>
-                    <li><strong>Competitive Analysis:</strong> We don't just look at your site; we look at the top three competitors in your space to understand the baseline expectations of your target buyers.</li>
-                    <li><strong>Strategic Blueprinting:</strong> We deliver a comprehensive, layman-friendly report outlining exactly what is wrong technically (e.g., slow load times, poor mobile UX) and what is wrong from a business perspective (e.g., weak messaging, lack of trust signals).</li>
-                </ul>
-                <p>This phase ensures that every dollar spent in the subsequent phases is directed toward solving a concrete business problem, not just making things "look pretty."</p>
-            </>
+            <div className="space-y-6">
+                <p className="text-zinc-300 font-light leading-relaxed"><strong>The Business Reality:</strong> You cannot fix what you cannot measure. Before we write a single line of code, we must understand exactly where your business is currently bleeding revenue or wasting operational hours.</p>
+                
+                <div className="grid md:grid-cols-2 gap-6 mt-6">
+                    <div className="space-y-3">
+                        <h4 className="font-semibold text-white flex items-center gap-2"><FileText className="w-4 h-4 text-primary" /> Deliverables</h4>
+                        <ul className="text-sm text-zinc-400 font-light space-y-2 list-disc pl-4">
+                            <li>Technical Architecture Audit</li>
+                            <li>UX/UI Conversion Teardown</li>
+                            <li>Custom Growth Strategy Deck</li>
+                            <li>Phased Implementation Roadmap</li>
+                        </ul>
+                    </div>
+                    <div className="space-y-3">
+                        <h4 className="font-semibold text-white flex items-center gap-2"><Users className="w-4 h-4 text-primary" /> Client Responsibilities</h4>
+                        <ul className="text-sm text-zinc-400 font-light space-y-2 list-disc pl-4">
+                            <li>Provide access to current analytics/codebases</li>
+                            <li>Stakeholder interviews (2 hours max)</li>
+                            <li>Define primary business KPI targets</li>
+                        </ul>
+                    </div>
+                    <div className="space-y-3">
+                        <h4 className="font-semibold text-white flex items-center gap-2"><CheckSquare className="w-4 h-4 text-primary" /> Approval Points</h4>
+                        <ul className="text-sm text-zinc-400 font-light space-y-2 list-disc pl-4">
+                            <li>Sign-off on technical audit findings</li>
+                            <li>Approval of project scope and roadmap</li>
+                        </ul>
+                    </div>
+                    <div className="space-y-3">
+                        <h4 className="font-semibold text-white flex items-center gap-2"><MessageSquare className="w-4 h-4 text-primary" /> Comm. Cadence</h4>
+                        <ul className="text-sm text-zinc-400 font-light space-y-2 list-disc pl-4">
+                            <li>Kickoff Call (60 mins)</li>
+                            <li>Dedicated Slack Channel created</li>
+                            <li>End-of-phase Audit Presentation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         )
     },
     {
         id: "02",
         title: "Conversion-Led Design",
-        description: "We design every page with a focus on authority, trust, and conversion. Every element is strategically placed to guide high-ticket clients toward booking a call.",
+        description: "We design every interface with a focus on authority, trust, and conversion. Every element is strategically placed to guide high-ticket clients toward action.",
         icon: PenTool,
         duration: "2-3 weeks",
-        deliverables: ["Wireframes & user flows", "High-fidelity designs", "Design system components", "Responsive mockups"],
         detailedContent: (
-            <>
-                <p><strong>The Business Reality:</strong> Design is not art; it is a communication tool. A beautiful website that doesn't generate leads is a failure. Our design philosophy is entirely focused on driving the user toward a specific business outcome: contacting your sales team.</p>
-                <h4>Our Technical & Business Approach</h4>
-                <ul>
-                    <li><strong>Wireframing for Conversions:</strong> We structure the page layout based on psychological principles of how executives consume information—placing high-value propositions and trust signals precisely where the eye naturally tracks.</li>
-                    <li><strong>Authority Aesthetics:</strong> We utilize modern UI trends (like dark mode and glassmorphism) because they subconsciously signal premium quality, allowing you to command higher prices.</li>
-                    <li><strong>Frictionless UX:</strong> We design forms and interactive elements to require the absolute minimum cognitive load from the user. If it's hard to use, they won't use it.</li>
-                </ul>
-                <p>The result is an interface that looks expensive and operates like a highly trained digital salesperson, seamlessly guiding the prospect toward the "Book a Call" button.</p>
-            </>
+            <div className="space-y-6">
+                <p className="text-zinc-300 font-light leading-relaxed"><strong>The Business Reality:</strong> Design is not art; it is a communication tool. A beautiful interface that doesn't generate leads or reduce friction is a failure. Our design philosophy is entirely focused on driving specific business outcomes.</p>
+                
+                <div className="grid md:grid-cols-2 gap-6 mt-6">
+                    <div className="space-y-3">
+                        <h4 className="font-semibold text-white flex items-center gap-2"><FileText className="w-4 h-4 text-primary" /> Deliverables</h4>
+                        <ul className="text-sm text-zinc-400 font-light space-y-2 list-disc pl-4">
+                            <li>Low-fidelity Wireframes</li>
+                            <li>High-fidelity Figma Prototypes</li>
+                            <li>Comprehensive Design System</li>
+                            <li>Responsive Mobile Mockups</li>
+                        </ul>
+                    </div>
+                    <div className="space-y-3">
+                        <h4 className="font-semibold text-white flex items-center gap-2"><Users className="w-4 h-4 text-primary" /> Client Responsibilities</h4>
+                        <ul className="text-sm text-zinc-400 font-light space-y-2 list-disc pl-4">
+                            <li>Provide brand guidelines and assets</li>
+                            <li>Consolidated feedback within 48 hours</li>
+                        </ul>
+                    </div>
+                    <div className="space-y-3">
+                        <h4 className="font-semibold text-white flex items-center gap-2"><CheckSquare className="w-4 h-4 text-primary" /> Approval Points</h4>
+                        <ul className="text-sm text-zinc-400 font-light space-y-2 list-disc pl-4">
+                            <li>Wireframe structure approval</li>
+                            <li>Final visual design sign-off</li>
+                        </ul>
+                    </div>
+                    <div className="space-y-3">
+                        <h4 className="font-semibold text-white flex items-center gap-2"><Wrench className="w-4 h-4 text-primary" /> Tools Used</h4>
+                        <ul className="text-sm text-zinc-400 font-light space-y-2 list-disc pl-4">
+                            <li>Figma (Prototyping)</li>
+                            <li>Miro (User Flows)</li>
+                            <li>Loom (Asynchronous Presentations)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         )
     },
     {
         id: "03",
         title: "High-Performance Build",
-        description: "Our development phase focuses on speed, security, and integration. We build a robust system that syncs perfectly with your existing CRM and sales processes.",
+        description: "Our engineering phase focuses on speed, security, and integration. We build robust systems that sync perfectly with your existing operational workflows.",
         icon: Code2,
         duration: "3-4 weeks",
-        deliverables: ["Production-ready codebase", "CRM integrations", "API pipelines", "Automated workflows"],
         detailedContent: (
-            <>
-                <p><strong>The Business Reality:</strong> Slow websites kill deals. If a page takes more than 3 seconds to load, 53% of mobile users will abandon it. We build infrastructure that is lightning fast and bulletproof.</p>
-                <h4>Our Technical & Business Approach</h4>
-                <ul>
-                    <li><strong>Modern Stack (Next.js):</strong> We ditch slow, bloated platforms like WordPress. We build using modern enterprise technology (React/Next.js) which pre-renders pages for instantaneous loading times.</li>
-                    <li><strong>CRM & API Integrations:</strong> A website should not exist in a vacuum. We pipe your lead forms directly into your CRM (HubSpot, Salesforce) and automate the notification process to your sales team via Slack or email.</li>
-                    <li><strong>Technical SEO Foundations:</strong> We write semantic, clean code that Google loves, ensuring that your foundation is perfectly primed for organic search dominance.</li>
-                </ul>
-                <p>By investing in a high-performance build, you aren't just buying a website; you are buying a scalable software asset that integrates seamlessly into your company's operational workflow.</p>
-            </>
+            <div className="space-y-6">
+                <p className="text-zinc-300 font-light leading-relaxed"><strong>The Business Reality:</strong> We build infrastructure that is lightning fast and bulletproof. We don't just write code; we build scalable software assets that integrate seamlessly into your company.</p>
+                
+                <div className="grid md:grid-cols-2 gap-6 mt-6">
+                    <div className="space-y-3">
+                        <h4 className="font-semibold text-white flex items-center gap-2"><FileText className="w-4 h-4 text-primary" /> Deliverables</h4>
+                        <ul className="text-sm text-zinc-400 font-light space-y-2 list-disc pl-4">
+                            <li>Production-ready codebase</li>
+                            <li>Custom API Pipelines</li>
+                            <li>CRM and Third-Party Integrations</li>
+                            <li>Staging Environment Access</li>
+                        </ul>
+                    </div>
+                    <div className="space-y-3">
+                        <h4 className="font-semibold text-white flex items-center gap-2"><MessageSquare className="w-4 h-4 text-primary" /> Comm. Cadence</h4>
+                        <ul className="text-sm text-zinc-400 font-light space-y-2 list-disc pl-4">
+                            <li>Weekly Progress Demos via Loom</li>
+                            <li>Real-time Slack updates</li>
+                            <li>Weekly live sync (optional)</li>
+                        </ul>
+                    </div>
+                    <div className="space-y-3">
+                        <h4 className="font-semibold text-white flex items-center gap-2"><CheckSquare className="w-4 h-4 text-primary" /> Approval Points</h4>
+                        <ul className="text-sm text-zinc-400 font-light space-y-2 list-disc pl-4">
+                            <li>Staging environment acceptance</li>
+                            <li>Feature-complete sign-off</li>
+                        </ul>
+                    </div>
+                    <div className="space-y-3">
+                        <h4 className="font-semibold text-white flex items-center gap-2"><Wrench className="w-4 h-4 text-primary" /> Tools Used</h4>
+                        <ul className="text-sm text-zinc-400 font-light space-y-2 list-disc pl-4">
+                            <li>Next.js & React</li>
+                            <li>GitHub (Version Control)</li>
+                            <li>Vercel (Edge Deployment)</li>
+                            <li>Node.js / Python (Backend)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         )
     },
     {
         id: "04",
-        title: "Launch & Lead Capture",
-        description: "Rigorous testing and optimization before we go live. We ensure your lead capture systems are foolproof and your firm is ready to handle consistent inbound leads.",
+        title: "Launch & Support",
+        description: "Rigorous testing and optimization before we go live. We ensure your systems are foolproof and provide ongoing support to guarantee maximum uptime.",
         icon: ShieldCheck,
         duration: "1-2 weeks",
-        deliverables: ["QA testing report", "Performance audit", "Team training", "Documentation"],
         detailedContent: (
-            <>
-                <p><strong>The Business Reality:</strong> Launching a new system is inherently risky. We mitigate that risk entirely through exhaustive testing protocols before the public ever sees the new platform.</p>
-                <h4>Our Technical & Business Approach</h4>
-                <ul>
-                    <li><strong>Quality Assurance (QA):</strong> We test the platform across every major device, browser, and network speed to ensure 100% functionality. A broken form is a lost deal.</li>
-                    <li><strong>Performance Benchmarking:</strong> We run rigorous speed and accessibility audits to ensure the final product exceeds industry standards for performance.</li>
-                    <li><strong>Handoff & Training:</strong> We don't just hand over the keys and disappear. We train your team on how to manage the content, interpret the analytics, and handle the new influx of leads smoothly.</li>
-                </ul>
-                <p>The launch is just the beginning. We ensure your digital infrastructure is fully operational from day one, ready to act as the primary growth engine for your firm.</p>
-            </>
+            <div className="space-y-6">
+                <p className="text-zinc-300 font-light leading-relaxed"><strong>The Business Reality:</strong> Launching a new system is inherently risky. We mitigate that risk entirely through exhaustive testing protocols before the public ever sees the new platform, followed by dedicated post-launch support.</p>
+                
+                <div className="grid md:grid-cols-2 gap-6 mt-6">
+                    <div className="space-y-3">
+                        <h4 className="font-semibold text-white flex items-center gap-2"><Activity className="w-4 h-4 text-primary" /> QA Process</h4>
+                        <ul className="text-sm text-zinc-400 font-light space-y-2 list-disc pl-4">
+                            <li>Cross-browser & Device Testing</li>
+                            <li>Load & Penetration Testing</li>
+                            <li>Lighthouse Performance Benchmarking</li>
+                            <li>Form & API Endpoint Validation</li>
+                        </ul>
+                    </div>
+                    <div className="space-y-3">
+                        <h4 className="font-semibold text-white flex items-center gap-2"><FileText className="w-4 h-4 text-primary" /> Deliverables</h4>
+                        <ul className="text-sm text-zinc-400 font-light space-y-2 list-disc pl-4">
+                            <li>Live Production Deployment</li>
+                            <li>Performance Audit Report</li>
+                            <li>Codebase Handover Documentation</li>
+                            <li>Video Training Library for Staff</li>
+                        </ul>
+                    </div>
+                    <div className="space-y-3">
+                        <h4 className="font-semibold text-white flex items-center gap-2"><HeartHandshake className="w-4 h-4 text-primary" /> Post-Launch Support</h4>
+                        <ul className="text-sm text-zinc-400 font-light space-y-2 list-disc pl-4">
+                            <li>30 Days Free Bug-Fixing Warranty</li>
+                            <li>Uptime & Error Monitoring (Sentry)</li>
+                            <li>Optional Continuous Retainer</li>
+                        </ul>
+                    </div>
+                    <div className="space-y-3">
+                        <h4 className="font-semibold text-white flex items-center gap-2"><Users className="w-4 h-4 text-primary" /> Client Responsibilities</h4>
+                        <ul className="text-sm text-zinc-400 font-light space-y-2 list-disc pl-4">
+                            <li>DNS switch approval</li>
+                            <li>Internal team training (via our videos)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         )
     }
 ];
@@ -110,7 +219,7 @@ export function HowWeWork({ isPage = false }: { isPage?: boolean }) {
                     </p>
                 </div>
 
-                {/* Desktop Visual Flow */}
+                {/* Unified Responsive Flow */}
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
@@ -118,42 +227,45 @@ export function HowWeWork({ isPage = false }: { isPage?: boolean }) {
                     variants={{
                         visible: { transition: { staggerChildren: 0.2 } }
                     }}
-                    className="hidden md:block relative mt-24"
+                    className="relative mt-16 md:mt-24"
                 >
-                    {/* The glowing timeline connector */}
-                    <div className="absolute top-[28px] left-0 right-0 h-[2px] bg-gradient-to-r from-primary/5 via-primary/40 to-primary/5" />
+                    {/* The glowing timeline connector (Desktop only) */}
+                    <div className="hidden md:block absolute top-[28px] left-0 right-0 h-[2px] bg-gradient-to-r from-primary/5 via-primary/40 to-primary/5" />
                     
-                    <div className="grid grid-cols-4 gap-8 relative">
+                    {/* The glowing vertical connector (Mobile only) */}
+                    <div className="block md:hidden absolute top-0 bottom-0 left-[11px] w-[2px] bg-gradient-to-b from-primary/5 via-primary/40 to-primary/5" />
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 relative">
                         {phases.map((phase, i) => (
                             <motion.div
                                 key={i}
                                 variants={itemVariants}
-                                className="group relative cursor-pointer"
+                                className="group relative cursor-pointer flex flex-row md:flex-col items-start md:items-stretch pl-10 md:pl-0"
                                 onClick={() => setSelectedPhase(phase)}
                             >
                                 {/* Glowing node */}
-                                <div className="absolute top-[18px] left-0 w-6 h-6 rounded-full bg-[#0a0a0c] border-[2px] border-primary group-hover:border-primary group-hover:bg-primary/20 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.7)] group-hover:scale-125 transition-all duration-500 z-10 flex items-center justify-center">
+                                <div className="absolute md:top-[18px] top-1 md:left-0 -left-[1px] md:w-6 md:h-6 w-6 h-6 rounded-full bg-[#0a0a0c] border-[2px] border-primary group-hover:border-primary group-hover:bg-primary/20 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.7)] group-hover:scale-125 transition-all duration-500 z-10 flex items-center justify-center">
                                     <div className="w-2 h-2 rounded-full bg-primary group-hover:bg-primary transition-colors" />
                                 </div>
 
-                                <div className="pt-16 h-full flex flex-col">
-                                    <div className="mb-6 p-3 w-fit rounded-2xl bg-primary/10 border border-primary/30 group-hover:border-primary/50 group-hover:bg-primary/20 transition-all duration-500 shadow-inner group-hover:scale-110">
+                                <div className="md:pt-16 h-full flex flex-col w-full">
+                                    <div className="mb-6 p-3 w-fit rounded-2xl bg-primary/10 border border-primary/30 group-hover:border-primary/50 group-hover:bg-primary/20 transition-all duration-500 shadow-inner group-hover:scale-110 hidden md:block">
                                         <phase.icon className="w-6 h-6 text-primary transition-colors duration-300 stroke-[1.5]" />
                                     </div>
-                                    <span className="text-[11px] font-bold text-primary uppercase tracking-[0.2em] block mb-3">
+                                    <span className="text-[11px] font-bold text-primary uppercase tracking-[0.2em] block mb-2 md:mb-3">
                                         Phase {phase.id}
                                     </span>
-                                    <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-primary transition-colors tracking-tight">{phase.title}</h3>
+                                    <h3 className="text-2xl font-semibold text-white mb-3 md:mb-4 group-hover:text-primary transition-colors tracking-tight">{phase.title}</h3>
                                     <p className="text-zinc-400 font-light text-[15px] leading-relaxed flex-grow mb-6">
                                         {phase.description}
                                     </p>
 
                                     <div className="mb-6 pb-6 border-b border-primary/20">
-                                        <p className="text-xs text-primary font-bold uppercase tracking-widest mb-3">Timeline</p>
+                                        <p className="text-xs text-primary font-bold uppercase tracking-widest mb-2 md:mb-3">Timeline</p>
                                         <p className="text-white font-semibold">{phase.duration}</p>
                                     </div>
 
-                                    <div className="flex items-center text-sm font-semibold text-zinc-400 group-hover:text-white transition-colors mt-auto pt-5">
+                                    <div className="flex items-center text-sm font-semibold text-zinc-400 group-hover:text-white transition-colors md:mt-auto pt-2 md:pt-5">
                                         <Plus className="w-4 h-4 mr-2 group-hover:rotate-90 group-hover:text-primary transition-all duration-300" />
                                         <span>Read Methodology</span>
                                     </div>
@@ -162,43 +274,6 @@ export function HowWeWork({ isPage = false }: { isPage?: boolean }) {
                         ))}
                     </div>
                 </motion.div>
-
-                {/* Mobile View (Stacked with Line) */}
-                <div className="md:hidden space-y-16 relative border-l-2 border-primary/20 ml-4 pl-10 mt-16">
-                    {phases.map((phase, i) => (
-                        <div 
-                            key={i} 
-                            className="relative group cursor-pointer"
-                            onClick={() => setSelectedPhase(phase)}
-                        >
-                            {/* Glowing Node */}
-                            <div className="absolute top-2 -left-[49px] w-5 h-5 rounded-full bg-[#0a0a0c] border-[2px] border-primary group-hover:border-primary group-hover:bg-primary/20 group-hover:shadow-[0_0_15px_rgba(59,130,246,0.6)] transition-all flex items-center justify-center">
-                                <div className="w-1.5 h-1.5 rounded-full bg-primary transition-colors" />
-                            </div>
-                            
-                            <div className="relative text-foreground">
-                                <div className="mb-6 p-3 w-fit rounded-2xl bg-primary/10 border border-primary/30 group-hover:border-primary/50 group-hover:bg-primary/20 transition-all duration-500 shadow-inner">
-                                    <phase.icon className="w-6 h-6 text-primary group-hover:text-primary transition-colors duration-300 stroke-[1.5]" />
-                                </div>
-                                <span className="text-[11px] font-bold text-primary uppercase tracking-widest block mb-2">Phase {phase.id}</span>
-                                <h3 className="text-2xl font-semibold text-white mb-4 tracking-tight">{phase.title}</h3>
-                                <p className="text-zinc-400 font-light text-[15px] leading-relaxed mb-6">
-                                    {phase.description}
-                                </p>
-
-                                <div className="mb-6 pb-6 border-b border-primary/20">
-                                    <p className="text-xs text-primary font-bold uppercase tracking-widest mb-3">Timeline</p>
-                                    <p className="text-white font-semibold">{phase.duration}</p>
-                                </div>
-
-                                <div className="flex items-center text-sm font-semibold text-zinc-400 group-hover:text-white transition-colors">
-                                    <Plus className="w-4 h-4 mr-2 group-hover:rotate-90 group-hover:text-primary transition-all duration-300" />
-                                    <span>Read Methodology</span>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
             </Container>
 
             <ContentModal 

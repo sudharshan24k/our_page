@@ -27,9 +27,9 @@ export function Footer() {
                             We partner with visionary enterprises to engineer scalable, high-performance digital systems that drive measurable growth and predictability.
                         </p>
                         <div className="flex flex-col gap-1 mt-2">
-                            <span className="font-semibold text-white text-xs uppercase tracking-widest mb-1">Global Headquarters</span>
-                            <span className="text-zinc-400">Mumbai, Maharashtra</span>
-                            <span className="text-zinc-400">India</span>
+                            <span className="font-semibold text-white text-xs uppercase tracking-widest mb-1">Global Operations</span>
+                            <span className="text-zinc-400 text-sm font-medium">India-based engineering partner serving US businesses.</span>
+                            <span className="text-zinc-500 text-xs mt-1">Headquarters: Mumbai, Maharashtra</span>
                         </div>
                     </div>
 

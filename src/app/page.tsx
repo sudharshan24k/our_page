@@ -2,6 +2,8 @@ import { Hero } from "@/components/sections/Hero";
 import { Problems } from "@/components/sections/Problems";
 import { WhyUs } from "@/components/sections/WhyUs";
 import { SelectedWork } from "@/components/sections/SelectedWork";
+import { GlobalDelivery } from "@/components/sections/GlobalDelivery";
+import { EnterpriseSecurity } from "@/components/sections/EnterpriseSecurity";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Contact } from "@/components/sections/Contact";
 import { Reveal } from "@/components/ui/Reveal";
@@ -32,6 +34,14 @@ export default function Home() {
 
       <Reveal width="100%">
         <WhyUs />
+      </Reveal>
+
+      <Reveal width="100%">
+        <GlobalDelivery />
+      </Reveal>
+
+      <Reveal width="100%">
+        <EnterpriseSecurity />
       </Reveal>
 
       <Reveal width="100%">
