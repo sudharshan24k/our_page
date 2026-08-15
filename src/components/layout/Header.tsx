@@ -57,7 +57,7 @@ export function Header() {
                         <Image src={logoImg} alt="Edura Technologies Logo" width={32} height={32} className="w-8 h-8 object-contain" />
                         <span>Edura Technologies</span>
                     </Link>
-                    <nav className="hidden xl:flex items-center gap-4 xl:gap-8 text-sm xl:text-[15px] font-medium text-zinc-200">
+                    <nav className="hidden xl:flex items-center gap-4 2xl:gap-6 text-xs xl:text-sm font-medium text-zinc-200">
                         {[
                             { label: "Why Us", href: "/why-eduratech" },
                             { label: "How We Work", href: "/how-we-work" },
@@ -88,7 +88,7 @@ export function Header() {
                         })}
                     </nav>
 
-                    <div className="flex items-center gap-6">
+                    <div className="flex items-center gap-3 xl:gap-4">
                         {/* Mobile Menu Trigger */}
                         <button
                             aria-label="Open mobile menu"
@@ -99,9 +99,9 @@ export function Header() {
                             <span className="w-6 h-0.5 bg-current"></span>
                         </button>
 
-                        <Link href="/contact" className="hidden xl:flex items-center gap-2 text-sm font-medium text-white px-6 py-2 rounded-full bg-primary hover:bg-primary/90 shadow-[0_0_20px_-5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_30px_-5px_rgba(59,130,246,0.7)] transition-all whitespace-nowrap">
+                        <Link href="/contact" className="hidden xl:flex items-center gap-1.5 text-xs xl:text-sm font-medium text-white px-4 xl:px-5 py-2 rounded-full bg-primary hover:bg-primary/90 shadow-[0_0_20px_-5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_30px_-5px_rgba(59,130,246,0.7)] transition-all whitespace-nowrap">
                             Claim Free Audit
-                            <ArrowRight className="w-4 h-4" />
+                            <ArrowRight className="w-3.5 h-3.5" />
                         </Link>
                     </div>
                 </Container>
