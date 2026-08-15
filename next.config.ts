@@ -2,15 +2,15 @@ import type { NextConfig } from "next";
 
 const cspHeader = `
     default-src 'self';
-    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdn-in.pagesense.io https://assets.cal.com https://app.cal.com;
+    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdn-in.pagesense.io https://assets.cal.com https://app.cal.com https://www.googletagmanager.com;
     style-src 'self' 'unsafe-inline';
-    img-src 'self' blob: data: https://cdn-in.pagesense.io;
+    img-src 'self' blob: data: https://cdn-in.pagesense.io https://www.google-analytics.com https://www.googletagmanager.com;
     font-src 'self';
     object-src 'none';
     base-uri 'self';
     form-action 'self' https://forms.zohopublic.in;
     frame-src 'self' https://forms.zohopublic.in https://cal.com https://app.cal.com;
-    connect-src 'self' https://cdn-in.pagesense.io https://forms.zohopublic.in https://api.web3forms.com;
+    connect-src 'self' https://cdn-in.pagesense.io https://forms.zohopublic.in https://api.web3forms.com https://www.google-analytics.com https://region1.google-analytics.com;
     frame-ancestors 'none';
     upgrade-insecure-requests;
 `;
