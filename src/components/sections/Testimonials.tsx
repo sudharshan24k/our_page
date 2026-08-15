@@ -6,34 +6,34 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
     {
-        content: "Edura Technologies didn't just build a website; they engineered a sales pipeline. We went from 2 unpredictable leads a month to a consistent 15+ qualified inquiries, yielding a 300% ROI in the first quarter.",
-        author: "Managing Partner",
+        content: "We were drowning in manual data entry across 4 disconnected systems. Edura Technologies built a custom middleware layer that synced everything in real-time. We reduced admin hours by 62% and saved $120k annually in overhead.",
+        author: "Director of Operations",
+        role: "National Logistics Firm"
+    },
+    {
+        content: "Their RAG (Retrieval-Augmented Generation) implementation completely transformed how our associates search legal precedents. What used to take hours of manual reading now takes our AI chatbot seconds, with citation accuracy.",
+        author: "Senior Partner",
         role: "Boutique Law Firm, New York"
     },
     {
-        content: "The automated follow-up system has saved our team hours of manual work every single week. More importantly, our contact-to-close rate jumped by 42%.",
-        author: "Operations Manager",
-        role: "Financial Advisory Group, Chicago"
+        content: "Edura didn't just build a SaaS product; they architected a highly scalable, multi-tenant infrastructure. We scaled from 0 to 10,000 active users in 3 months with absolutely zero downtime or latency issues.",
+        author: "Technical Founder",
+        role: "FinTech Startup, Austin"
     },
     {
-        content: "They understood exactly how to position our firm's authority. The conversion rate on our contact form tripled within the first 60 days of launching the new site.",
-        author: "Principal Consultant",
-        role: "Tax Advisory Firm, Austin"
-    },
-    {
-        content: "We were losing high-ticket clients to competitors with better digital presence. After the redesign, our inbound lead volume increased by 150%, and we closed a record month.",
+        content: "We were losing high-ticket prospects due to slow response times. Their custom automated CRM workflow automatically qualifies and routes leads 24/7. Our contact-to-close rate jumped by 42% in the first quarter alone.",
         author: "Lead Broker",
         role: "Luxury Real Estate, Dallas"
     },
     {
-        content: "A true partner in our growth. The seamless CRM integration means we never lose a lead in static emails anymore. Everything is tracked, automated, and converting.",
-        author: "Founder",
-        role: "Wealth Management Firm, Miami"
+        content: "The seamless AWS migration and subsequent API development meant we finally owned our own data ecosystem instead of renting expensive third-party tools. The system paid for its development cost in less than 45 days.",
+        author: "Chief Financial Officer",
+        role: "Retail Supply Chain, Chicago"
     },
     {
-        content: "Professional, fast, and results-oriented. They speak the language of business, not just code. The new digital system paid for itself in less than 45 days.",
+        content: "Professional, deterministic, and highly technical. They built a custom AI extraction tool that parses unstructured medical invoices with 99.4% accuracy. It's the most impactful software investment we've ever made.",
         author: "Managing Director",
-        role: "Accounting Firm, Seattle"
+        role: "Healthcare Billing Network"
     }
 ];
 

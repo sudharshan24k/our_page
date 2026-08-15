@@ -31,14 +31,16 @@ const serviceTemplates: Record<string, {
     bulletTitle: "When Custom Software Makes Sense",
     whyText: "Many businesses use software that doesn't fit their actual processes. They either overpay for features they don't use, or waste hours working around limitations of generic solutions.",
     bullets: [
-      "Tailored workflow automation to eliminate manual tasks.",
-      "Custom CRM/ERP systems that map to your exact processes.",
-      "Scalable infrastructure designed for long-term reliability."
+      "Custom CRM/ERP systems mapped directly to your unique operational flows.",
+      "Legacy system migration and modernization without operational downtime.",
+      "Scalable infrastructure (AWS/Azure) designed for 99.999% uptime.",
+      "End-to-end security architecture and compliance-ready data handling.",
+      "Custom API development for seamless third-party software integrations."
     ],
-    detailsTitle: "Our Strategic Approach",
+    detailsTitle: "Our Strategic Approach to Custom Engineering",
     detailsContent: [
-      "We build systems that are easy to manage and grow with your business, avoiding licensing fees of generic SaaS systems.",
-      "Every project starts with a detailed audit to ensure your technology matches your strategic operational goals."
+      "We build systems that are entirely yours. Unlike off-the-shelf SaaS products that force you into restrictive workflows and charge per-seat licensing fees, our custom software becomes a proprietary asset for your company. This means zero recurring licensing fees, complete data ownership, and a system that perfectly mirrors your operational reality.",
+      "Every project begins with a comprehensive technical audit. Our senior engineers map your current bottlenecks, data silos, and manual processes to design an architecture that scales. We deploy in aggressive 60-day engineering sprints to ensure rapid time-to-market, allowing you to recognize return on investment within the first quarter."
     ]
   },
   "ai-development": {
@@ -50,14 +52,16 @@ const serviceTemplates: Record<string, {
     bulletTitle: "Where AI Adds Immediate Value",
     whyText: "We focus exclusively on deterministic, high-accuracy AI integrations that solve real bottlenecks instead of chasing trends.",
     bullets: [
-      "Document parsing and data extraction tools.",
-      "Vector search engines trained on private documents.",
-      "Strategic model fine-tuning for custom decision-making."
+      "Document parsing and unstructured data extraction tools with 99%+ accuracy.",
+      "Custom predictive models to forecast demand and automate inventory routing.",
+      "Private vector search engines (RAG) trained exclusively on your internal data.",
+      "Automated decision pipelines to qualify leads and trigger follow-up sequences.",
+      "Strategic model fine-tuning (LLaMA, GPT, Claude) for proprietary industry use cases."
     ],
-    detailsTitle: "Secure and Reliable Integrations",
+    detailsTitle: "Deterministic AI Integrations",
     detailsContent: [
-      "We design AI architectures with strict safety guardrails, hosting databases on private clouds to maintain complete security.",
-      "By connecting AI workflows with your existing APIs, we make intelligent workflows a natural extension of your operational stack."
+      "We don't build novelty chatbots; we engineer deterministic AI workflows that solve expensive bottlenecks. By connecting advanced machine learning models directly to your existing APIs and databases, we automate cognitive labor that traditionally required hours of manual human intervention.",
+      "Security and privacy are non-negotiable. We design AI architectures with strict safety guardrails, hosting vector databases and fine-tuned models on private cloud infrastructure (AWS/Azure). This ensures your proprietary corporate data is never used to train public models, maintaining absolute confidentiality while delivering transformative efficiency."
     ]
   },
   "generative-ai-development": {
