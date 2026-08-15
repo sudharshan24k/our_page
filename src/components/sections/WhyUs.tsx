@@ -9,38 +9,38 @@ const reasons = [
     {
         icon: Users,
         title: "Principal Talent",
-        description: "You work directly with the senior engineers building your system. By removing translation layers, we reduce development timelines by an average of 40% compared to traditional agencies.",
-        highlight: "0 junior developers"
+        description: "You work directly with the senior engineers building your system. By removing translation layers and middlemen, we consistently deliver high-quality code faster than traditional agencies.",
+        highlight: "Direct engineer access"
     },
     {
         icon: Zap,
         title: "High-Complexity Specialists",
-        description: "We specialize in business-critical environments. Our custom infrastructure and API deployments currently process over 2.4 million seamless transactions monthly for our active clients.",
-        highlight: "99.999% uptime SLAs"
+        description: "We specialize in business-critical environments. Our custom infrastructure and API deployments seamlessly process thousands of daily automated workflows for our active clients.",
+        highlight: "Enterprise reliability"
     },
     {
         icon: Trophy,
         title: "Full Ownership",
-        description: "We take full responsibility for outcomes. Our systems have collectively generated over $50M in new client revenue by completely automating sales pipelines and lead routing.",
-        highlight: "$50M+ Revenue Impact"
+        description: "We take full responsibility for outcomes. We don't just write code; we build digital systems specifically designed to automate your sales pipelines and improve your bottom line.",
+        highlight: "Accountable partners"
     },
     {
         icon: Target,
         title: "Conversion Obsession",
-        description: "Every line of code is optimized for ROI. Our custom UI/UX engineering historically yields a 2.5x to 3x increase in enterprise contact form conversions within 90 days of launch.",
-        highlight: "300% conversion lift"
+        description: "Every line of code is optimized for ROI. Our custom UI/UX engineering focuses heavily on reducing friction, consistently yielding meaningful improvements in enterprise contact form conversions.",
+        highlight: "Frictionless UX"
     },
     {
         icon: Clock,
         title: "Speed to Revenue",
-        description: "Traditional firms take 6+ months. We operate in aggressive 60-day engineering sprints, allowing our clients to see a positive return on investment in less than one fiscal quarter.",
-        highlight: "60-day deployment"
+        description: "Traditional firms take 6+ months just to plan. We operate in focused engineering sprints, allowing our clients to launch MVPs and start seeing a return on investment within their first quarter.",
+        highlight: "Agile deployment"
     },
     {
         icon: TrendingUp,
         title: "Measurable Impact",
-        description: "We replaced manual administrative workflows for our partners, resulting in a documented average reduction of 62% in data-entry labor costs across our client portfolio.",
-        highlight: "62% overhead reduction"
+        description: "By replacing manual administrative workflows with intelligent middleware, we help our partners achieve significant, measurable reductions in data-entry labor costs and operational overhead.",
+        highlight: "Reduced overhead"
     }
 ];
 
