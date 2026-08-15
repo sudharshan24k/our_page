@@ -102,7 +102,7 @@ export default function RootLayout({
         />
         <Script 
           src="https://cdn-in.pagesense.io/js/eduratechnologies/4b485abf4fd1470b97e7ca5f0eae8283.js" 
-          strategy="afterInteractive" 
+          strategy="lazyOnload" 
         />
       </head>
       <body className={cn(inter.className, "bg-background text-foreground min-h-screen antialiased relative")}>

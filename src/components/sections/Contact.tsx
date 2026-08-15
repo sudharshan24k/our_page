@@ -176,14 +176,13 @@ export function Contact({ isPage = false }: { isPage?: boolean }) {
                             <h3 className="text-xl font-semibold text-white mb-6 relative z-10">Schedule Instantly</h3>
                             
                             <div className="relative z-10 w-full overflow-hidden rounded-2xl bg-[#08080a] border border-white/5 p-2 h-[550px]">
-                                {isMounted && (
                                     <iframe
                                         src="https://app.cal.com/eduratech/30min?embed=true&theme=dark"
                                         style={{ width: "100%", height: "100%", border: "none" }}
                                         title="Schedule a 30-minute Strategy Call with EduraTech"
                                         allow="camera; microphone; geolocation; clipboard-write"
+                                        loading="lazy"
                                     />
-                                )}
                             </div>
                         </div>
                     </div>
