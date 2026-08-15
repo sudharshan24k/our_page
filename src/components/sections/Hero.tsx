@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/Button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Magnetic } from "@/components/ui/Magnetic";
 
-const ANIMATED_WORDS = ["Growth", "Leads", "Conversions", "ROI"];
+const ANIMATED_WORDS = ["Growth", "Leads", "Conversions", "ROI", "Efficiency", "Automation", "AI Systems", "Scale"];
 
 export function Hero() {
     const [wordIndex, setWordIndex] = useState(0);
