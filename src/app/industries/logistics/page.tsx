@@ -33,10 +33,10 @@ export default function LogisticsPage() {
   ];
 
   const tiers = [
-    { label: "Small Fleet (10-50)", range: "$40K - $80K", timeline: "10-14 weeks" },
-    { label: "Medium (50-200)", range: "$80K - $200K", timeline: "14-24 weeks" },
-    { label: "Large (200+)", range: "$200K - $500K+", timeline: "24-36 weeks" },
-    { label: "Enterprise", range: "$500K+", timeline: "Custom" }
+    { label: "Small Fleet (10-50)", range: "$400 - $800", timeline: "10-14 weeks" },
+    { label: "Medium (50-200)", range: "$800 - $1,500", timeline: "14-24 weeks" },
+    { label: "Large (200+)", range: "$1,500 - $2,000", timeline: "24-36 weeks" },
+    { label: "Enterprise", range: "$2,000+", timeline: "Custom" }
   ];
 
   return (

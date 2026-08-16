@@ -6,7 +6,7 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
     {
-        content: "We were drowning in manual data entry across disconnected systems. Edura Technologies built a custom middleware layer that synced everything in real-time. We reduced admin hours by 62% and saved $120k annually in overhead.",
+        content: "We were drowning in manual data entry across disconnected systems. Edura Technologies built a custom middleware layer that synced everything in real-time. We reduced admin hours by 62% and saved $2,000 annually in overhead.",
         author: "Director of Operations",
         role: "National Logistics Firm"
     },

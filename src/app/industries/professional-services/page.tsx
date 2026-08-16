@@ -11,7 +11,7 @@ export const metadata = {
 export default function ProfessionalServicesPage() {
   const challenges = ['Manual onboarding of high-ticket clients takes too long', 'Inability to track project deliverables and milestones cleanly', 'Friction in billing, time-tracking, and invoice generation', 'No centralized dashboard to monitor client retention and satisfaction', 'Inflexible client portals that look unprofessional', 'Fragmented client data makes delivery scaling difficult'];
   const solutions = [{'title': 'Client Portals', 'desc': 'Secure custom portals, document sharing, digital signatures, milestone tracking.'}, {'title': 'Project Management', 'desc': 'Milestone delivery tracker, resource allocations, automated tasks, Slack notifications.'}, {'title': 'Billing & Invoicing', 'desc': 'Time tracking integrations, automated invoicing, secure recurring payment processors.'}, {'title': 'Operations Dashboard', 'desc': 'Fulfillment velocities, client retention metrics, resource utilization reports.'}];
-  const tiers = [{'label': 'Boutique Firm', 'range': '$30K - $60K', 'timeline': '8-12 weeks'}, {'label': 'Mid-Sized Agency', 'range': '$60K - $120K', 'timeline': '12-16 weeks'}, {'label': 'National Consultancy', 'range': '$120K - $250K+', 'timeline': '16-24 weeks'}, {'label': 'Enterprise Custom', 'range': '$250K+', 'timeline': 'Custom'}];
+  const tiers = [{'label': 'Boutique Firm', 'range': '$300 - $600', 'timeline': '8-12 weeks'}, {'label': 'Mid-Sized Agency', 'range': '$600 - $1,200', 'timeline': '12-16 weeks'}, {'label': 'National Consultancy', 'range': '$1,200 - $2,000', 'timeline': '16-24 weeks'}, {'label': 'Enterprise Custom', 'range': '$2,000+', 'timeline': 'Custom'}];
 
   return (
     <IndustryPageLayout

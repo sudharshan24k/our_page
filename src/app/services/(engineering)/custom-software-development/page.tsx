@@ -153,9 +153,9 @@ export default function CustomSoftwareDevelopment() {
                   <h3 className="text-xl font-semibold text-white mb-4">Cost Ranges</h3>
                   <div className="grid md:grid-cols-3 gap-4">
                     {[
-                      { name: "Small Project", range: "$15K - $30K", timeline: "6-8 weeks" },
-                      { name: "Medium Project", range: "$40K - $75K", timeline: "12-16 weeks" },
-                      { name: "Complex Project", range: "$100K+", timeline: "16-24 weeks" },
+                      { name: "Small Project", range: "$200 - $500", timeline: "6-8 weeks" },
+                      { name: "Medium Project", range: "$500 - $1,200", timeline: "12-16 weeks" },
+                      { name: "Complex Project", range: "$2,000", timeline: "16-24 weeks" },
                     ].map((tier, i) => (
                       <div key={i} className="p-6 rounded-xl border border-white/5 bg-white/[0.02]">
                         <p className="text-zinc-400 text-sm mb-2">Typical</p>
@@ -200,7 +200,7 @@ export default function CustomSoftwareDevelopment() {
                 {[
                   {
                     q: "How much does custom software development cost?",
-                    a: "Depends on complexity. Simple tools: $15-30K. Medium: $40-75K. Complex: $100K+. We provide detailed estimates after discovery."
+                    a: "Depends on complexity. Simple tools: $200-500. Medium: $500-$1,200. Complex: $2,000. We provide detailed estimates after discovery."
                   },
                   {
                     q: "How long does it take to build custom software?",

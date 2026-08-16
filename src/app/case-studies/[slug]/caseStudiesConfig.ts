@@ -41,7 +41,7 @@ export const caseStudiesData: Record<string, CaseStudy> = {
       before: "4,000 invoices manually processed, 6% error rate, 4-day processing backlog.",
       after: "90% of invoices auto-processed instantly, 99.4% extraction accuracy, zero backlog."
     },
-    quantifiedResult: "Achieved 99.4% extraction accuracy and eliminated 280 hours of manual data entry per month, saving over $140k in annual operational overhead.",
+    quantifiedResult: "Achieved 99.4% extraction accuracy and eliminated 280 hours of manual data entry per month, saving over $1,500 in annual operational overhead.",
     clientQuote: {
       text: "This pipeline completely changed how our billing department operates. We've eliminated our backlog entirely and our staff can finally focus on exception handling rather than typing.",
       author: "Sarah Jenkins",

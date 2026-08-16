@@ -131,11 +131,11 @@ export function Contact({ isPage = false }: { isPage?: boolean }) {
                                                 className="w-full h-14 px-6 rounded-xl bg-[#0a0a0c] border border-primary/20 text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all font-light text-sm appearance-none"
                                             >
                                                 <option value="" disabled>Estimated Budget</option>
-                                                <option value="<$2,500">&lt;$2,500</option>
+                                                <option value="<$1,000">&lt;$1,000</option>
+                                                <option value="$1,000–$2,500">$1,000–$2,500</option>
                                                 <option value="$2,500–$5,000">$2,500–$5,000</option>
                                                 <option value="$5,000–$10,000">$5,000–$10,000</option>
-                                                <option value="$10,000–$25,000">$10,000–$25,000</option>
-                                                <option value="$25,000+">$25,000+</option>
+                                                <option value="$10,000+">$10,000+</option>
                                             </select>
 
                                             <select 

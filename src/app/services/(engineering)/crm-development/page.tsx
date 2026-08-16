@@ -1,4 +1,4 @@
-﻿import { Reveal } from "@/components/ui/Reveal";
+import { Reveal } from "@/components/ui/Reveal";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { ArrowRight } from "lucide-react";
@@ -109,10 +109,10 @@ export default function CRMDevelopment() {
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
                 {[
-                  { label: "Small Team CRM", range: "$40K - $80K", timeline: "10-14 weeks", users: "5-15 users" },
-                  { label: "Growing Company CRM", range: "$80K - $150K", timeline: "14-20 weeks", users: "15-50 users" },
-                  { label: "Enterprise CRM", range: "$150K - $300K+", timeline: "20-30 weeks", users: "50+ users" },
-                  { label: "CRM + Integrations", range: "$100K - $250K+", timeline: "16-24 weeks", users: "Custom" }
+                  { label: "Small Team CRM", range: "$300 - $800", timeline: "10-14 weeks", users: "5-15 users" },
+                  { label: "Growing Company CRM", range: "$800 - $1,200", timeline: "14-20 weeks", users: "15-50 users" },
+                  { label: "Enterprise CRM", range: "$1,200 - $2,000", timeline: "20-30 weeks", users: "50+ users" },
+                  { label: "CRM + Integrations", range: "$1,000 - $2,000", timeline: "16-24 weeks", users: "Custom" }
                 ].map((tier, i) => (
                   <div key={i} className="p-6 rounded-xl border border-white/5 bg-white/[0.02]">
                     <p className="text-sm text-zinc-400 mb-2">{tier.label}</p>

@@ -11,7 +11,7 @@ export const metadata = {
 export default function EcommercePage() {
   const challenges = ['Off-the-shelf platforms lack flexibility for custom product logic', 'Inventory sync lag between warehouse, ERP, and channels', 'Fulfillment bottleneck from manual order processing', 'Low cart conversion rates from basic checkout flows', 'Fragmented customer data prevents targeted marketing', 'High transaction fees cutting into brand margins'];
   const solutions = [{'title': 'Custom Checkouts', 'desc': 'Bespoke checkout flows, subscription engines, localized multi-currency pricing.'}, {'title': 'Inventory & ERP', 'desc': 'Real-time stock synchronization, automatic purchase order triggers, custom integrations.'}, {'title': 'Customer Loyalty', 'desc': 'Referral systems, loyalty points programs, customized discount engines.'}, {'title': 'Analytics Dashboard', 'desc': 'Cohort analysis, customer lifetime value tracking, real-time sales reporting.'}];
-  const tiers = [{'label': 'Growth Brands', 'range': '$40K - $80K', 'timeline': '10-14 weeks'}, {'label': 'Mid-Market', 'range': '$80K - $180K', 'timeline': '14-20 weeks'}, {'label': 'High-Volume Enterprise', 'range': '$180K - $400K+', 'timeline': '20-28 weeks'}, {'label': 'Global Brands Custom', 'range': '$400K+', 'timeline': 'Custom'}];
+  const tiers = [{'label': 'Growth Brands', 'range': '$400 - $800', 'timeline': '10-14 weeks'}, {'label': 'Mid-Market', 'range': '$800 - $1,800', 'timeline': '14-20 weeks'}, {'label': 'High-Volume Enterprise', 'range': '$1,800 - $2,000', 'timeline': '20-28 weeks'}, {'label': 'Global Brands Custom', 'range': '$2,000+', 'timeline': 'Custom'}];
 
   return (
     <IndustryPageLayout

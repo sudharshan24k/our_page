@@ -11,7 +11,7 @@ export const metadata = {
 export default function StartupsPage() {
   const challenges = ['Long engineering cycles delay initial MVP launch', 'Monolithic structures that prevent easy feature expansion', 'Poor infrastructure scaling that leads to user timeouts', 'API design bottlenecks that block integration partners', 'Accumulated tech debt from rushed initial builds', 'High maintenance overhead draining runway budgets'];
   const solutions = [{'title': 'MVP Development', 'desc': 'Rapid core product release, clean database design, high-conversion landing pages.'}, {'title': 'SaaS Architecture', 'desc': 'Multi-tenant database structures, billing integrations, user auth management.'}, {'title': 'API Frameworks', 'desc': 'Scalable REST/GraphQL APIs, secure authentication tokens, partner integrations.'}, {'title': 'DevOps Scaling', 'desc': 'Container deployments (Docker/K8s), automated CI/CD pipelines, cloud monitors.'}];
-  const tiers = [{'label': 'MVP Launch', 'range': '$25K - $50K', 'timeline': '6-10 weeks'}, {'label': 'Seed Stage Scale', 'range': '$50K - $120K', 'timeline': '10-14 weeks'}, {'label': 'Series A Growth', 'range': '$120K - $250K+', 'timeline': '14-20 weeks'}, {'label': 'Enterprise Venture', 'range': '$250K+', 'timeline': 'Custom'}];
+  const tiers = [{'label': 'MVP Launch', 'range': '$200 - $500', 'timeline': '6-10 weeks'}, {'label': 'Seed Stage Scale', 'range': '$500 - $1,000', 'timeline': '10-14 weeks'}, {'label': 'Series A Growth', 'range': '$1,000 - $1,500', 'timeline': '14-20 weeks'}, {'label': 'Enterprise Venture', 'range': '$2,000+', 'timeline': 'Custom'}];
 
   return (
     <IndustryPageLayout

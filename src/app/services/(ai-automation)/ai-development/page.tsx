@@ -210,8 +210,8 @@ export default function AIDevelopment() {
                   <h3 className="text-xl font-semibold text-white mb-4">Typical Investment</h3>
                   <div className="grid md:grid-cols-2 gap-4">
                     {[
-                      { name: "Simple Chatbot", range: "$15K - $30K", timeline: "4-8 weeks" },
-                      { name: "Custom AI Solution", range: "$40K - $100K", timeline: "8-16 weeks" },
+                      { name: "Simple Chatbot", range: "$200 - $500", timeline: "4-8 weeks" },
+                      { name: "Custom AI Solution", range: "$500 - $1,500", timeline: "8-16 weeks" },
                     ].map((tier, i) => (
                       <div key={i} className="p-6 rounded-xl border border-white/5 bg-white/[0.02]">
                         <p className="text-zinc-400 text-sm mb-2">{tier.name}</p>

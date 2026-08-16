@@ -46,7 +46,7 @@ export default function ArticlePage() {
               <h2 className="text-3xl md:text-4xl font-semibold tracking-tighter text-white mb-6">
                 The Spectrum of Automation
               </h2>
-              <p className="text-lg text-zinc-300 leading-relaxed mb-6">Basic Zapier scripts and low-code integrations run from $2K to $5K. But if you are a $10M+ enterprise looking for true middleware that parses complex databases, routes logic, and implements machine learning safely, you are looking at enterprise automation.</p>
+              <p className="text-lg text-zinc-300 leading-relaxed mb-6">Basic Zapier scripts and low-code integrations run from $100 to $300. But if you are a $10M+ enterprise looking for true middleware that parses complex databases, routes logic, and implements machine learning safely, you are looking at enterprise automation.</p>
               
               <h2 className="text-3xl md:text-4xl font-semibold tracking-tighter text-white mb-6 mt-12">
                 Calculating True ROI

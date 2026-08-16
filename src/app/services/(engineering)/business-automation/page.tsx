@@ -1,4 +1,4 @@
-﻿import { Reveal } from "@/components/ui/Reveal";
+import { Reveal } from "@/components/ui/Reveal";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { ArrowRight } from "lucide-react";
@@ -109,10 +109,10 @@ export default function BusinessAutomation() {
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
                 {[
-                  { label: "Single Workflow", range: "$5K - $15K", timeline: "2-4 weeks" },
-                  { label: "Multi-workflow", range: "$15K - $40K", timeline: "4-8 weeks" },
-                  { label: "Department-wide", range: "$40K - $100K", timeline: "8-16 weeks" },
-                  { label: "Enterprise", range: "$100K+", timeline: "Custom" }
+                  { label: "Single Workflow", range: "$100 - $300", timeline: "2-4 weeks" },
+                  { label: "Multi-workflow", range: "$300 - $800", timeline: "4-8 weeks" },
+                  { label: "Department-wide", range: "$800 - $1,500", timeline: "8-16 weeks" },
+                  { label: "Enterprise", range: "$2,000", timeline: "Custom" }
                 ].map((tier, i) => (
                   <div key={i} className="p-6 rounded-xl border border-white/5 bg-white/[0.02]">
                     <p className="text-sm text-zinc-400 mb-2">{tier.label}</p>
