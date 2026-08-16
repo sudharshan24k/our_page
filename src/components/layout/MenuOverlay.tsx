@@ -106,6 +106,14 @@ export function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
                                 >
                                     Instagram
                                 </a>
+                                <a 
+                                    href="https://www.facebook.com/profile.php?id=61593132340377" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors p-2 -ml-2 first:ml-0"
+                                >
+                                    Facebook
+                                </a>
                             </div>
                         </div>
 

@@ -87,6 +87,9 @@ export function Footer() {
                         <a href="https://www.instagram.com/edura_tech/?hl=en" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-primary transition-colors flex items-center gap-2 group">
                             <span className="w-0 h-[1px] bg-primary group-hover:w-2 transition-all duration-300"></span> Instagram
                         </a>
+                        <a href="https://www.facebook.com/profile.php?id=61593132340377" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-primary transition-colors flex items-center gap-2 group">
+                            <span className="w-0 h-[1px] bg-primary group-hover:w-2 transition-all duration-300"></span> Facebook
+                        </a>
                     </div>
 
                 </div>

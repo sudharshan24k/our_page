@@ -79,7 +79,8 @@ const jsonLd = {
   ],
   "sameAs": [
     "https://www.linkedin.com/showcase/eduratech/",
-    "https://www.instagram.com/edura_tech/"
+    "https://www.instagram.com/edura_tech/",
+    "https://www.facebook.com/profile.php?id=61593132340377"
   ],
   "contactPoint": {
     "@type": "ContactPoint",
