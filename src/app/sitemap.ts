@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { TARGET_LOCATIONS } from '@/lib/data/locations';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.eduratech.com';
@@ -207,12 +208,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
+  const locationHubPages: MetadataRoute.Sitemap = TARGET_LOCATIONS.map((loc) => ({
+    url: `${baseUrl}/locations/${loc.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }));
+
   return [
     ...corePages,
     ...servicePages,
     ...industryPages,
     ...contentPages,
     ...caseStudyPages,
-    ...localSEOPages
+    ...localSEOPages,
+    ...locationHubPages
   ];
 }

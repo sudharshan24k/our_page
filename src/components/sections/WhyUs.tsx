@@ -62,7 +62,7 @@ export function WhyUs() {
 
             <Container className="relative z-10">
                 <div className="max-w-3xl mb-20 md:mb-24">
-                    <h2 className="text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tighter text-white mb-8">Why Enterprise Teams Choose Us</h2>
+                    <h2 className="text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tighter text-white mb-8">Why Choose Our Custom Software Development Services?</h2>
                     <p className="text-xl md:text-2xl text-zinc-400 font-light leading-relaxed">
                         We're not a typical digital agency. We're your growth infrastructure partners who think like your CFO and execute like your CTO.
                     </p>

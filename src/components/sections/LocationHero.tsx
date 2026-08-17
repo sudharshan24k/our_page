@@ -4,12 +4,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/Button";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, MapPin } from "lucide-react";
 import { Magnetic } from "@/components/ui/Magnetic";
 
 const ANIMATED_WORDS = ["Growth", "Leads", "ROI", "Scale", "Revenue", "Impact"];
 
-export function Hero() {
+interface LocationHeroProps {
+    city: string;
+    state: string;
+}
+
+export function LocationHero({ city, state }: LocationHeroProps) {
     const [wordIndex, setWordIndex] = useState(0);
 
     useEffect(() => {
@@ -20,7 +25,7 @@ export function Hero() {
     }, []);
 
     return (
-        <section aria-label="Introduction" className="min-h-screen flex items-center bg-transparent text-foreground overflow-hidden relative selection:bg-primary/30">
+        <section aria-label={`Introduction for ${city}`} className="min-h-screen flex items-center bg-transparent text-foreground overflow-hidden relative selection:bg-primary/30">
             {/* Background Glow Effect specific to Hero */}
             <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-primary/20 blur-[120px] rounded-full pointer-events-none opacity-50 mix-blend-screen" />
 
@@ -35,8 +40,8 @@ export function Hero() {
                         className="flex-1 lg:max-w-[50%] space-y-8 relative"
                     >
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-sm text-zinc-300 font-medium tracking-wide">
-                            <Sparkles className="w-4 h-4 text-primary" />
-                            <span>Digital Systems that Scale</span>
+                            <MapPin className="w-4 h-4 text-primary" />
+                            <span>Serving {city}, {state}</span>
                         </div>
 
                         <div className="space-y-6">
@@ -46,7 +51,7 @@ export function Hero() {
                                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
                                 className="text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight text-white leading-[1.05] text-balance"
                             >
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">Custom Software Development</span> & AI Automation to Secure High-Ticket Clients.
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">Custom Software</span> & AI Automation in {city}.
                             </motion.h1>
 
                             <motion.p
@@ -55,7 +60,7 @@ export function Hero() {
                                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
                                 className="text-lg md:text-xl text-zinc-400 leading-relaxed font-light max-w-xl text-balance"
                             >
-                                We build conversion-optimized digital systems that predictably generate qualified inbound leads and scale revenue for growing small-to-medium businesses across the US heartland, sunbelt, and beyond.
+                                We build conversion-optimized digital systems that predictably generate qualified inbound leads and scale revenue for top businesses in the {city} area.
                             </motion.p>
                         </div>
 

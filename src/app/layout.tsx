@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     default: "Edura Technologies | Custom Software & AI",
   },
   description: "Custom software, business automation, and AI systems engineered to deliver measurable growth and secure high-ticket clients.",
-  keywords: ["custom software development", "AI development company", "SaaS development", "business automation", "web application development", "AI solutions", "cloud development"],
+  keywords: ["custom software development", "AI development company", "SaaS development", "business automation", "web application development", "AI solutions", "cloud development", "US SMB software solutions", "midwest software development", "texas AI solutions", "florida custom software", "local business AI automation"],
   openGraph: {
     title: "Edura Technologies | Custom AI & Software Development",
     description: "We build practical AI solutions and custom software that solve real business problems. No hype. Real results.",
@@ -51,6 +51,30 @@ const jsonLd = {
     {
       "@type": "Country",
       "name": "United States"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Texas"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Florida"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Ohio"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "North Carolina"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Georgia"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Illinois"
     },
     {
       "@type": "Country",
@@ -98,15 +122,15 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <head>
         {/* Google Tag Manager */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MW7B6LFS');`
-          }}
-        />
+        <Script id="google-tag-manager" strategy="afterInteractive">
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-MW7B6LFS');
+          `}
+        </Script>
         {/* End Google Tag Manager */}
         <script
           type="application/ld+json"

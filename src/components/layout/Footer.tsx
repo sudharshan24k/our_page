@@ -13,7 +13,7 @@ export function Footer() {
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-primary/5 blur-[100px] pointer-events-none" />
 
             <Container className="relative z-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-8 mb-16">
                     
                     {/* Brand Column */}
                     <div className="lg:col-span-2 flex flex-col gap-6">
@@ -90,6 +90,23 @@ export function Footer() {
                         <a href="https://www.facebook.com/profile.php?id=61593132340377" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-primary transition-colors flex items-center gap-2 group">
                             <span className="w-0 h-[1px] bg-primary group-hover:w-2 transition-all duration-300"></span> Facebook
                         </a>
+                    </div>
+
+                    {/* Service Areas */}
+                    <div className="flex flex-col gap-4">
+                        <h4 className="font-bold text-white text-sm uppercase tracking-widest mb-2">Service Areas</h4>
+                        <Link href="/locations/columbus-oh" className="text-zinc-400 hover:text-primary transition-colors flex items-center gap-2 group">
+                            <span className="w-0 h-[1px] bg-primary group-hover:w-2 transition-all duration-300"></span> Columbus, OH
+                        </Link>
+                        <Link href="/locations/raleigh-nc" className="text-zinc-400 hover:text-primary transition-colors flex items-center gap-2 group">
+                            <span className="w-0 h-[1px] bg-primary group-hover:w-2 transition-all duration-300"></span> Raleigh, NC
+                        </Link>
+                        <Link href="/locations/nashville-tn" className="text-zinc-400 hover:text-primary transition-colors flex items-center gap-2 group">
+                            <span className="w-0 h-[1px] bg-primary group-hover:w-2 transition-all duration-300"></span> Nashville, TN
+                        </Link>
+                        <Link href="/locations/salt-lake-city-ut" className="text-zinc-400 hover:text-primary transition-colors flex items-center gap-2 group">
+                            <span className="w-0 h-[1px] bg-primary group-hover:w-2 transition-all duration-300"></span> Salt Lake City, UT
+                        </Link>
                     </div>
 
                 </div>

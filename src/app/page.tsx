@@ -1,16 +1,18 @@
 import { Hero } from "@/components/sections/Hero";
 import { Problems } from "@/components/sections/Problems";
 import { WhyUs } from "@/components/sections/WhyUs";
-import { SelectedWork } from "@/components/sections/SelectedWork";
-import { GlobalDelivery } from "@/components/sections/GlobalDelivery";
-import { EnterpriseSecurity } from "@/components/sections/EnterpriseSecurity";
-import { Testimonials } from "@/components/sections/Testimonials";
-import { Contact } from "@/components/sections/Contact";
 import { Reveal } from "@/components/ui/Reveal";
+import dynamic from "next/dynamic";
 import type { Metadata } from "next";
 
+const SelectedWork = dynamic(() => import("@/components/sections/SelectedWork").then(mod => mod.SelectedWork));
+const GlobalDelivery = dynamic(() => import("@/components/sections/GlobalDelivery").then(mod => mod.GlobalDelivery));
+const EnterpriseSecurity = dynamic(() => import("@/components/sections/EnterpriseSecurity").then(mod => mod.EnterpriseSecurity));
+const Testimonials = dynamic(() => import("@/components/sections/Testimonials").then(mod => mod.Testimonials));
+const Contact = dynamic(() => import("@/components/sections/Contact").then(mod => mod.Contact));
+
 export const metadata: Metadata = {
-  title: "Custom Software & AI Automation | EduraTech",
+  title: "Custom Software Development & AI Automation | EduraTech",
   description: "Edura Technologies builds custom software, AI automation, and web applications designed to scale your digital growth and streamline operations.",
   alternates: {
     canonical: "/",
@@ -24,7 +26,6 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "WebSite", "name": "Edura Technologies", "url": "https://www.eduratech.com", "potentialAction": {"@type": "SearchAction", "target": "https://www.eduratech.com/search?q={search_term_string}", "query-input": "required name=search_term_string"}}) }}
       />
-      <div dangerouslySetInnerHTML={{ __html: `<script src="https://cdn-in.pagesense.io/js/eduratechnologies/4b485abf4fd1470b97e7ca5f0eae8283.js"></script>` }} />
       <Reveal width="100%">
         <Hero />
       </Reveal>
