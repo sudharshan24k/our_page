@@ -10,7 +10,7 @@ const cspHeader = `
     base-uri 'self';
     form-action 'self' https://forms.zohopublic.in;
     frame-src 'self' https://forms.zohopublic.in https://cal.com https://app.cal.com;
-    connect-src 'self' https://cdn-in.pagesense.io https://static.zohocdn.com https://forms.zohopublic.in https://api.web3forms.com https://www.google-analytics.com https://region1.google-analytics.com;
+    connect-src 'self' https://cdn-in.pagesense.io https://static.zohocdn.com https://forms.zohopublic.in https://api.web3forms.com https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://www.google-analytics.com/g/collect https://region1.analytics.google.com;
     frame-ancestors 'none';
     upgrade-insecure-requests;
 `;
