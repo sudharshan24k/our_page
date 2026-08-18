@@ -36,7 +36,7 @@ export function Hero() {
                     >
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-sm text-zinc-300 font-medium tracking-wide">
                             <Sparkles className="w-4 h-4 text-primary" />
-                            <span>Digital Systems that Scale</span>
+                            <span>INNOVATE. TRANSFORM. GROW.</span>
                         </div>
 
                         <div className="space-y-6">

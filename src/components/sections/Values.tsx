@@ -109,7 +109,7 @@ export function Values({ isPage = false }: { isPage?: boolean }) {
                 <div className="mb-20 md:mb-24 max-w-3xl">
                     <HeadingTag className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tighter text-foreground mb-6">{headingText}</HeadingTag>
                     <p className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed tracking-tight">
-                        The core values that define our culture and drive every partnership we form.
+                        The core values that define our culture and drive every partnership we form. Powered by our core logic: <strong className="text-foreground font-medium">INNOVATE. TRANSFORM. GROW.</strong>
                     </p>
                 </div>
 
