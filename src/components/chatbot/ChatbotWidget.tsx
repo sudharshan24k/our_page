@@ -5,6 +5,7 @@ import { X, Send, MessageCircle } from "lucide-react";
 import { ChatMessage } from "./ChatMessage";
 import { ChatInput } from "./ChatInput";
 import { DataCollectionForm } from "./DataCollectionForm";
+import { trackEvent } from "@/lib/tracking";
 
 export interface Message {
   id: string;
@@ -121,6 +122,7 @@ export function ChatbotWidget() {
   const handleDataSubmit = async (data: Record<string, string>) => {
     setCollectedData(data);
     setShowDataForm(false);
+    trackEvent("generate_lead", { source: "chatbot" });
 
     const confirmMsg: Message = {
       id: `confirm-${Date.now()}`,

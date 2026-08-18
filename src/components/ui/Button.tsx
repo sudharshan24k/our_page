@@ -35,7 +35,7 @@ export function Button({
 
     if (href) {
         return (
-            <Link href={href} className={comp}>
+            <Link href={href} className={comp} onClick={props.onClick as any}>
                 {children}
             </Link>
         );

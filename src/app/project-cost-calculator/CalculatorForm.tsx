@@ -18,6 +18,7 @@ import {
   TimelineOption,
   DesignOption
 } from "./calculatorConfig";
+import { trackEvent } from "@/lib/tracking";
 
 export default function CalculatorForm() {
   const [step, setStep] = useState(1);
@@ -177,6 +178,7 @@ export default function CalculatorForm() {
       const result = await res.json();
       if (result.success) {
         setFormSubmitted(true);
+        trackEvent("generate_lead", { source: "calculator" });
       } else {
         setFormError("Submission failed: " + (result.message || "Please check your network connection."));
       }
@@ -830,7 +832,12 @@ export default function CalculatorForm() {
           </button>
 
           <button
-            onClick={() => setStep(prev => Math.min(5, prev + 1))}
+            onClick={() => {
+              const nextStep = Math.min(5, step + 1);
+              if (step === 1) trackEvent("calculator_start");
+              if (nextStep === 5 && step !== 5) trackEvent("calculator_complete");
+              setStep(nextStep);
+            }}
             disabled={!canContinue()}
             className="px-8 py-3.5 bg-primary text-white font-semibold rounded-xl hover:bg-primary/90 transition-all disabled:opacity-40 flex items-center gap-2 cursor-pointer"
           >

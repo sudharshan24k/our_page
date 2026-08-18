@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/Button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Magnetic } from "@/components/ui/Magnetic";
+import { trackEvent } from "@/lib/tracking";
 
 const ANIMATED_WORDS = ["Growth", "Leads", "ROI", "Scale", "Revenue", "Impact"];
 
@@ -46,7 +47,7 @@ export function Hero() {
                                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
                                 className="text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight text-white leading-[1.05] text-balance"
                             >
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">Custom Software Development</span> & AI Automation to Secure High-Ticket Clients.
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">Custom Software, AI & Automation</span> for Growing Businesses
                             </motion.h1>
 
                             <motion.p
@@ -55,20 +56,21 @@ export function Hero() {
                                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
                                 className="text-lg md:text-xl text-zinc-400 leading-relaxed font-light max-w-xl text-balance"
                             >
-                                We build conversion-optimized digital systems that predictably generate qualified inbound leads and scale revenue for growing small-to-medium businesses across the US heartland, sunbelt, and beyond.
+                                We build websites, business software, AI solutions and automation that help businesses reduce manual work and operate more efficiently.
                             </motion.p>
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-5 pt-4">
                             <Magnetic>
-                                <Button href="/contact" size="lg" className="bg-primary text-white hover:bg-primary/90 font-medium flex items-center gap-2 rounded-xl shadow-[0_0_40px_-10px_rgba(59,130,246,0.6)] hover:shadow-[0_0_60px_-15px_rgba(59,130,246,0.8)] transition-all duration-300 px-8">
-                                    Book a Strategy Call
+                                <Button onClick={() => trackEvent("cta_click", { button_text: "Get a Project Estimate" })} href="/project-cost-calculator" size="lg" className="bg-primary text-white hover:bg-primary/90 font-medium flex items-center gap-2 rounded-xl shadow-[0_0_40px_-10px_rgba(59,130,246,0.6)] hover:shadow-[0_0_60px_-15px_rgba(59,130,246,0.8)] transition-all duration-300 px-8">
+                                    Get a Project Estimate
                                     <ArrowRight className="w-4 h-4" />
                                 </Button>
                             </Magnetic>
                             <Magnetic>
-                                <Button href="/services" variant="ghost" size="lg" className="text-zinc-300 hover:text-white hover:bg-white/10 border border-white/10 backdrop-blur-sm rounded-xl px-8 transition-all duration-300">
-                                    View Our Results
+                                <Button onClick={() => trackEvent("cta_click", { button_text: "Talk to an Expert" })} href="/contact" variant="ghost" size="lg" className="text-zinc-300 hover:text-white hover:bg-white/10 border border-white/10 backdrop-blur-sm rounded-xl flex items-center gap-2 px-8 transition-all duration-300">
+                                    Talk to an Expert
+                                    <ArrowRight className="w-4 h-4" />
                                 </Button>
                             </Magnetic>
                         </div>

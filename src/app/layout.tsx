@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { SmoothScroll } from "@/components/providers/SmoothScroll";
 import Script from "next/script";
+import { ChatbotWidget } from "@/components/chatbot/ChatbotWidget";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -169,15 +170,8 @@ export default function RootLayout({
           <Footer />
         </SmoothScroll>
 
-        {/* Floating CTA */}
-        <a 
-          href="/contact" 
-          aria-label="Send a Message"
-          className="fixed bottom-8 right-8 z-[100] flex items-center justify-center w-14 h-14 bg-primary text-white rounded-full shadow-[0_0_20px_rgba(59,130,246,0.6)] hover:shadow-[0_0_30px_rgba(59,130,246,0.8)] hover:scale-110 hover:-translate-y-1 transition-all duration-300 group"
-        >
-          <span className="sr-only">Send a Message</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-message-square group-hover:scale-110 transition-transform"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        </a>
+        {/* Chatbot Widget */}
+        <ChatbotWidget />
       </body>
     </html>
   );

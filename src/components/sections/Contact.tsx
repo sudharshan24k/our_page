@@ -5,18 +5,31 @@ import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { Lock, ArrowRight, ShieldCheck, Mail, Clock } from "lucide-react";
 import { useState, useEffect } from "react";
+import { trackEvent } from "@/lib/tracking";
 
 export function Contact({ isPage = false }: { isPage?: boolean }) {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
+    const [formStarted, setFormStarted] = useState(false);
 
     useEffect(() => {
         setIsMounted(true);
-    }, []);
+        if (isPage) {
+            trackEvent("contact_page_view");
+        }
+    }, [isPage]);
+
+    const handleFocus = () => {
+        if (!formStarted) {
+            setFormStarted(true);
+            trackEvent("contact_form_start");
+        }
+    };
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        trackEvent("contact_form_submit");
         setIsSubmitting(true);
 
         const formData = new FormData(e.currentTarget);
@@ -38,6 +51,7 @@ export function Contact({ isPage = false }: { isPage?: boolean }) {
             const result = await response.json();
             if (result.success) {
                 setIsSubmitted(true);
+                trackEvent("generate_lead");
             } else {
                 alert("Something went wrong! Please check your Access Key.");
             }
@@ -91,6 +105,7 @@ export function Contact({ isPage = false }: { isPage?: boolean }) {
                                                 type="text" 
                                                 name="Name"
                                                 required 
+                                                onFocus={handleFocus}
                                                 placeholder="Full Name" 
                                                 className="w-full h-14 px-6 rounded-xl bg-[#0a0a0c] border border-primary/20 text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all font-light text-sm"
                                             />
@@ -98,6 +113,7 @@ export function Contact({ isPage = false }: { isPage?: boolean }) {
                                                 type="email" 
                                                 name="Email"
                                                 required 
+                                                onFocus={handleFocus}
                                                 placeholder="Work Email" 
                                                 className="w-full h-14 px-6 rounded-xl bg-[#0a0a0c] border border-primary/20 text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all font-light text-sm"
                                             />
@@ -126,11 +142,10 @@ export function Contact({ isPage = false }: { isPage?: boolean }) {
                                         <div className="grid grid-cols-2 gap-4">
                                             <select 
                                                 name="Budget"
-                                                required
                                                 defaultValue=""
                                                 className="w-full h-14 px-6 rounded-xl bg-[#0a0a0c] border border-primary/20 text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all font-light text-sm appearance-none"
                                             >
-                                                <option value="" disabled>Estimated Budget</option>
+                                                <option value="" disabled>Estimated Budget (Optional)</option>
                                                 <option value="<$1,000">&lt;$1,000</option>
                                                 <option value="$1,000–$2,500">$1,000–$2,500</option>
                                                 <option value="$2,500–$5,000">$2,500–$5,000</option>
@@ -140,11 +155,10 @@ export function Contact({ isPage = false }: { isPage?: boolean }) {
 
                                             <select 
                                                 name="Timeline"
-                                                required
                                                 defaultValue=""
                                                 className="w-full h-14 px-6 rounded-xl bg-[#0a0a0c] border border-primary/20 text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all font-light text-sm appearance-none"
                                             >
-                                                <option value="" disabled>Project Timeline</option>
+                                                <option value="" disabled>Project Timeline (Optional)</option>
                                                 <option value="ASAP">ASAP</option>
                                                 <option value="1–3 months">1–3 months</option>
                                                 <option value="3–6 months">3–6 months</option>
@@ -154,7 +168,7 @@ export function Contact({ isPage = false }: { isPage?: boolean }) {
                                     </div>
 
                                     <Button type="submit" disabled={isSubmitting} className="w-full bg-primary text-white hover:bg-primary/90 h-14 text-xs tracking-widest font-bold uppercase rounded-xl flex items-center justify-center gap-3 shadow-[0_0_20px_-5px_rgba(59,130,246,0.5)] transition-all disabled:opacity-50 disabled:cursor-not-allowed">
-                                        {isSubmitting ? "Submitting..." : "Send My Message"}
+                                        {isSubmitting ? "Submitting..." : "Request a Free Consultation"}
                                         {!isSubmitting && <ArrowRight className="w-4 h-4" />}
                                     </Button>
 
@@ -180,6 +194,7 @@ export function Contact({ isPage = false }: { isPage?: boolean }) {
                                     <div className="flex flex-col gap-2">
                                         <a 
                                             href="mailto:hello@eduratech.com" 
+                                            onClick={() => trackEvent("email_click", { email: "hello@eduratech.com" })}
                                             className="text-white hover:text-primary transition-colors text-sm font-semibold flex items-center gap-1.5 group"
                                         >
                                             hello@eduratech.com
@@ -187,6 +202,7 @@ export function Contact({ isPage = false }: { isPage?: boolean }) {
                                         </a>
                                         <a 
                                             href="mailto:support@eduratech.com" 
+                                            onClick={() => trackEvent("email_click", { email: "support@eduratech.com" })}
                                             className="text-white hover:text-primary transition-colors text-sm font-semibold flex items-center gap-1.5 group"
                                         >
                                             support@eduratech.com

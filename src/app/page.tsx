@@ -2,6 +2,7 @@ import { Hero } from "@/components/sections/Hero";
 import { Problems } from "@/components/sections/Problems";
 import { WhyUs } from "@/components/sections/WhyUs";
 import { Reveal } from "@/components/ui/Reveal";
+import { WhatWeHelpBuild } from "@/components/sections/WhatWeHelpBuild";
 import dynamic from "next/dynamic";
 import type { Metadata } from "next";
 
@@ -28,6 +29,10 @@ export default function Home() {
       />
       <Reveal width="100%">
         <Hero />
+      </Reveal>
+
+      <Reveal width="100%">
+        <WhatWeHelpBuild />
       </Reveal>
 
       <Reveal width="100%">
