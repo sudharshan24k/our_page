@@ -56,7 +56,7 @@ export function Hero() {
                                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
                                 className="text-lg md:text-xl text-zinc-400 leading-relaxed font-light max-w-xl text-balance"
                             >
-                                We build websites, business software, AI solutions and automation that help businesses reduce manual work and operate more efficiently.
+                                Serving North America and Europe, we build websites, business software, AI solutions and automation that help businesses reduce manual work and operate more efficiently.
                             </motion.p>
                         </div>
 

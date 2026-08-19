@@ -171,7 +171,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'milwaukee', 'albuquerque', 'tucson', 'fresno', 'sacramento', 
     'mesa', 'kansas-city', 'atlanta', 'omaha', 'colorado-springs', 
     'raleigh', 'virginia-beach', 'long-beach', 'miami', 'oakland', 
-    'minneapolis', 'tulsa', 'bakersfield', 'wichita', 'arlington'
+    'minneapolis', 'tulsa', 'bakersfield', 'wichita', 'arlington',
+    // High-traffic analytics additions
+    'warsaw', 'glenview', 'santa-clara', 'ashburn'
   ];
 
   // All 17 core services to be dynamically mapped to all 50 cities

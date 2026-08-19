@@ -22,6 +22,8 @@ export const TARGET_LOCATIONS: LocationData[] = [
   { city: "Kansas City", state: "MO", slug: "kansas-city-mo" },
   { city: "Pittsburgh", state: "PA", slug: "pittsburgh-pa" },
   { city: "Grand Rapids", state: "MI", slug: "grand-rapids-mi" },
+  { city: "Glenview", state: "IL", slug: "glenview-il" },
+  { city: "Ashburn", state: "VA", slug: "ashburn-va" },
   { city: "Chattanooga", state: "TN", slug: "chattanooga-tn" },
   { city: "Greenville", state: "SC", slug: "greenville-sc" },
   { city: "Des Moines", state: "IA", slug: "des-moines-ia" },
@@ -39,6 +41,7 @@ export const TARGET_LOCATIONS: LocationData[] = [
   { city: "Dallas", state: "TX", slug: "dallas-tx" },
   { city: "Austin", state: "TX", slug: "austin-tx" },
   { city: "San Jose", state: "CA", slug: "san-jose-ca" },
+  { city: "Santa Clara", state: "CA", slug: "santa-clara-ca" },
   { city: "San Francisco", state: "CA", slug: "san-francisco-ca" },
   { city: "Seattle", state: "WA", slug: "seattle-wa" },
   { city: "Denver", state: "CO", slug: "denver-co" },
@@ -60,6 +63,7 @@ export const TARGET_LOCATIONS: LocationData[] = [
   { city: "Victoria", state: "BC", slug: "victoria-bc" },
 
   // European Union & UK
+  { city: "Warsaw", state: "PL", slug: "warsaw-poland" },
   { city: "London", state: "UK", slug: "london-uk" },
   { city: "Berlin", state: "DE", slug: "berlin-de" },
   { city: "Paris", state: "FR", slug: "paris-fr" },

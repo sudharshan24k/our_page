@@ -8,9 +8,9 @@ import { Users, Zap, Trophy, Target, Clock, TrendingUp } from "lucide-react";
 const reasons = [
     {
         icon: Users,
-        title: "Principal Talent",
-        description: "You work directly with the senior engineers building your system. By removing translation layers and middlemen, we consistently deliver high-quality code faster than traditional agencies.",
-        highlight: "Direct engineer access"
+        title: "Global Engineering Excellence",
+        description: "You work directly with the senior engineers building your system. With a strong footprint across North America and Europe, we deliver high-quality code seamlessly across time zones without traditional agency bottlenecks.",
+        highlight: "US & European presence"
     },
     {
         icon: Zap,
