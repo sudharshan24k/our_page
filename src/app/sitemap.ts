@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { TARGET_LOCATIONS } from '@/lib/data/locations';
+import { TARGET_SOLUTIONS } from '@/lib/data/solutions';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.eduratech.com';
@@ -133,8 +134,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/insights/ai-chatbot-costs',
     '/insights/custom-vs-off-the-shelf-software',
     '/insights/how-to-automate-without-replacing-systems',
-    '/insights/saas-development-costs',
     '/insights/how-to-build-internal-dashboard',
+    // New Cost Insight Pages
+    '/insights/custom-software-development-cost',
+    '/insights/ai-chatbot-development-cost',
+    '/insights/ai-automation-cost',
+    '/insights/saas-development-cost',
+    '/insights/web-application-development-cost',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
@@ -217,6 +223,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  const solutionPages: MetadataRoute.Sitemap = TARGET_SOLUTIONS.map((sol) => ({
+    url: `${baseUrl}/solutions/${sol.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }));
+
   return [
     ...corePages,
     ...servicePages,
@@ -224,6 +237,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...contentPages,
     ...caseStudyPages,
     ...localSEOPages,
-    ...locationHubPages
+    ...locationHubPages,
+    ...solutionPages
   ];
 }
